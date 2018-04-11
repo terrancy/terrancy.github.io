@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  <title>在Centos7环境下开发环境打搭建杂集 | terrancy`s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="笔者平时开发使用的时Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Centos7环境下开发环境打搭建杂集">
+<meta property="og:url" content="http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/index.html">
+<meta property="og:site_name" content="terrancy`s blog">
+<meta property="og:description" content="笔者平时开发使用的时Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.">
+<meta property="og:updated_time" content="2018-04-08T17:20:30.361Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Centos7环境下开发环境打搭建杂集">
+<meta name="twitter:description" content="笔者平时开发使用的时Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.">
+  
+    <link rel="alternative" href="/atom.xml" title="terrancy`s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+      <link href="//cdn.staticfile.org/animate.css/3.4.0/animate.min.css" rel="stylesheet">
+  
+  
+  
+      <script src="//cdn.staticfile.org/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.staticfile.org/pace/1.0.2/themes/pink/pace-theme-bounce.css" rel="stylesheet">
+  
+  
+    <script src="//cdn.staticfile.org/offline-js/0.7.14/offline.min.js"></script>
+    <link href="//cdn.staticfile.org/offline-js/0.7.14/themes/offline-language-english.css" rel="stylesheet">
+    <link href="//cdn.staticfile.org/offline-js/0.7.14/themes/offline-theme-chrome-indicator.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link href="//cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+  <script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
+  <script src="//cdn.staticfile.org/clipboard.js/1.5.5/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: false,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js",
+          background_image: {dir:"AprilsLie",min_mun:27,max_num:31},
+          baidu_share:{on:true},
+          comments_changyan:{on:"true",app_id:"cyt2vJE4I",conf:"prod_693e657ec102e31bcd97557015f49ae2"}
+      }
+  </script>
+  <!-- <script src="https://rawgit.com/DIYgod/DPlayer/master/dist/DPlayer.min.js"></script> -->
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpg" class="animated zoomIn" alt="avatar">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">terrancy</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">放慢了步伐,只为跑得更远~</p>
+        
+        
+        <form action="https://www.google.com/search" target="_blank" method="get" accept-charset="UTF-8">
+          <input type="text" name="q" class="search st-default-search-input" autocomplete="off" maxlength="20" placeholder=" 搜索...">
+          <input type="hidden" name="q" autocomplete="off" value="site:blog.terrancy.com">
+        </form>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:terrancy@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/terrancy" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/terrancy" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="http://v2ex.com/member/terrancy" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ELK/">ELK</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QQ/">QQ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Steam/">Steam</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/U8/">U8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VideoJS/">VideoJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/analysis/">analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bigdata/">bigdata</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/burg/">burg</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cdn/">cdn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud-storage/">cloud storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/composer/">composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/crawler/">crawler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/danmaku/">danmaku</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/">deep-learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/duoshuo/">duoshuo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/">email</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exception/">exception</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/facebook/">facebook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/framework/">framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ftp/">ftp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gifthub/">gifthub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitlab/">gitlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http/">http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/images/">images</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jotting/">jotting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lamp/">lamp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/live/">live</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/marathon/">marathon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pay/">pay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/payment/">payment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pjax/">pjax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/problem/">problem</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/push/">push</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pyhton/">pyhton</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pytorch/">pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sport/">sport</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/staticFile/">staticFile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tencent/">tencent</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/">tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/twitch/">twitch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virus/">virus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wechat/">wechat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a></li></ul>
+                    </div>
+                </section>
+                
+
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://chloy.com/">山上淘金</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.rogerblog.cn/">Roger</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://lintingbin2009.github.io/">Darcy</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">terrancy</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpg" class="animated zoomIn" alt="avatar">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">terrancy</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">放慢了步伐,只为跑得更远~</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:terrancy@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/terrancy" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/terrancy" title="GitHub"></a>
+                            
+                                <a class="fa V2EX" target="_blank" href="http://v2ex.com/member/terrancy" title="V2EX"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+
+      <div class="body-wrap" id="article-list"><article id="post-how-to-set-up-ftp-server-on-the-centos" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/" class="article-date">
+      <time datetime="2017-06-21T15:18:23.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+      
+  <a href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/#comments" title="查看评论">
+      <i class="fa fa-comments-o" aria-hidden="true"></i>
+      <span id = "sourceId::http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/" class = "cy_cmt_count"></span>条评论
+      <script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cyt2vJE4I"></script>
+  </a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在Centos7环境下开发环境打搭建杂集
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ftp/">ftp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>笔者平时开发使用的是Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要.因为当时购买选用的是Centos7.x操作系统<del>(一般情况都是使用Centos作为服务器)</del>,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.</p>
+<h2 id="Nginx-服务器"><a href="#Nginx-服务器" class="headerlink" title="Nginx 服务器"></a>Nginx 服务器</h2><h3 id="Nginx-介绍"><a href="#Nginx-介绍" class="headerlink" title="Nginx 介绍"></a>Nginx 介绍</h3><p>Nginx是一款轻量级的Web服务器/反向代理服务器及电子邮件代理服务器.由于它自身占用内存少,并发能力强的特点在同类型的网页服务器中有这不俗的表现.深受广大用户的喜爱.</p>
+<h3 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h3><ul>
+<li>在指定的目录下创建yum源配置文件.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/yum.repos.d/nginx.repo</div></pre></td></tr></table></figure>
+<ul>
+<li>插入以下一行代码,在vim环境下切换编辑模式</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">name=nginx repo</div><div class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure>
+<ul>
+<li>更新系统资源并安装</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum update &amp;&amp;  yum -y nginx install</div></pre></td></tr></table></figure>
+<h3 id="Nginx-启动"><a href="#Nginx-启动" class="headerlink" title="Nginx 启动"></a>Nginx 启动</h3><ul>
+<li>以下关于nginx常用的几个命令:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#启动</span></div><div class="line">systemctl start nginx.service</div><div class="line"><span class="comment">#关闭</span></div><div class="line">systemctl stop  nginx.service</div><div class="line"><span class="comment">#重载</span></div><div class="line">systemctl reload nginx.service</div><div class="line"><span class="comment">#重启</span></div><div class="line">systemctl restart nginx.service</div><div class="line"><span class="comment">#状态</span></div><div class="line">systemctl status nginx.service</div><div class="line"><span class="comment"># 配置文件</span></div><div class="line">vim /etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+<ul>
+<li>安装完nginx之后不要着急着把它启动起来,一帮情况是需要通过防火墙开放nginx的端口,默认是80.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#第一种方案,重启之后失效</span></div><div class="line">iptables -I INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT</div><div class="line">service iptables save</div><div class="line"><span class="comment">#第二种方案,直接写在iptables文件中,需要注意顺序</span></div><div class="line">vim /etc/sysconfig/iptables</div><div class="line">-A INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT</div></pre></td></tr></table></figure>
+<p>开放防火墙的80端口之后,可以通过以上命令启动nginx.而且nginx在默认的情况下是有一个站点的,所以启动之后是可以直接访问的.简单的检查下nginx服务器是否正在运行,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux | grep nginx</div></pre></td></tr></table></figure></p>
+<ul>
+<li>添加开机启动<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> nginx.service</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="PHP7"><a href="#PHP7" class="headerlink" title="PHP7"></a>PHP7</h2><h3 id="PHP7-介绍"><a href="#PHP7-介绍" class="headerlink" title="PHP7 介绍"></a>PHP7 介绍</h3><p>PHP7使用新的 Zend Engine 3.0 提高应用程序性能两倍,比PHP5.6 低了 50％ 的内存消耗. 它可以服务于更多的并发用户，无需任何额外的硬件.此外,由于它摒弃低版本的一些过时的API而无法完全向下兼容.</p>
+<h3 id="PHP7-安装"><a href="#PHP7-安装" class="headerlink" title="PHP7 安装"></a>PHP7 安装</h3><ul>
+<li>Centos下默认的PHP版本比较低,一般情况下在安装之前先卸载已有的版本.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum remove php</div></pre></td></tr></table></figure>
+<p>但是这样是并完全卸载掉PHP,以下命令是查看与php相关的所有软件.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep php</div></pre></td></tr></table></figure>
+<p>卸载前先查看下软件之前的相互依赖.没有依赖项的软件优先卸载.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm <span class="_">-e</span> php70w-common-7.0.19-1.w7.x86_64</div></pre></td></tr></table></figure>
+<ul>
+<li>下载并安装指定版本的PHP7</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 下载</span></div><div class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</div><div class="line"><span class="comment"># 安装</span></div><div class="line">yum install php70w-7.0.19-1.w7.x86_64 php70w-cli-7.0.19-1.w7.x86_64 php70w-common-7.0.19-1.w7.x86_64 php70w-gd-7.0.19-1.w7.x86_64 php70w-ldap-7.0.19-1.w7.x86_64 php70w-mbstring-7.0.19-1.w7.x86_64 php70w-mcrypt-7.0.19-1.w7.x86_64 php70w-mysql-7.0.19-1.w7.x86_64 php70w-pdo-7.0.19-1.w7.x86_64</div><div class="line"><span class="comment"># 卸载</span></div><div class="line">rpm -qa | grep webstatic</div><div class="line">rpm <span class="_">-e</span>  上面搜索到的包即可</div></pre></td></tr></table></figure>
+<ul>
+<li>安装php-fpm</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install php70w-fpm</div></pre></td></tr></table></figure>
+<h3 id="PHP7-启动"><a href="#PHP7-启动" class="headerlink" title="PHP7 启动"></a>PHP7 启动</h3><ul>
+<li>以下是PHP启动的常见命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 启动</span></div><div class="line">systemctl start php-fpm</div><div class="line"><span class="comment"># 关闭</span></div><div class="line">systemctl stop php-fpm</div><div class="line"><span class="comment"># 重启</span></div><div class="line">systemctl restart php-fpm</div><div class="line"><span class="comment"># 状态</span></div><div class="line">systemctl status php-fpm</div><div class="line"><span class="comment"># 配置文件</span></div><div class="line">vim /etc/php.ini</div></pre></td></tr></table></figure>
+<p>安装完PHP之后就可以通过以上命令启动.查看PHP是否已经正在运行,</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux | grep php-fpm</div></pre></td></tr></table></figure>
+<p>添加开机启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> php-fpm</div></pre></td></tr></table></figure>
+<h2 id="FTP-服务器"><a href="#FTP-服务器" class="headerlink" title="FTP 服务器"></a>FTP 服务器</h2><h3 id="FTP-介绍"><a href="#FTP-介绍" class="headerlink" title="FTP 介绍"></a>FTP 介绍</h3><p>一般而言,直接连接到服务器上是一个便捷而且安全的做法.搭建FTP服务器主要是为了服务其他人,他们不要动那么多命令照样可以在服务器上指定的路径上完成一些任务.比如上传搭建服务器CDN源站后给相关人员上传资源,他们只关心将资源上传到指定的路径之后就可以访问,而不用通过一大堆的命令去完成.</p>
+<h3 id="FTP-安装"><a href="#FTP-安装" class="headerlink" title="FTP 安装"></a>FTP 安装</h3><ul>
+<li>查看是否有安装,如果没有就安装.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 检查</span></div><div class="line">rpm -qa | grep vsftpd</div><div class="line"><span class="comment"># 安装</span></div><div class="line">yum -y install vsftpd</div><div class="line"><span class="comment"># 开机启动</span></div><div class="line">systemctl <span class="built_in">enable</span> vsftpd.service</div></pre></td></tr></table></figure>
+<h3 id="FTP-配置"><a href="#FTP-配置" class="headerlink" title="FTP 配置"></a>FTP 配置</h3><ul>
+<li>修改配置文件vsftpd.conf</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 访问限制</span></div><div class="line">anonymous_enable=NO</div><div class="line">local_enable=YES</div><div class="line"><span class="comment"># 设置路径</span></div><div class="line">chroot_list_enable=YES</div><div class="line"><span class="comment"># 设置宿主账号列表</span></div><div class="line">chroot_list_file=/etc/vsftpd/chroot_list</div><div class="line"><span class="comment"># 设置PAM认证文件名</span></div><div class="line">pam_service_name=vsftpd</div><div class="line"><span class="comment"># 开启虚拟账号</span></div><div class="line">guest.enable=YES</div><div class="line"><span class="comment"># 设置宿主用户</span></div><div class="line">guest.username=username</div><div class="line"><span class="comment"># 设置存放虚拟账号的文件夹路径</span></div><div class="line">user_config_dir=/etc/vsftpd/vuser_conf</div><div class="line"><span class="comment"># 端口监听,默认是21</span></div><div class="line">listen_port=21</div></pre></td></tr></table></figure>
+<ul>
+<li>创建允许访问的宿主账号文件,填写已存在的宿主账号并保存</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/vsftpd/chroot_list</div></pre></td></tr></table></figure>
+<ul>
+<li>创建虚拟账号和密码,<strong><em>奇数行是账号,偶数行是密码</em></strong>,并生成认证文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建虚拟账号信息并保存为vuser_passwd.txt</span></div><div class="line">vim /etc/vsftpd/vuser_passwd.txt</div><div class="line"><span class="comment"># 生成认证文件vuser_passwd.db</span></div><div class="line">dbload -T -t <span class="built_in">hash</span> <span class="_">-f</span> /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db</div><div class="line"><span class="comment"># 编辑认证文件,加入ftp认证并保存</span></div><div class="line">vim /etc/pam.d/vsftpd</div><div class="line"><span class="comment"># 查找系统版本号</span></div><div class="line">getconf LONG_BIT</div><div class="line"><span class="comment">#系统为32位：</span></div><div class="line">auth required pam_userdb.so db=/etc/vsftpd/vuser_passwd</div><div class="line">account required pam_userdb.so db=/etc/vsftpd/vuser_passwd</div><div class="line"><span class="comment"># 系统为64位：</span></div><div class="line">auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd</div><div class="line">account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd</div></pre></td></tr></table></figure>
+<ul>
+<li>创建虚拟账号文件信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建虚拟账号文件</span></div><div class="line">vim /etc/vsftpd/vuser_conf/username</div><div class="line"><span class="comment"># 权限限制</span></div><div class="line"><span class="comment"># 虚拟用户根目录,根据实际情况修改  该目录必须要有读写权限 chmod -R 777 目录</span></div><div class="line">local_root=/var/www/html  </div><div class="line"><span class="comment"># 可写</span></div><div class="line">write_enable=YES</div><div class="line"><span class="comment"># 掩码  </span></div><div class="line">anon_umask=022</div><div class="line">anon_world_readable_only=NO</div><div class="line">anon_upload_enable=YES</div><div class="line">anon_mkdir_write_enable=YES</div><div class="line">anon_other_write_enable=YES</div></pre></td></tr></table></figure>
+<p>以上代码注意每行末尾的空格,否则会出现认证成功但却无法登陆的窘境.</p>
+<ul>
+<li>开放防火墙端口,默认是21.设置启动服务器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 设置防护墙,防护墙添加访问限制</span></div><div class="line">-A INPUT -m state --state NEW <span class="_">-s</span> xxx.xxx.xxx.xxx  -m tcp -p tcp --dport 21 -j ACCEPT</div><div class="line">systemctl restart vsftpd.service</div></pre></td></tr></table></figure>
+<h3 id="FTP-日志"><a href="#FTP-日志" class="headerlink" title="FTP 日志"></a>FTP 日志</h3><p>这步骤很重要,开启FTP上传下载日志.可以监控访问者的所有行为.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xferlog_enable=YES</div><div class="line">xferlog_file=/var/<span class="built_in">log</span>/vsftpd/xferlog</div><div class="line">xferlog_std_format=YES</div><div class="line"></div><div class="line">dual_log_enable=YES</div><div class="line">vsftpd_log_file=/var/<span class="built_in">log</span>/vsftpd/vsftd.log</div></pre></td></tr></table></figure>
+<h2 id="SSH-服务器"><a href="#SSH-服务器" class="headerlink" title="SSH 服务器"></a>SSH 服务器</h2><h3 id="SSH-介绍"><a href="#SSH-介绍" class="headerlink" title="SSH 介绍"></a>SSH 介绍</h3><h3 id="SSH-常见问题"><a href="#SSH-常见问题" class="headerlink" title="SSH 常见问题"></a>SSH 常见问题</h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://jingyan.baidu.com/article/d169e186469f44436611d8ec.html" target="_blank" rel="external">如何在centos7环境下安装vsftpd</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/">在Centos7环境下开发环境打搭建杂集</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">terrancy</a></p>
+        <p><span>发布时间:</span>2017-06-21, 23:18:23</p>
+        <p><span>最后更新:</span>2018-04-09, 01:20:30</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/" title="在Centos7环境下开发环境打搭建杂集">http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/07/31/the-tutorial-about-microclient-with-tencent/">
+                    关于接入QQ微端游戏的教程
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/06/09/the-elegant-framework-about-pytorch/">
+                    深度学习-Pytorch框架初体验
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx-服务器"><span class="toc-number">1.</span> <span class="toc-text">Nginx 服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-介绍"><span class="toc-number">1.1.</span> <span class="toc-text">Nginx 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-安装"><span class="toc-number">1.2.</span> <span class="toc-text">Nginx 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-启动"><span class="toc-number">1.3.</span> <span class="toc-text">Nginx 启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP7"><span class="toc-number">2.</span> <span class="toc-text">PHP7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP7-介绍"><span class="toc-number">2.1.</span> <span class="toc-text">PHP7 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP7-安装"><span class="toc-number">2.2.</span> <span class="toc-text">PHP7 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP7-启动"><span class="toc-number">2.3.</span> <span class="toc-text">PHP7 启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTP-服务器"><span class="toc-number">3.</span> <span class="toc-text">FTP 服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FTP-介绍"><span class="toc-number">3.1.</span> <span class="toc-text">FTP 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FTP-安装"><span class="toc-number">3.2.</span> <span class="toc-text">FTP 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FTP-配置"><span class="toc-number">3.3.</span> <span class="toc-text">FTP 配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FTP-日志"><span class="toc-number">3.4.</span> <span class="toc-text">FTP 日志</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH-服务器"><span class="toc-number">4.</span> <span class="toc-text">SSH 服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH-介绍"><span class="toc-number">4.1.</span> <span class="toc-text">SSH 介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH-常见问题"><span class="toc-number">4.2.</span> <span class="toc-text">SSH 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox" data-tag="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <!-- <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a> -->
+        </div>
+        <script>
+            var baiduSharePic = $('body').css('background').replace(/.*url\(\"([^\)]+)\"\).*/gi,'$1') || "";
+            window._bd_share_config={
+                "common":{
+                  "bdSnsKey":{},
+                  "bdText":"在Centos7环境下开发环境打搭建杂集　| terrancy`s blog",
+                  "bdMini":"2",
+                  "bdMiniList":false,
+                  "bdPic": baiduSharePic,
+                  "bdStyle":"0",
+                  "bdSize":"24"
+                },
+                "share":{}
+              };
+              var scriptBaiduShare;
+              scriptBaiduShare = document.createElement('script');
+              scriptBaiduShare.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5);
+              scriptBaiduShare.id = 'id_bgimg_baidu_share';
+              if($('#id_bgimg_baidu_share').length) $('#id_bgimg_baidu_share').remove();
+              window._bd_share_main = false;
+              with(document)0[(getElementsByTagName('head')[0]||body).appendChild(scriptBaiduShare)];
+
+        </script>
+    
+
+    
+
+
+</div>
+
+
+
+
+    
+        
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/" class="cy_thread"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cyt2vJE4I';
+var conf = 'prod_693e657ec102e31bcd97557015f49ae2';
+ var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); })(); </script>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/07/31/the-tutorial-about-microclient-with-tencent/" title="上一篇: 关于接入QQ微端游戏的教程">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/06/09/the-elegant-framework-about-pytorch/" title="下一篇: 深度学习-Pytorch框架初体验">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/">话说七牛云</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/">关于海外支付SDK的集成方案与总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/the-tutorial-about-microclient-with-Steam/">Steam-SDK 接入教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/10/the-basical-tutorial-about-the-git/">Git基础教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/15/the-tutorial-about-wechat-mini-program/">微信小程序基础教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/06/the-tutorial-about-the-U8-server/">U8-服务端环境搭建及其思想架构的总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/31/the-tutorial-about-microclient-with-tencent/">关于接入QQ微端游戏的教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/">在Centos7环境下开发环境打搭建杂集</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/09/the-elegant-framework-about-pytorch/">深度学习-Pytorch框架初体验</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/the-web-plugin-with-google-customer-search/">博客站内搜索引擎</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/the-comment-system-about-duoshuo/">多说评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/the-web-plugin-with-music-player/">多功能网页音乐播放器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/the-way-about-AntiWannaCry/">WannaCry蠕虫病毒的快速蔓延与预防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/30/the-awesome-automated-operations-tool-ELK/">自动化运营维护人员的自动化运维工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/27/the-common-prolems-about-PHP/">PHP的常见问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/how-to-get-network-with-ipv6/">如何配置IPV6环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/how-to-get-facebook-live/">如何进行Facebook直播</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/the-similar-payment-sdk-about-bazaar/">Bazaar支付的服务端验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/">高效大并发游戏架构的整理与实施</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/some-conclusion-about-analysis-of-big-data/">关于大数据量的分析整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/the-api-server-was-under-DDOS-attacks/">游戏API服务器正面临着DDOS攻击</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/the-method-to-get-start-crawler-with-python/">入门级爬虫的基本姿势</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/how-to-get-simulation-login-zhihu-with-python/">如何使用python模拟登入知乎</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/the-difference-between-http-and-text/">通过Http获取和通过流的形式下载文件的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/research-about-phpunit-tool/">自动化测试工具PHPUNIT实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/research-about-api-live-sdk-with-youtube/">youtube直播sdk嵌入的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/how-to-use-package-manage-tool-for-php/">如何合理对待PHP包管理工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/life-can't-live-for-bread-or-mike-without-the-dream/">生活不止眼前的苟且,还有诗和远方</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/the-free-ssl-certificate-let-s-encrpt/">免费的SSL证书Let's Encrypt的安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/the-beautiful-system-boot-tool-with-burg/">使用burg为多系统点亮酷炫的开机启动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/restful-api-with-flask/">基于flask的RESTful-API应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/idea-about-position-of-the-content-tag-with-the-mouse-movement/">目录跟随鼠标移动定位</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/26/live-to-run-run-to-life/">跑步,与生俱来</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/research-about-api-live-sdk-with-twitch/">国外的直播SDK-Twitch的接入与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/22/the-document-about-vietnam-payment/">越南支付的接入总结文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/application-to-send-push-notifications-using-Google-Cloud-Messaging/">关于谷歌云推送的应用实例</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/docker-image-about-gitlab/">在docker环境下关于gitlab的镜像部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/docker-image-about-lamp-distributed/">在docker环境下关于分布式LAMP方案的镜像部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/04/a-tutorial-about-docker/">玩转docker镜像</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/resource-about-static-file-cdn-for-free/">关于常用优秀开源库免费CDN的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/how-to-switch-web-pages-without-refresh/">如何实现页面之间的切换不刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/">如何让自己的部落格变成功能性更强的系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/how-to-resolve-the-common-problems-about-git-that-occurred-as-usual/">关于在日常生活中经常发生的git问题的梳理与总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/how-to-resolve-mx-records-exception/">腾讯企业邮箱域名MX记录设置异常</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/13/research-about-encryption-with-different-pay-sdk/">浅谈支付加密及签名验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/research-about-using-live-from-alibaba/">浅谈九游直播接入</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/research-about-using-sdk-pay-from-different-channel/">浅谈支付SDK的接入</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/21/how-to-use-plugin-DPlayer/">html5视频播放器DPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/how-to-use-javascript-about-videoJs/">html5视频播放器VideoJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/fortress-besieged-personal/">围城</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/how-to-bulid-blog-with-hexo/">HEXO+Github,搭建属于自己的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/how-to-surfing-the-internet-all-over-the-world/">如何科学上网</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+              
+                  
+                      <span id="busuanzi_container_site_pv" style='display:none'>
+                          <span id="site-visit" >本站到访数:
+                              <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
+                          </span>
+                      </span>
+                  
+                  
+                      <span>, </span>
+                  
+                  
+                      <span id="busuanzi_container_page_pv" style='display:none'>
+                          <span id="page-visit">本页阅读量:
+                              <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                          </span>
+                      </span>
+                  
+              
+            </div>
+            <div class="footer-right">
+                <!--
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                -->
+                <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+            </div>
+        </div>
+        <div class="visit">
+            <i class="fa fa-copyright"></i>
+            2016-2018 terrancy
+            
+                    | <span style="display:inline"><a href="http://www.miitbeian.gov.cn/" target="_blank">闽ICP备16023392号-1</a></span>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+
+
+
+
+
+    <script src="/js/tpwidget.js"></script>
+    <script>
+    tpwidget("init", {
+        "flavor": "bubble",
+        "location": "WS7GQBRNR6V8",
+        "geolocation": "enabled",
+        "position": "bottom-right",
+        "margin": "60px 10px",
+        "language": "auto",
+        "unit": "c",
+        "theme": "chameleon",
+        "uid": "UF0695F19E",
+        "hash": "4a4afd8e2667df8de77c99b6a4124463"
+    });
+    tpwidget("show");
+    </script>
+
+
+
+  
+    <script>
+    auto= "close";
+    random= "open";
+    name= "菜鸟播放器";
+    geci= "open";
+    user= "50469052";
+    welcome= "open";
+    tips= "欢迎访问菜鸟部落格";
+    </script>
+    <script type="text/javascript" src="//www.terrancy.com/music/js/netease.js"></script>
+  
+
+
+
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.staticfile.org/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnumMax = 31;
+                var backgroundnumMin = 27;
+                var backgroundimg = "url(/background/AprilsLie/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * (backgroundnumMax-backgroundnumMin) + backgroundnumMin));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84318260-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+
+<script async="async" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" id="id_busuanzi"></script>
+
+    <script src="//cdn.staticfile.org/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+
+
+    <script type="text/javascript" color="0,0,255" opacity='0.3' zIndex="-2 " count="30" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+<script src="/js/tocListen.js"></script>
+
+  </div>
+</body>
+</html>

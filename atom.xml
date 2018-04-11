@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>terrancy`s blog</title>
+  <subtitle>放慢了步伐,只为跑得更远~</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.terrancy.com/"/>
+  <updated>2017-10-19T15:15:05.203Z</updated>
+  <id>http://blog.terrancy.com/</id>
+  
+  <author>
+    <name>terrancy</name>
+    <email>terrancy@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>话说七牛云</title>
+    <link href="http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/"/>
+    <id>http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/</id>
+    <published>2017-10-19T15:05:45.000Z</published>
+    <updated>2017-10-19T15:15:05.203Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近忙里偷闲写写小程序,为了让小程序整体的资源压缩到最小,应用内的绝大部分图片资源将使用云存储的方式上传到云端.对比了下阿里云与七牛云,性价比上而言,七牛云比较划算.&lt;/p&gt;
+&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gpake/qiniu-wxapp-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;基于七牛云API开发的微信小程序SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/kodo/sdk/1289/nodejs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛云API SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      最近忙里偷闲写写小程序,为了让小程序整体的资源压缩到最小,应用内的绝大部分图片资源将使用云存储的方式上传到云端.对比了下阿里云与七牛云,性价比上而言,七牛云比较划算.
+    
+    </summary>
+    
+      <category term="node" scheme="http://blog.terrancy.com/categories/node/"/>
+    
+    
+      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
+    
+      <category term="cloud storage" scheme="http://blog.terrancy.com/tags/cloud-storage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于海外支付SDK的集成方案与总结</title>
+    <link href="http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/"/>
+    <id>http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/</id>
+    <published>2017-10-18T06:09:28.000Z</published>
+    <updated>2018-04-03T16:32:32.858Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;因为业务的需要,公司的游戏不断的向海外拓展.自然地,我们的游戏也要根据当地的需要接入不同的支付方式.其中,最具代表性的,首当其冲的非苹果支付和谷歌支付莫属.但是,除此之外也有其他的支付方式,比如PayPal,Mycard等等.&lt;/p&gt;
+&lt;h2 id=&quot;PayPal支付&quot;&gt;&lt;a href=&quot;#PayPal支付&quot; class=&quot;headerlink&quot; title=&quot;PayPal支付&quot;&gt;&lt;/a&gt;PayPal支付&lt;/h2&gt;&lt;p&gt;相对于国外其他的第三方支付,Paypal支付算是一个比较容易上手的第三方支付.Paypal支付移动SDK继承三种方式的支付,如下所示:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a) 接受信用卡和Paypal支付: 开发者能够简单地将Paypal支付和信用卡支付集成到应用中,信用卡支付手动支付和扫码支付.&lt;/li&gt;
+&lt;li&gt;b) 未来支付: 一旦客户将Paypal账户授权给开发者的应用中,使用Paypal支付时无需再次登录即可完成付款.&lt;/li&gt;
+&lt;li&gt;c) 原生支付: 用户付款时无需重定向到新页面即可完成付款&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;OAuth2协议&quot;&gt;&lt;a href=&quot;#OAuth2协议&quot; class=&quot;headerlink&quot; title=&quot;OAuth2协议&quot;&gt;&lt;/a&gt;OAuth2协议&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;1)开发者使用key和secret向Paypal服务器请求token(OAuth2协议).&lt;/li&gt;
+&lt;li&gt;2)之后的请求都需要携带token认证完成操作.&lt;/li&gt;
+&lt;li&gt;3)用户支付成功之后,服务端需要将利用客户端回传的数据向Paypal发起支付确认.&lt;/li&gt;
+&lt;li&gt;4)当token过期失效是重新获取Token.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;获取授权Token&quot;&gt;&lt;a href=&quot;#获取授权Token&quot; class=&quot;headerlink&quot; title=&quot;获取授权Token&quot;&gt;&lt;/a&gt;获取授权Token&lt;/h3&gt;&lt;p&gt;开发者从开发者后台相应的应用上获取client_id和secret.通过这两个秘钥串想服务器请求token.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl -v https://api.sandbox.paypal.com/v1/oauth2/token \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   -H &lt;span class=&quot;string&quot;&gt;&quot;Accept: application/json&quot;&lt;/span&gt; \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   -H &lt;span class=&quot;string&quot;&gt;&quot;Accept-Language: en_US&quot;&lt;/span&gt; \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   -u &lt;span class=&quot;string&quot;&gt;&quot;client_id:secret&quot;&lt;/span&gt; \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;_&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;grant_type=client_credentials&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;请求成功之后,响应的参数格式数如下所示:&lt;br&gt;其中, Access-Token 表示获取到token值.expires_in表示该token的过期时间.scope表示授权可请求的权限.&lt;/p&gt;
+&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;scope&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/payments/payouts https://api.paypal.com/v1/vault/credit-card/.*&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;nonce&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;2017-06-08T18:30:28ZCl54Q_OlDqP6-4D03sDT8wRiHjKrYlb5EH7Di0gRrds&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;Access-Token&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Access-Token&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;token_type&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;Bearer&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;app_id&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;APP-80W284485P519543T&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;expires_in&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;32398&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;支付验证&quot;&gt;&lt;a href=&quot;#支付验证&quot; class=&quot;headerlink&quot; title=&quot;支付验证&quot;&gt;&lt;/a&gt;支付验证&lt;/h3&gt;&lt;p&gt;开发者通过将结合用户支付成功之后从客户端回传的参数(订单号)向Paypal服务器指定的API请求支付验证.此时需要在请求头中携带token.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;curl https://api.sandbox.paypal.com/v1/payments/payment/PAY-5YK922393D847794YKER7MUI \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  -H &lt;span class=&quot;string&quot;&gt;&quot;Content-Type: application/json&quot;&lt;/span&gt; \&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  -H &lt;span class=&quot;string&quot;&gt;&quot;Authorization: Bearer accessToken&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;请求成功之后,响应的参数格式如下所示:&lt;br&gt;其中,environment表示请求的支付环境,分为sandbox(沙盒模式)和正式模式(live).state表示支付状态,approved表示支付验证已通过. 开发者可以通过对响应值携带的相关参数进行二次验证.&lt;/p&gt;
+&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;client&quot;&lt;/span&gt;:&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;environment&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;sandbox&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;paypal_sdk_version&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;2.0.0&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;platform&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;iOS&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;product_name&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;PayPal iOS SDK;&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;response&quot;&lt;/span&gt;:&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;create_time&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;2014-02-12T22:29:49Z&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;id&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;PAY-564191241M8701234KL57LXI&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;intent&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;sale&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;state&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;approved&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attr&quot;&gt;&quot;response_type&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;payment&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Mycard支付&quot;&gt;&lt;a href=&quot;#Mycard支付&quot; class=&quot;headerlink&quot; title=&quot;Mycard支付&quot;&gt;&lt;/a&gt;Mycard支付&lt;/h2&gt;&lt;p&gt;Mycard支付是一个主要面向港澳台地区游戏充值代币平台,它的主要优势在于能够因地适宜的提供适合当地支付方式.按照交易模式来划分,主要分为网页支付和客户端支付两种.而按照付费方式来划分,又可以分为卡片支付、会员扣点交易、小额付款交易.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;申请交易授权码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;研发商在进行所有的相关的交易之前,需要向Mycard服务端申请授权码.当交易模式为Web,付费方式为INGAME,充值服务为Server-side时,此时进入网页版本支付模式.否则就是客户端支付.&lt;/p&gt;
+&lt;h3 id=&quot;客户端支付&quot;&gt;&lt;a href=&quot;#客户端支付&quot; class=&quot;headerlink&quot; title=&quot;客户端支付&quot;&gt;&lt;/a&gt;客户端支付&lt;/h3&gt;&lt;h4 id=&quot;支付流程&quot;&gt;&lt;a href=&quot;#支付流程&quot; class=&quot;headerlink&quot; title=&quot;支付流程&quot;&gt;&lt;/a&gt;支付流程&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;客户端通过API向服务端发起请求,由服务端代客户端向Mycard服务端申请相关的授权码.服务端相关的代码如下所示.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getMyCardAuthCode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrGetMyCardAuthWhere = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;FacServiceId&quot;&lt;/span&gt;          =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;FacServiceId&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;FacTradeSeq&quot;&lt;/span&gt;          =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;FacTradeSeq&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;TradeType&quot;&lt;/span&gt;             =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;TradeType&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;ServerId&quot;&lt;/span&gt;               =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;ServerId&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;CustomerId&quot;&lt;/span&gt;          =&amp;gt;     $arrData[&lt;span class=&quot;string&quot;&gt;&#39;CustomerId&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;PaymentType&quot;&lt;/span&gt;        =&amp;gt;     &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;ItemCode&quot;&lt;/span&gt;            =&amp;gt;     &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;ProductName&quot;&lt;/span&gt;        =&amp;gt;     strtolower(urlencode($arrData[&lt;span class=&quot;string&quot;&gt;&#39;ProductName&#39;&lt;/span&gt;])),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;Amount&quot;&lt;/span&gt;              =&amp;gt;     $arrData[&lt;span class=&quot;string&quot;&gt;&#39;Amount&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;Currency&quot;&lt;/span&gt;             =&amp;gt;    strtoupper($arrData[&lt;span class=&quot;string&quot;&gt;&#39;Currency&#39;&lt;/span&gt;]),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;SandBoxMode&quot;&lt;/span&gt;        =&amp;gt;     &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;sandBox&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $signature = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getPaySign($arrGetMyCardAuthWhere);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrGetMyCardAuthWhere[&lt;span class=&quot;string&quot;&gt;&#39;Hash&#39;&lt;/span&gt;] = $signature;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $rootUrlMyCard= &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;sandBox&#39;&lt;/span&gt;] ? &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardAuthTest : &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardAuthB2B;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $urlMyCard = $rootUrlMyCard.&lt;span class=&quot;string&quot;&gt;&quot;?&quot;&lt;/span&gt;.urldecode(http_build_query($arrGetMyCardAuthWhere,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrGetMyCardAuth = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;paySDK-&amp;gt;curlPayByGet($urlMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;logRequest($urlMyCard.PHP_EOL.$arrGetMyCardAuth);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrGetMyCardAuth) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : json_decode($arrGetMyCardAuth,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端获取相应的授权码之后,在SDK内发起支付请求唤起支付界面,再由玩家进行支付操作.&lt;/li&gt;
+&lt;li&gt;当玩家在游戏内成功完成交易之后,将申请得到的授权码再回传给我服务端请求发货.&lt;/li&gt;
+&lt;li&gt;服务端获取到授权码之后先去验证交易结果,然后再进行请款,最后在请求发货.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getMyCardTradeQuery&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrAuthCode = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;AuthCode&quot;&lt;/span&gt;      =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $rootUrlMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;sandBox&#39;&lt;/span&gt;] ?  &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardQueryTest : &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardQueryB2B;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $urlMyCard = $rootUrlMyCard.&lt;span class=&quot;string&quot;&gt;&quot;?&quot;&lt;/span&gt;.http_build_query($arrAuthCode,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrGetMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;paySDK-&amp;gt;curlPayByGet($urlMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;logRequest($urlMyCard.PHP_EOL.$arrGetMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrRst = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrGetMyCard) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : json_decode($arrGetMyCard,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrRst) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : $arrRst;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getMyCardPaymentConfirm&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrAuthCode = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;AuthCode&quot;&lt;/span&gt;      =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $rootUrlMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;sandBox&#39;&lt;/span&gt;] ?  &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardConfirmTest : &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardConfirmB2B;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $urlMyCard = $rootUrlMyCard.&lt;span class=&quot;string&quot;&gt;&quot;?&quot;&lt;/span&gt;.http_build_query($arrAuthCode,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrGetMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;paySDK-&amp;gt;curlPayByGet($urlMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;logRequest($urlMyCard.PHP_EOL.$arrGetMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrRst = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrGetMyCard) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : json_decode($arrGetMyCard,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrRst) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : $arrRst;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;网页版支付&quot;&gt;&lt;a href=&quot;#网页版支付&quot; class=&quot;headerlink&quot; title=&quot;网页版支付&quot;&gt;&lt;/a&gt;网页版支付&lt;/h3&gt;&lt;p&gt;进入网页版支付模式下,网页支付可分为自定义页面以及官方推荐页面.&lt;/p&gt;
+&lt;h4 id=&quot;支付流程-1&quot;&gt;&lt;a href=&quot;#支付流程-1&quot; class=&quot;headerlink&quot; title=&quot;支付流程&quot;&gt;&lt;/a&gt;支付流程&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;玩家选择指定的充值档位之后需要通过Ajax向服务端发起请求,由服务端代网页端向Mycard服务端申请相关的授权码.服务端相关的代码略.&lt;/li&gt;
+&lt;li&gt;玩家需要填写支付的点卡信息,网页需要将授权码和相关的点卡信息给服务端先进行验证,再进行请款,最后再请求发货.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getMyCardPayInGamePay&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;]) &amp;amp;&amp;amp; !&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrData[&lt;span class=&quot;string&quot;&gt;&#39;CardID&#39;&lt;/span&gt;]) &amp;amp;&amp;amp; !&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrData[&lt;span class=&quot;string&quot;&gt;&#39;CardPW&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrMyCardInGamePayWhere = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;AuthCode&quot;&lt;/span&gt;      =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;AuthCode&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;CardID&quot;&lt;/span&gt;      =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;CardID&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;CardPW&quot;&lt;/span&gt;      =&amp;gt;      $arrData[&lt;span class=&quot;string&quot;&gt;&#39;CardPW&#39;&lt;/span&gt;],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $signature = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getPaySign($arrMyCardInGamePayWhere);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrMyCardInGamePayWhere[&lt;span class=&quot;string&quot;&gt;&#39;Hash&#39;&lt;/span&gt;] = $signature;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $rootUrlMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;arrConfigSDK[&lt;span class=&quot;string&quot;&gt;&#39;sandBox&#39;&lt;/span&gt;] ?  &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardInGamePayTest : &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;::urlMyCardInGamePayB2B;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $urlMyCard = $rootUrlMyCard.&lt;span class=&quot;string&quot;&gt;&quot;?&quot;&lt;/span&gt;.http_build_query($arrMyCardInGamePayWhere,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrGetMyCard = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;paySDK-&amp;gt;curlPayByGet($urlMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;logRequest($urlMyCard.PHP_EOL.$arrGetMyCard);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrRst = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrGetMyCard) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : json_decode($arrGetMyCard,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($arrRst) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : $arrRst;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.paypal.com/docs/api/overview/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Paypal支付-开发者获取令牌环&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Paypay支付-信用卡支付&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      因为业务的需要,公司的游戏不断的向海外拓展.自然地,我们的游戏也要根据当地的需要接入不同的支付方式.其中,最具代表性的,首当其冲的非苹果支付和谷歌支付莫属.但是,除此之外也有其他的支付方式,比如PayPal,Mycard等等.
+    
+    </summary>
+    
+      <category term="pay" scheme="http://blog.terrancy.com/categories/pay/"/>
+    
+    
+      <category term="pay" scheme="http://blog.terrancy.com/tags/pay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Steam-SDK 接入教程</title>
+    <link href="http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/"/>
+    <id>http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/</id>
+    <published>2017-09-30T14:32:09.000Z</published>
+    <updated>2017-10-11T15:42:06.688Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.腾讯游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.在海外,作为最重要的端游平台,Steam的名气几乎在游戏玩家之间传播着.&lt;/p&gt;
+&lt;h2 id=&quot;支付流程&quot;&gt;&lt;a href=&quot;#支付流程&quot; class=&quot;headerlink&quot; title=&quot;支付流程&quot;&gt;&lt;/a&gt;支付流程&lt;/h2&gt;&lt;h3 id=&quot;基本流程&quot;&gt;&lt;a href=&quot;#基本流程&quot; class=&quot;headerlink&quot; title=&quot;基本流程&quot;&gt;&lt;/a&gt;基本流程&lt;/h3&gt;&lt;p&gt;玩家在游戏内购买道具并支付的流程如下,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;①玩家购买指定的道具时,客户端需要向服务端相关参数.&lt;/li&gt;
+&lt;li&gt;②服务端按照Steam提供的api发起支付请求.请求成功之后,界面上会自动弹出Stea支付结算界面.&lt;/li&gt;
+&lt;li&gt;③如果请求时调用的是沙盒测试环境,可以直接购买该道具.如果是正式环境,玩家余额不足事会引导玩家去充值.&lt;/li&gt;
+&lt;li&gt;④玩家玩家支付之后,客户端通过监听Steam响应,并将结果通知服务端.&lt;/li&gt;
+&lt;li&gt;⑤服务端将按照Steam提供的api发起结束交易请求.如果支付成功,需要根据订单给玩家发送指定的道具.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;服务端接口&quot;&gt;&lt;a href=&quot;#服务端接口&quot; class=&quot;headerlink&quot; title=&quot;服务端接口&quot;&gt;&lt;/a&gt;服务端接口&lt;/h3&gt;&lt;p&gt;服务端在整个支付流程中主要负责两部分,发起支付与结束交易.当然,其前提必须要有指定的APP的支付权限.&lt;/p&gt;
+&lt;h4 id=&quot;获取开发者支付秘钥&quot;&gt;&lt;a href=&quot;#获取开发者支付秘钥&quot; class=&quot;headerlink&quot; title=&quot;获取开发者支付秘钥&quot;&gt;&lt;/a&gt;获取开发者支付秘钥&lt;/h4&gt;&lt;p&gt;获取开发者支付秘钥的前提是当前Steamworks的账号要有管理员权限.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;①选择或者创建一个包含待创建秘钥的与应用的群组.&lt;/li&gt;
+&lt;li&gt;②点击该群组查看群组右侧,如果尚未创建秘钥,只要点击「Create Web API Key」选项;否则可直接在右侧查看该群组的秘钥.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;通用接口规范&quot;&gt;&lt;a href=&quot;#通用接口规范&quot; class=&quot;headerlink&quot; title=&quot;通用接口规范&quot;&gt;&lt;/a&gt;通用接口规范&lt;/h4&gt;&lt;p&gt;支付接口分为两部分,分别为&lt;a href=&quot;https://partner.steamgames.com/doc/webapi/ISteamMicroTxn#InitTxn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;发起支付&lt;/a&gt;,&lt;a href=&quot;https://partner.steamgames.com/doc/webapi/ISteamMicroTxn#FinalizeTxn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;介绍交易&lt;/a&gt;.&lt;br&gt;在&lt;a href=&quot;https://partner.steamgames.com/doc/features/microtransactions/implementation#1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小额交易实现指南&lt;/a&gt;这章中,对支付API的规范有做了说明.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Content-Type should be “application/x-www-form-urlencoded” and the POST parameters should be in the body of the request in standard form urlencoding format. Text should be transmitted as UTF-8.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因此,在代码请求的时候需要明确数据格式,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;①请求头里设置好 “application/x-www-form-urlencoded”&lt;/li&gt;
+&lt;li&gt;②请求以POST的方式,数据拼接以key1=value1&amp;amp;key2=value2..的形式.&lt;br&gt;具体的代码实现方式如下所示,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;curlByPay&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData, $method,$sandbox=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonData = urldecode(http_build_query($arrData,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt;($method)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;InitTxn&quot;&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay = $sandbox ? &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlInitTxnSandBox : &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlInitTxnLive;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;FinalizeTxn&quot;&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay =$sandbox ? &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlFinalizeTxnSandBox : &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlFinalizeTxnLive;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay  = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $header  = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Content-Type:application/x-www-form-urlencoded&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Accept: application/json&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Accept-Language: en_US&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($urlPay))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//简单的curl&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $ch = curl_init($urlPay);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_RETURNTRANSFER, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_POST, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch,CURLOPT_HTTPHEADER,$header);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $result = curl_exec($ch);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_close($ch);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $result = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($result) ? &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt; : json_encode(json_decode($result,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $result;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;发起支付&quot;&gt;&lt;a href=&quot;#发起支付&quot; class=&quot;headerlink&quot; title=&quot;发起支付&quot;&gt;&lt;/a&gt;发起支付&lt;/h4&gt;&lt;p&gt;玩家点击道具购买按钮之后,客户端需要将指定的参数传送到服务端.由服务端负责将相关的数据提交到Steam服务器.一旦数据请求成功,客户端将会弹出指定道具的支付界面.游戏服务端和Steam交互过程中,需要调用发起支付API.&lt;/p&gt;
+&lt;p&gt;需要注意的是,该请求涉及到支付,需要使用开发者秘钥,并且该请求最好放在相对安全的服务单,而不是客户端.以下只列举出调用该API必须的参数,&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;key&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Steamworks Web API publisher authentication key.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;orderid&lt;/td&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Unique 64-bit ID for order&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;steamid&lt;/td&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Steam ID of user making purchase.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;appid&lt;/td&gt;
+&lt;td&gt;uint32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;App ID of game this transaction is for.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;itemcount&lt;/td&gt;
+&lt;td&gt;uint32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Number of items in cart.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;language&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;ISO 639-1 language code of the item descriptions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;currency&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;ISO 4217 currency code.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;itemid[0]&lt;/td&gt;
+&lt;td&gt;uint32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;3rd party ID for item.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;qty[0]&lt;/td&gt;
+&lt;td&gt;uint32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Quantity of this item.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount[0]&lt;/td&gt;
+&lt;td&gt;int32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Total cost (in cents) of item(s).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description[0]&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Description of item.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;通过该发起支付的API请求之后,会收到相应的响应.具体的数据形式如下,&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;result&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Result of the operation. (OK or Failure)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;params[‘orderid’]&lt;/td&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;ID for order.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;params[‘transid’]&lt;/td&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Steam transaction ID.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;params[‘steamurl’]&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Optional URL returned when the usersession input is set to web.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;error[‘errorcode’]&lt;/td&gt;
+&lt;td&gt;int32&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Error or event code.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;error[‘errordesc’]&lt;/td&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Message for error or event.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&quot;结束交易&quot;&gt;&lt;a href=&quot;#结束交易&quot; class=&quot;headerlink&quot; title=&quot;结束交易&quot;&gt;&lt;/a&gt;结束交易&lt;/h4&gt;&lt;p&gt;一旦弹出支付结算界面之后,客户端需要开始通过Steam SDK监听玩家支付行为.当玩家完成支付之后,客户端通过SDK收到支付结果.从而判断是否向服务端发起结束交易的行为.&lt;/p&gt;
+&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;p&gt;普通秘钥和开发者秘钥的使用的域名是分开的,根据用户使用的频繁度和安全性不同也有不同.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;①普通用户的API是走Akamai的cdn缓存,一方面是保证用户请求的速度,另一方面也减轻服务器的资源负载.&lt;/li&gt;
+&lt;li&gt;②开发者秘钥涉及到支付等涉及玩家与商家的隐私信息.一方面使用SSL证书保证数据传输加密,另一方面使用独立的服务器实时数据交互保证数据的准确性.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;p&gt;数据响应不够明确,或者可能是设计的疏忽.&lt;/p&gt;
+&lt;p&gt;在请求发起支付的时候,因为客户端的失误传入服务端的Steam ID导致每次请求时提示服务器内部错误.按照正常理解,服务器内部错误应该是服务器本身报错,从而误导开发者.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://partner.steamgames.com/doc/features/microtransactions/implementation#1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小额交易实现指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://partner.steamgames.com/doc/webapi_overview/auth&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;获取开发者秘钥&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://steamcommunity.com/app/219640/discussions/0/611702631248143398/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;steam 内部错误&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      关于微端游戏接入Steam开放平台的流程的整理
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="Steam" scheme="http://blog.terrancy.com/tags/Steam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git基础教程</title>
+    <link href="http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/"/>
+    <id>http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/</id>
+    <published>2017-09-09T16:42:05.000Z</published>
+    <updated>2017-10-18T23:56:19.744Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;工作中必然会接触到代码版本管理工具,它有效地提高了程序猿的代码管理效率,大大的节约了工作成本.其中,最常用的便是SVN和GIT两种版本管理工具.&lt;/p&gt;
+&lt;h2 id=&quot;SVN基础篇&quot;&gt;&lt;a href=&quot;#SVN基础篇&quot; class=&quot;headerlink&quot; title=&quot;SVN基础篇&quot;&gt;&lt;/a&gt;SVN基础篇&lt;/h2&gt;&lt;h3 id=&quot;钩子的用处&quot;&gt;&lt;a href=&quot;#钩子的用处&quot; class=&quot;headerlink&quot; title=&quot;钩子的用处&quot;&gt;&lt;/a&gt;钩子的用处&lt;/h3&gt;&lt;p&gt;svn钩子的好处在于当用户提交前后触发的一些行为.按照具体的行为分为提交前的日志检查和提交后的代码部署&lt;/p&gt;
+&lt;h4 id=&quot;提交前日记检查&quot;&gt;&lt;a href=&quot;#提交前日记检查&quot; class=&quot;headerlink&quot; title=&quot;提交前日记检查&quot;&gt;&lt;/a&gt;提交前日记检查&lt;/h4&gt;&lt;p&gt;用户将数据提交到svn的时候需要填写提交的内容作为当前版本的日志记录.默认情况是不强制用户填写,但如果没有养成日志记录的习惯的话,版本控制的作用效果微乎其微.因为此时用户无法顺利的做版本管理和回溯.因此,我们需要做svn上做数据提交前的日志自检功能,强制用户做日志记录.这里用的钩子是pre-commit.&lt;/p&gt;
+&lt;p&gt;关于日志提交自检的钩子代码,如下所示:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; off&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem SVN强制写注释的hooks脚本(Windows)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem 文件名是: pre-commit.bat,放到repository/hooks目录下&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;setlocal&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; SVN_BINDIR=&lt;span class=&quot;string&quot;&gt;&quot;这里填写VisualSVN Server的Bin目录&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; REPOS=%1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; TXN=%2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem 检查日志信息不少于10个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;%SVN_BINDIR%\svnlook &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;%REPOS%&quot;&lt;/span&gt; -t &lt;span class=&quot;string&quot;&gt;&quot;%TXN%&quot;&lt;/span&gt; | findstr &lt;span class=&quot;string&quot;&gt;&quot;..........&quot;&lt;/span&gt; &amp;gt; nul&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;If %errorlevel% gtr 0 goto err&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; 0&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:err&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; 提交时必须填写注释，并且不少于10个字符! 1&amp;gt;&amp;amp;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; 1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;提交后自动部署&quot;&gt;&lt;a href=&quot;#提交后自动部署&quot; class=&quot;headerlink&quot; title=&quot;提交后自动部署&quot;&gt;&lt;/a&gt;提交后自动部署&lt;/h4&gt;&lt;p&gt;有些时候为了方便和服务器资源的利用,在一台服务器同时部署svn服务器和web服务器.将用户提交的数据部署到web路径下就可以正常访问.这样用户提交的代码可以很直观的显示出来.这样做确实很方便,当然其中也隐藏了一些小技巧.那就是利用svn的钩子实现代码自动部署.这里用到的钩子是post-commit.&lt;/p&gt;
+&lt;p&gt;关于代码自动化部署的钩子代码,如下所示:&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; off&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET REPOS=%1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET USER=%2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Code Deployed at %date:~0,10% %time:~0,8%&quot;&lt;/span&gt; &amp;gt;&amp;gt; 提交时的日志路径&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET SVN=&lt;span class=&quot;string&quot;&gt;&quot;这里填写VisualSVN Server的Bin目录/svn.exe&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET DIR=&lt;span class=&quot;string&quot;&gt;&quot;待部署的站点根目录&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;%SVN% update %DIR% --username 账号 --password 密码 --non-interactive&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;初学者可能无法一步到位,看看是否也踩到坑了.以下是一些总结,对Windows和Linux的都大同小异.主要是执行权限和目录路径不规范.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提示 svn: E020024: Error resolving case.可能是指定的目录不合法,特别是windows下的路径分隔符是反斜杠(“\“),在指定的字母之前是有转义功能.此时的反斜杠就是转义符,不再是目录路径分隔符了.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最简单的做法就是更换目录路径,避免转义符.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手动执行改文件代码能正常部署到指定的站点,但提交数据的时候却无法自动部署.全程没有发现报错,就算报错也看不到.这个问题,明显就是Visual SVN Server服务的执行权限不足.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单操作 win+R  运行 services.msc 找到visual svn server 服务 右键属性 登陆面板 设置桌面交互或者管理员权限再试.&lt;/p&gt;
+&lt;h2 id=&quot;GIT基础篇&quot;&gt;&lt;a href=&quot;#GIT基础篇&quot; class=&quot;headerlink&quot; title=&quot;GIT基础篇&quot;&gt;&lt;/a&gt;GIT基础篇&lt;/h2&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.chenyudong.com/archives/tortoisegit-use-key-authentication.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tortoisegit使用密钥连接服务器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/dahuzix/article/details/49053507&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用svn钩子hooks/post-commit实现代码自动部署-LINUX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xiezhengcai/archive/2013/11/27/3445457.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SVN利用钩子实现代码同步到WEB目录-WINDOWS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      工作中必然会接触到代码版本管理工具,它有效地提高了程序猿的代码管理效率,大大的节约了工作成本.其中,最常用的便是SVN和GIT两种版本管理工具.
+    
+    </summary>
+    
+      <category term="git" scheme="http://blog.terrancy.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://blog.terrancy.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序基础教程</title>
+    <link href="http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/"/>
+    <id>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</id>
+    <published>2017-08-14T17:59:47.000Z</published>
+    <updated>2017-09-05T18:10:53.214Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.&lt;/p&gt;
+&lt;h2 id=&quot;微信小程序&quot;&gt;&lt;a href=&quot;#微信小程序&quot; class=&quot;headerlink&quot; title=&quot;微信小程序&quot;&gt;&lt;/a&gt;微信小程序&lt;/h2&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;h3 id=&quot;前端模块&quot;&gt;&lt;a href=&quot;#前端模块&quot; class=&quot;headerlink&quot; title=&quot;前端模块&quot;&gt;&lt;/a&gt;前端模块&lt;/h3&gt;&lt;h3 id=&quot;服务端模块&quot;&gt;&lt;a href=&quot;#服务端模块&quot; class=&quot;headerlink&quot; title=&quot;服务端模块&quot;&gt;&lt;/a&gt;服务端模块&lt;/h3&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h3&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>U8-服务端环境搭建及其思想架构的总结</title>
+    <link href="http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/"/>
+    <id>http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/</id>
+    <published>2017-08-05T17:48:48.000Z</published>
+    <updated>2017-10-09T22:48:35.699Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前段阵子一直在研究U8SDK的架构以及服务端的运行逻辑,顺便重新回顾大学期间学习的Java编程.结合最近的实践体验总结些U8Server的思路.&lt;/p&gt;
+&lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;p&gt;U8SDK是基于Java编写的,&lt;/p&gt;
+&lt;h2 id=&quot;总体架构&quot;&gt;&lt;a href=&quot;#总体架构&quot; class=&quot;headerlink&quot; title=&quot;总体架构&quot;&gt;&lt;/a&gt;总体架构&lt;/h2&gt;&lt;h2 id=&quot;用户模块&quot;&gt;&lt;a href=&quot;#用户模块&quot; class=&quot;headerlink&quot; title=&quot;用户模块&quot;&gt;&lt;/a&gt;用户模块&lt;/h2&gt;&lt;h2 id=&quot;支付模块&quot;&gt;&lt;a href=&quot;#支付模块&quot; class=&quot;headerlink&quot; title=&quot;支付模块&quot;&gt;&lt;/a&gt;支付模块&lt;/h2&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.uustory.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; 优优网事&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      前段阵子一直在研究U8SDK的架构以及服务端的运行逻辑,顺便重新回顾大学所有的基础Java.结合最近的实践体验总结些U8Server的思路.
+    
+    </summary>
+    
+      <category term="Java" scheme="http://blog.terrancy.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://blog.terrancy.com/tags/Java/"/>
+    
+      <category term="U8" scheme="http://blog.terrancy.com/tags/U8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于接入QQ微端游戏的教程</title>
+    <link href="http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/"/>
+    <id>http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/</id>
+    <published>2017-07-31T01:14:32.000Z</published>
+    <updated>2017-10-07T13:57:35.215Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.QQ游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.&lt;/p&gt;
+&lt;h2 id=&quot;常用接口&quot;&gt;&lt;a href=&quot;#常用接口&quot; class=&quot;headerlink&quot; title=&quot;常用接口&quot;&gt;&lt;/a&gt;常用接口&lt;/h2&gt;&lt;p&gt;接入QQ游戏平台端游有几个必须接入的游戏接口,分别为获取用户信息,蓝钻信息,Q点直购.这些接口接入最麻烦的就是签名验证功能.其中获取用户信息、蓝钻信息接口和Q点直购在签名验证上存在一些区别.以下对签名验证功能做一些简要的讲解.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://wiki.open.qq.com/wiki/%E8%85%BE%E8%AE%AF%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E7%AD%BE%E5%90%8D%E5%8F%82%E6%95%B0sig%E7%9A%84%E8%AF%B4%E6%98%8E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三方应用开放平台参数验证&lt;/a&gt;,将请求源串以及密钥根据一定签名方法生成的签名值，用来提高传输过程参数的防篡改性.签名的生成分为3个步骤:构造源串,构造密钥,生成签名.&lt;/p&gt;
+&lt;h3 id=&quot;构造源串&quot;&gt;&lt;a href=&quot;#构造源串&quot; class=&quot;headerlink&quot; title=&quot;构造源串&quot;&gt;&lt;/a&gt;构造源串&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;将请求的URI路径进行URL编码.&lt;/li&gt;
+&lt;li&gt;将除’sign’以外的其他参数按照键值key进行字典升序排列&lt;/li&gt;
+&lt;li&gt;将排序的参数(key=value)按照”&amp;amp;”拼接起来,并进行URL编码&lt;/li&gt;
+&lt;li&gt;将请求方式(GET或者POST)以及第一、三步骤生成URL编码字符串用”&amp;amp;”拼接起来.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;构造密钥&quot;&gt;&lt;a href=&quot;#构造密钥&quot; class=&quot;headerlink&quot; title=&quot;构造密钥&quot;&gt;&lt;/a&gt;构造密钥&lt;/h3&gt;&lt;p&gt;在开放平台申请应用之后获取一串字符串(appkey),在appkey末尾加上”&amp;amp;”,就是密钥源串&lt;/p&gt;
+&lt;h3 id=&quot;生成签名&quot;&gt;&lt;a href=&quot;#生成签名&quot; class=&quot;headerlink&quot; title=&quot;生成签名&quot;&gt;&lt;/a&gt;生成签名&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;使用HMAC-SHA1利用第二步生成的秘钥对第一步生成源串加密.(php5.1.2之后直接使用hash_hmac函数)&lt;/li&gt;
+&lt;li&gt;将加密后的字符串进行Base64编码.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过以上几个步骤变可得到签名.在常用的这个接口接入验证的时候会使用到.当然,为了帮助我们检查签名的有效性,开放者后台有专用的&lt;a href=&quot;http://open.qq.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开放者平台联调工具&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;代码演示&quot;&gt;&lt;a href=&quot;#代码演示&quot; class=&quot;headerlink&quot; title=&quot;代码演示&quot;&gt;&lt;/a&gt;代码演示&lt;/h3&gt;&lt;p&gt;以下是PHP版本的sign源串加密算法&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getSDKSignature&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData,$uri,$arrTemp=&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $strUri = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getUriList($uri);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;list&lt;/span&gt;($ms,$sc) = explode(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;,microtime());&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $time = @date(&lt;span class=&quot;string&quot;&gt;&#39;[d/M/Y:H:i:s]&#39;&lt;/span&gt;).&lt;span class=&quot;string&quot;&gt;&quot;[$ms]&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($strUri))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $idApp = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;idApp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $keyApp = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;keyApp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataGetTemp = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;appid&quot;&lt;/span&gt;      =&amp;gt;   $idApp,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;pf&quot;&lt;/span&gt;         =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;qqgame&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;format&quot;&lt;/span&gt;     =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;json&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;zoneid&quot;&lt;/span&gt;     =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataGetTemp = is_array($arrTemp) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : $arrDataGetTemp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrData = array_merge($arrData,$arrDataGetTemp);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $method = &lt;span class=&quot;string&quot;&gt;&quot;GET&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ksort($arrData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $strData = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;UrlEncode($uri,$arrData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $strOriginal = $method.&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;.urlencode($strUri).&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;.urlencode($strData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $appKey = $keyApp.&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $encrypt = hash_hmac(&lt;span class=&quot;string&quot;&gt;&quot;sha1&quot;&lt;/span&gt;,$strOriginal,$appKey,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $signature = base64_encode($encrypt);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $signature = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($signature) ? &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt; : $signature;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrRst = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;data&quot;&lt;/span&gt;      =&amp;gt;      $arrData,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;signature&quot;&lt;/span&gt;     =&amp;gt;  $signature,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $arrRst;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;因为支付部分对sign验证部分要求比较严格,在代码上做了一些调整.单独抽出重写.&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PayUrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($string)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = urlencode($string);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%2A&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%21&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;!&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%28&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;(&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%29&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;+&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%20&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;_&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%5F&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;.&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%2E&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;-&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%2D&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $encodeStr;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getPayUrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&amp;amp;$string)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $string = QQGamePay::PayUrlEncode($string);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;UrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($uri,$arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    strcmp($uri,&lt;span class=&quot;string&quot;&gt;&quot;delivery_goods&quot;&lt;/span&gt;) ? &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; : array_walk($arrData,&lt;span class=&quot;string&quot;&gt;&quot;QQGamePay::getPayUrlEncode&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; urldecode(http_build_query($arrData,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;前端接口调用&quot;&gt;&lt;a href=&quot;#前端接口调用&quot; class=&quot;headerlink&quot; title=&quot;前端接口调用&quot;&gt;&lt;/a&gt;前端接口调用&lt;/h2&gt;&lt;h3 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h3&gt;&lt;h3 id=&quot;开通蓝钻&quot;&gt;&lt;a href=&quot;#开通蓝钻&quot; class=&quot;headerlink&quot; title=&quot;开通蓝钻&quot;&gt;&lt;/a&gt;开通蓝钻&lt;/h3&gt;&lt;h3 id=&quot;QQ点直购&quot;&gt;&lt;a href=&quot;#QQ点直购&quot; class=&quot;headerlink&quot; title=&quot;QQ点直购&quot;&gt;&lt;/a&gt;QQ点直购&lt;/h3&gt;&lt;h2 id=&quot;BI系统-罗盘&quot;&gt;&lt;a href=&quot;#BI系统-罗盘&quot; class=&quot;headerlink&quot; title=&quot;BI系统(罗盘)&quot;&gt;&lt;/a&gt;BI系统(罗盘)&lt;/h2&gt;&lt;h3 id=&quot;说明-1&quot;&gt;&lt;a href=&quot;#说明-1&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h3&gt;&lt;h3 id=&quot;接口调用&quot;&gt;&lt;a href=&quot;#接口调用&quot; class=&quot;headerlink&quot; title=&quot;接口调用&quot;&gt;&lt;/a&gt;接口调用&lt;/h3&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://open.qqgame.qq.com/inside/lz03.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;总接口&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wiki.open.qq.com/wiki/%E6%94%AF%E4%BB%98%E6%8E%A5%E5%85%A5&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;支付接入&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://open.qq.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联调工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://open.qqgame.qq.com/wiki/24/35/46/48/48.html?ptlang=2052&amp;amp;source&amp;amp;ADUIN=877095327&amp;amp;ADSESSION=1496715658&amp;amp;ADTAG=CLIENT.QQ.5521_.0&amp;amp;ADPUBNO=26675&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前端Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://compass.qq.com/platforms&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;罗盘&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      关于微端游戏接入QQ开放平台的流程的整理
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="QQ" scheme="http://blog.terrancy.com/tags/QQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Centos7环境下开发环境打搭建杂集</title>
+    <link href="http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/"/>
+    <id>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</id>
+    <published>2017-06-21T15:18:23.000Z</published>
+    <updated>2018-04-08T17:20:30.361Z</updated>
+    
+    <content type="html">&lt;p&gt;笔者平时开发使用的是Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要.因为当时购买选用的是Centos7.x操作系统&lt;del&gt;(一般情况都是使用Centos作为服务器)&lt;/del&gt;,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.&lt;/p&gt;
+&lt;h2 id=&quot;Nginx-服务器&quot;&gt;&lt;a href=&quot;#Nginx-服务器&quot; class=&quot;headerlink&quot; title=&quot;Nginx 服务器&quot;&gt;&lt;/a&gt;Nginx 服务器&lt;/h2&gt;&lt;h3 id=&quot;Nginx-介绍&quot;&gt;&lt;a href=&quot;#Nginx-介绍&quot; class=&quot;headerlink&quot; title=&quot;Nginx 介绍&quot;&gt;&lt;/a&gt;Nginx 介绍&lt;/h3&gt;&lt;p&gt;Nginx是一款轻量级的Web服务器/反向代理服务器及电子邮件代理服务器.由于它自身占用内存少,并发能力强的特点在同类型的网页服务器中有这不俗的表现.深受广大用户的喜爱.&lt;/p&gt;
+&lt;h3 id=&quot;Nginx-安装&quot;&gt;&lt;a href=&quot;#Nginx-安装&quot; class=&quot;headerlink&quot; title=&quot;Nginx 安装&quot;&gt;&lt;/a&gt;Nginx 安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在指定的目录下创建yum源配置文件.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/yum.repos.d/nginx.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;插入以下一行代码,在vim环境下切换编辑模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;name=nginx repo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baseurl=http://nginx.org/packages/centos/&lt;span class=&quot;variable&quot;&gt;$releasever&lt;/span&gt;/&lt;span class=&quot;variable&quot;&gt;$basearch&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgcheck=0&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;enabled=1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;更新系统资源并安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum update &amp;amp;&amp;amp;  yum -y nginx install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Nginx-启动&quot;&gt;&lt;a href=&quot;#Nginx-启动&quot; class=&quot;headerlink&quot; title=&quot;Nginx 启动&quot;&gt;&lt;/a&gt;Nginx 启动&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;以下关于nginx常用的几个命令:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl start nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#关闭&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl stop  nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl reload nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重启&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#状态&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl status nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 配置文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/nginx/nginx.conf&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;安装完nginx之后不要着急着把它启动起来,一帮情况是需要通过防火墙开放nginx的端口,默认是80.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#第一种方案,重启之后失效&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;iptables -I INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;service iptables save&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#第二种方案,直接写在iptables文件中,需要注意顺序&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/sysconfig/iptables&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-A INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;开放防火墙的80端口之后,可以通过以上命令启动nginx.而且nginx在默认的情况下是有一个站点的,所以启动之后是可以直接访问的.简单的检查下nginx服务器是否正在运行,&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ps aux | grep nginx&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加开机启动&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; nginx.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;PHP7&quot;&gt;&lt;a href=&quot;#PHP7&quot; class=&quot;headerlink&quot; title=&quot;PHP7&quot;&gt;&lt;/a&gt;PHP7&lt;/h2&gt;&lt;h3 id=&quot;PHP7-介绍&quot;&gt;&lt;a href=&quot;#PHP7-介绍&quot; class=&quot;headerlink&quot; title=&quot;PHP7 介绍&quot;&gt;&lt;/a&gt;PHP7 介绍&lt;/h3&gt;&lt;p&gt;PHP7使用新的 Zend Engine 3.0 提高应用程序性能两倍,比PHP5.6 低了 50％ 的内存消耗. 它可以服务于更多的并发用户，无需任何额外的硬件.此外,由于它摒弃低版本的一些过时的API而无法完全向下兼容.&lt;/p&gt;
+&lt;h3 id=&quot;PHP7-安装&quot;&gt;&lt;a href=&quot;#PHP7-安装&quot; class=&quot;headerlink&quot; title=&quot;PHP7 安装&quot;&gt;&lt;/a&gt;PHP7 安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Centos下默认的PHP版本比较低,一般情况下在安装之前先卸载已有的版本.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum remove php&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是这样是并完全卸载掉PHP,以下命令是查看与php相关的所有软件.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep php&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;卸载前先查看下软件之前的相互依赖.没有依赖项的软件优先卸载.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; php70w-common-7.0.19-1.w7.x86_64&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;下载并安装指定版本的PHP7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 下载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum install php70w-7.0.19-1.w7.x86_64 php70w-cli-7.0.19-1.w7.x86_64 php70w-common-7.0.19-1.w7.x86_64 php70w-gd-7.0.19-1.w7.x86_64 php70w-ldap-7.0.19-1.w7.x86_64 php70w-mbstring-7.0.19-1.w7.x86_64 php70w-mcrypt-7.0.19-1.w7.x86_64 php70w-mysql-7.0.19-1.w7.x86_64 php70w-pdo-7.0.19-1.w7.x86_64&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 卸载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep webstatic&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt;  上面搜索到的包即可&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;安装php-fpm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum install php70w-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;PHP7-启动&quot;&gt;&lt;a href=&quot;#PHP7-启动&quot; class=&quot;headerlink&quot; title=&quot;PHP7 启动&quot;&gt;&lt;/a&gt;PHP7 启动&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;以下是PHP启动的常见命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl start php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 关闭&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl stop php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重启&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 状态&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl status php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 配置文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/php.ini&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装完PHP之后就可以通过以上命令启动.查看PHP是否已经正在运行,&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ps aux | grep php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;添加开机启动&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;FTP-服务器&quot;&gt;&lt;a href=&quot;#FTP-服务器&quot; class=&quot;headerlink&quot; title=&quot;FTP 服务器&quot;&gt;&lt;/a&gt;FTP 服务器&lt;/h2&gt;&lt;h3 id=&quot;FTP-介绍&quot;&gt;&lt;a href=&quot;#FTP-介绍&quot; class=&quot;headerlink&quot; title=&quot;FTP 介绍&quot;&gt;&lt;/a&gt;FTP 介绍&lt;/h3&gt;&lt;p&gt;一般而言,直接连接到服务器上是一个便捷而且安全的做法.搭建FTP服务器主要是为了服务其他人,他们不要动那么多命令照样可以在服务器上指定的路径上完成一些任务.比如上传搭建服务器CDN源站后给相关人员上传资源,他们只关心将资源上传到指定的路径之后就可以访问,而不用通过一大堆的命令去完成.&lt;/p&gt;
+&lt;h3 id=&quot;FTP-安装&quot;&gt;&lt;a href=&quot;#FTP-安装&quot; class=&quot;headerlink&quot; title=&quot;FTP 安装&quot;&gt;&lt;/a&gt;FTP 安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;查看是否有安装,如果没有就安装.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 检查&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum -y install vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 开机启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; vsftpd.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;FTP-配置&quot;&gt;&lt;a href=&quot;#FTP-配置&quot; class=&quot;headerlink&quot; title=&quot;FTP 配置&quot;&gt;&lt;/a&gt;FTP 配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;修改配置文件vsftpd.conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 访问限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anonymous_enable=NO&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;local_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置路径&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chroot_list_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置宿主账号列表&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chroot_list_file=/etc/vsftpd/chroot_list&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置PAM认证文件名&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;pam_service_name=vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 开启虚拟账号&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;guest.enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置宿主用户&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;guest.username=username&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置存放虚拟账号的文件夹路径&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;user_config_dir=/etc/vsftpd/vuser_conf&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 端口监听,默认是21&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;listen_port=21&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;创建允许访问的宿主账号文件,填写已存在的宿主账号并保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/chroot_list&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;创建虚拟账号和密码,&lt;strong&gt;&lt;em&gt;奇数行是账号,偶数行是密码&lt;/em&gt;&lt;/strong&gt;,并生成认证文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建虚拟账号信息并保存为vuser_passwd.txt&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/vuser_passwd.txt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 生成认证文件vuser_passwd.db&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dbload -T -t &lt;span class=&quot;built_in&quot;&gt;hash&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 编辑认证文件,加入ftp认证并保存&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/pam.d/vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 查找系统版本号&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;getconf LONG_BIT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#系统为32位：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;auth required pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;account required pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 系统为64位：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;创建虚拟账号文件信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建虚拟账号文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/vuser_conf/username&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 权限限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 虚拟用户根目录,根据实际情况修改  该目录必须要有读写权限 chmod -R 777 目录&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;local_root=/var/www/html  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 可写&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;write_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 掩码  &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_umask=022&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_world_readable_only=NO&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_upload_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_mkdir_write_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_other_write_enable=YES&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;以上代码注意每行末尾的空格,否则会出现认证成功但却无法登陆的窘境.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开放防火墙端口,默认是21.设置启动服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置防护墙,防护墙添加访问限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-A INPUT -m state --state NEW &lt;span class=&quot;_&quot;&gt;-s&lt;/span&gt; xxx.xxx.xxx.xxx  -m tcp -p tcp --dport 21 -j ACCEPT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart vsftpd.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;FTP-日志&quot;&gt;&lt;a href=&quot;#FTP-日志&quot; class=&quot;headerlink&quot; title=&quot;FTP 日志&quot;&gt;&lt;/a&gt;FTP 日志&lt;/h3&gt;&lt;p&gt;这步骤很重要,开启FTP上传下载日志.可以监控访问者的所有行为.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;xferlog_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;xferlog_file=/var/&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;/vsftpd/xferlog&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;xferlog_std_format=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dual_log_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vsftpd_log_file=/var/&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;/vsftpd/vsftd.log&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;SSH-服务器&quot;&gt;&lt;a href=&quot;#SSH-服务器&quot; class=&quot;headerlink&quot; title=&quot;SSH 服务器&quot;&gt;&lt;/a&gt;SSH 服务器&lt;/h2&gt;&lt;h3 id=&quot;SSH-介绍&quot;&gt;&lt;a href=&quot;#SSH-介绍&quot; class=&quot;headerlink&quot; title=&quot;SSH 介绍&quot;&gt;&lt;/a&gt;SSH 介绍&lt;/h3&gt;&lt;h3 id=&quot;SSH-常见问题&quot;&gt;&lt;a href=&quot;#SSH-常见问题&quot; class=&quot;headerlink&quot; title=&quot;SSH 常见问题&quot;&gt;&lt;/a&gt;SSH 常见问题&lt;/h3&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/d169e186469f44436611d8ec.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何在centos7环境下安装vsftpd&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      笔者平时开发使用的时Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.terrancy.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
+    
+      <category term="ftp" scheme="http://blog.terrancy.com/tags/ftp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习-Pytorch框架初体验</title>
+    <link href="http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/"/>
+    <id>http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/</id>
+    <published>2017-06-09T14:44:25.000Z</published>
+    <updated>2017-06-09T14:55:31.022Z</updated>
+    
+    <content type="html">&lt;p&gt;自从阿尔法Go相继与围棋界顶尖棋手博弈之后,世界上开始了机器学习和深度学习的两个技术学习.追随着浩浩汤汤的学习大潮,慢慢地去接触深度学习框架.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      自从阿尔法Go相继与围棋界顶尖棋手博弈之后,世界上开始了机器学习和深度学习的两个技术学习.追随着浩浩汤汤的学习大潮,慢慢地去接触深度学习框架.
+    
+    </summary>
+    
+      <category term="python" scheme="http://blog.terrancy.com/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://blog.terrancy.com/tags/python/"/>
+    
+      <category term="deep-learning" scheme="http://blog.terrancy.com/tags/deep-learning/"/>
+    
+      <category term="pytorch" scheme="http://blog.terrancy.com/tags/pytorch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客站内搜索引擎</title>
+    <link href="http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/"/>
+    <id>http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/</id>
+    <published>2017-05-27T15:46:46.000Z</published>
+    <updated>2017-05-30T02:32:14.166Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近经常逛V2EX网站,对其站内的搜索引擎特别好奇.站内对其也有相关的讨论,才知道原来借助的是谷歌的搜索-Custom Search Engine(简称CSE).&lt;/p&gt;
+&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;通过谷歌自定义搜索引擎(以下称之为CSE)的使用,我们可以很方便的在我们的博客首页上添加谷歌搜索框,充分利用谷歌抓取的数据从而帮助他们从我们的站点上搜索到满足他们需要的信息.通过自定义搜索引擎的功能,为自己的网站提供更加丰富的搜索需要并提高站点的搜索质量从而增加站点自身的搜索排名.&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;p&gt;要使用谷歌自定义搜索引擎的前提,也是最重要的一点自然是能访问谷歌开发者后台.利用注册号的账号登录谷歌控制台才能继续以下其他步骤.&lt;/p&gt;
+&lt;h3 id=&quot;自定义搜索引擎创建与安装&quot;&gt;&lt;a href=&quot;#自定义搜索引擎创建与安装&quot; class=&quot;headerlink&quot; title=&quot;自定义搜索引擎创建与安装&quot;&gt;&lt;/a&gt;自定义搜索引擎创建与安装&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;使用已有的谷歌账号登入谷歌的&lt;a href=&quot;https://cse.google.com/create/new&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;控制台&lt;/a&gt;创建一个搜索引擎.&lt;/li&gt;
+&lt;li&gt;输入需要待搜索的站点节点,这里所说的站点节点既可以是泛域名搜索,也可以是指定站点,或者是站点的某个部分内容,比如一个网页.&lt;/li&gt;
+&lt;li&gt;根据自身站点的语言特点选择所需的语言,不通的语言意味着生成的搜索插件有着不通的样式和表现形式,但不会影响到搜索的结果.&lt;/li&gt;
+&lt;li&gt;创建之后会生成一段JavaScript脚本和一个谷歌特有的标签.这个标签就是谷歌搜索框,把这个标签代替站点搜索框的位置,在站点的嵌入相应的JavaScript脚本即可.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;谷歌搜索框的其他使用方法&quot;&gt;&lt;a href=&quot;#谷歌搜索框的其他使用方法&quot; class=&quot;headerlink&quot; title=&quot;谷歌搜索框的其他使用方法&quot;&gt;&lt;/a&gt;谷歌搜索框的其他使用方法&lt;/h3&gt;&lt;p&gt;如果仔细观察V2EX的搜索框的部分代码和搜索链接,我们会发现V2EX的搜索虽然用到的也是自定义搜索引擎但和上面的方法不太一样.主要的区别在于不用使用谷歌标签和脚本.只要把将搜索的结果重定向到谷歌搜索,让他们替我们针对网站做定向搜索.以下针对hexo框架的博客站点简要说明下.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;谷歌自定义搜索引擎只是站点搜索的一种形式,为了方便站点其他搜索引擎控制与切换,我们在配置文件添加切换开关.&lt;br&gt;在_config.yml配置文件中修改搜索框的控制类型,根据需要暂时定义两个参数控制.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 是否显示边栏中的搜索框（仅样式，未添加搜索功能）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Search Box in left column&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# type google | baidu | swifttype&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;search_box:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  on:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  type:&lt;/span&gt; google&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;根据不同的主题找到搜索框指定位置的页面上修改页面跳转的重定向即可.&lt;br&gt;页面重定向后的链接类似于 &lt;a href=&quot;https://www.google.com/search?q=搜索内容&amp;amp;q=site:站点域名&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.google.com/search?q=搜索内容&amp;amp;q=site:站点域名&lt;/a&gt;, 根据这个思路只要稍微懂页面前端的程序猿自然很清楚如何修改.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;attr&quot;&gt;theme.search_box.on&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;theme.search_box.type&lt;/span&gt; == &lt;span class=&quot;string&quot;&gt;&#39;google&#39;&lt;/span&gt;)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;action&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://www.google.com/search&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;target&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;_blank&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;method&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;get&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;accept-charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;q&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;search&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;autocomplete&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;maxlength&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;20&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;placeholder&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot; &amp;lt;%= __(&#39;index.search&#39;) %&amp;gt;...&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hidden&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;q&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;autocomplete&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;site:&amp;lt;%- config.url.replace(/^https?:\/\//, &#39;&#39;) %&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&amp;#125;%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;未完待续&quot;&gt;&lt;a href=&quot;#未完待续&quot; class=&quot;headerlink&quot; title=&quot;未完待续&quot;&gt;&lt;/a&gt;未完待续&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype-v2.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用swiftype为hexo添加站内搜索v2.0&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://developers.google.com/custom-search/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Custom Search Api&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      最近经常逛V2EX网站,对其站内的搜索引擎特别好奇.站内对其也有相关的讨论,才知道原来借助的是谷歌的搜索引擎-Custom Search Engine.
+    
+    </summary>
+    
+      <category term="blog" scheme="http://blog.terrancy.com/categories/blog/"/>
+    
+    
+      <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
+    
+      <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多说评论系统</title>
+    <link href="http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/"/>
+    <id>http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/</id>
+    <published>2017-05-26T15:42:57.000Z</published>
+    <updated>2017-06-01T14:04:35.727Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;搭建博客的时候选用了多说作为评论系统之后就一直爱不释手,特别是它充分利用评论系统结合自身收集的数据以及人性化的插件使得博客变得更加丰富.不过可惜的是&lt;a href=&quot;http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说提示即将关闭&lt;/a&gt;,当半年前多说官方宣布由于内部原因导致多说使用将于2017年6月1日到期这个消息的时候让很多用户感到倍加惋惜.虽然作为其中的一位受益者,希望写下这份纪念博客不算太晚.&lt;/p&gt;
+&lt;h2 id=&quot;多说插件&quot;&gt;&lt;a href=&quot;#多说插件&quot; class=&quot;headerlink&quot; title=&quot;多说插件&quot;&gt;&lt;/a&gt;多说插件&lt;/h2&gt;&lt;p&gt;多说是追求最佳的用户体验的社交化评论框,为中小网站提供多账号登录并评论的功能.具有众多实用性,功能强大且永久免费.与其他的评论平台的不同之处在于,多说提供众多的插件.比如最新评论,最近访客,站点热评文章,文章评论数,以及分享组件等等.同时,多说评论框的描述,背景图片,头像都支持自定义样式调整的功能.用户可以根据自己的喜好调整不同的样式.&lt;/p&gt;
+&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;虽然博客建站不就,但在慢慢的接触到了多说的评论系统的几个不同插件之后发现它对丰富博客功能起到了重要的作用.最直接的表现就是让静态博客变得生动有趣起来.一方面,读者可以借助第三方账号通过评论系统与博主实时沟通而没有阻碍.另一方面,博主可以通过该系统搜集读者的行为数据有助于提高博客的阅读量.&lt;/p&gt;
+&lt;h3 id=&quot;功能&quot;&gt;&lt;a href=&quot;#功能&quot; class=&quot;headerlink&quot; title=&quot;功能&quot;&gt;&lt;/a&gt;功能&lt;/h3&gt;&lt;p&gt;针对多说众多的功能,以下就博客目前使用的几个插件做介绍.在搞清楚如何安装这些插件的之前,需要我们到&lt;a href=&quot;http://dev.duoshuo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说官网&lt;/a&gt; 注册一个账号并填写唯一的站点域名值.&lt;/p&gt;
+&lt;h4 id=&quot;评论框&quot;&gt;&lt;a href=&quot;#评论框&quot; class=&quot;headerlink&quot; title=&quot;评论框&quot;&gt;&lt;/a&gt;评论框&lt;/h4&gt;&lt;p&gt;多说评论框是多说的基础功能,它需要使用一个多说提供的公共脚本库.这里的评论框使用的到时多说标签”ds-thread”.&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;duoshuo&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 start --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=key%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=title%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=url%&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 end --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; duoshuoQuery = &amp;#123;short_name:&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=theme.duoshuo.domain%&amp;gt;&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ds = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;script&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.type = &lt;span class=&quot;string&quot;&gt;&#39;text/javascript&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.async = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.src = (&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.location.protocol == &lt;span class=&quot;string&quot;&gt;&#39;https:&#39;&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&#39;https:&#39;&lt;/span&gt; : &lt;span class=&quot;string&quot;&gt;&#39;http:&#39;&lt;/span&gt;) + &lt;span class=&quot;string&quot;&gt;&#39;//static.duoshuo.com/embed.js&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.charset = &lt;span class=&quot;string&quot;&gt;&#39;UTF-8&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        (&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&#39;head&#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;         || &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&#39;body&#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]).appendChild(ds);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 end --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;通过以上的脚本基本上可以看出一些端倪,多说的所有功能依赖一个&lt;a href=&quot;//static.duoshuo.com/embed.js&quot;&gt;脚本&lt;/a&gt;.多说是依据注册时使用的域名值来区分并记录数据的.多说会更具每篇文章的标题进行索引,然后依据不同的标题显示不同的数据.以下是多说评论框的代码.这里的data-thread-key是博客的URI,data-url是完整的RUL.&lt;a href=&quot;http://dev.duoshuo.com/docs/50b344447f32d30066000147&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=key%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=title%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=url%&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;文章评论数&quot;&gt;&lt;a href=&quot;#文章评论数&quot; class=&quot;headerlink&quot; title=&quot;文章评论数&quot;&gt;&lt;/a&gt;文章评论数&lt;/h4&gt;&lt;p&gt;多说的文章评论数的位置是放在文章列表右侧,博主不需要点进文章详情也可以大致了解文章的评论数.这是个简单的插件,多说API根据之前提供的data-thread-key的值进行查找并返回相应的评论数,我们需要根据提供的数据做些页面的美化就可.这里使用的标签是”ds-thread-count”.&lt;a href=&quot;http://dev.duoshuo.com/docs/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread-count&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;2016/08/28/how-to-switch-web-pages-without-refresh/&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-count-type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;暂无评论&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;最近访客&quot;&gt;&lt;a href=&quot;#最近访客&quot; class=&quot;headerlink&quot; title=&quot;最近访客&quot;&gt;&lt;/a&gt;最近访客&lt;/h4&gt;&lt;p&gt;当游客用第三方账号登录之后,读者的第三方头像会在最近访客中显示出来.这里使用的标签是”ds-recent-visitors”.使用该插件有两个方面的好处.&lt;a href=&quot;http://dev.duoshuo.com/docs/4ff28d6f552860f21f00000c&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果读者刚好也是多说的用户,而且在多说后台配置了各自的博客链接.在最近访客部分的头像也附带了对应的站点链接.这样让很多的站点直接互相分享站点暴露值.&lt;/li&gt;
+&lt;li&gt;就博主而言,如果能在分配一个最近访客展示墙无疑是一种自身能力的最好证明.如果博客写得好,吸引的读者越多,最近访客展示墙展示的读者也会越多.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-recent-visitors&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-num-items&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;28&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-avatar-size&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;42&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-recent-visitors&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;动态加载&quot;&gt;&lt;a href=&quot;#动态加载&quot; class=&quot;headerlink&quot; title=&quot;动态加载&quot;&gt;&lt;/a&gt;动态加载&lt;/h4&gt;&lt;p&gt;多说的动态加载的特点是多说的类库一次加载之后,其所有的插件可以根据各自的功能判断动态加载.特别在于网站引入pjax局部异步加载功能之后,多说的动态加载表现出其他原生插件所无法比拟的优越性.以致于现在不得不使用其它评论系统之后,越发发现多说的方便和实用.&lt;/p&gt;
+&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;p&gt;尽管有多么的不舍,但多说始终都是要关闭的.对比国内外的几种评论系统,虽然各有各的优缺点,相信也会满足博客的基本的要求.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://dev.duoshuo.com/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说帮助文档&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://dev.duoshuo.com/docs/4ff1cfd0397309552c000017&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说样式的修改&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      搭建博客的时候选用了多说作为评论系统之后就一直爱不释手,特别是它充分利用评论系统结合自身收集的数据以及人性化的插件使得博客变得更加丰富.
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
+    
+      <category term="duoshuo" scheme="http://blog.terrancy.com/tags/duoshuo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多功能网页音乐播放器</title>
+    <link href="http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/"/>
+    <id>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</id>
+    <published>2017-05-22T13:07:08.000Z</published>
+    <updated>2018-04-11T13:11:10.140Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;个人喜欢边听音乐便工作的程序猿,可无奈因为版权所限导致有些喜欢的音乐在不同的平台.意味着如果想听音乐便需要有不同平台的账号,非常不方便.因而萌生自己改写音乐插件,算是个人技能的拓展提升吧.&lt;/p&gt;
+&lt;h2 id=&quot;音乐插件&quot;&gt;&lt;a href=&quot;#音乐插件&quot; class=&quot;headerlink&quot; title=&quot;音乐插件&quot;&gt;&lt;/a&gt;音乐插件&lt;/h2&gt;&lt;p&gt;在创建博客的时候也参考过别人分享的心得以及一些亮点,其中一个就是音乐播放器插件.原文作者没有提到具体做法,只是那么对于音乐播放器那么一提.不管是否说者有意,但是那是似乎也没有给我多少的印象.&lt;/p&gt;
+&lt;p&gt;喜欢有事没事就去逛逛V2EX,就像如同去淘淘心玩意一样.刚好是去年的五一劳动节,有个网友在V站上分享了他们的音乐插件.该插件使用的是angular些的一个chrome插件,在开发者模式下可以播放支持网易,QQ,虾米三方音乐平台.这样用户可以随心所欲的听听三个播放器的不同的资源,同时还支持搜索功能.真心好用~&lt;/p&gt;
+&lt;p&gt;自己喜欢在网易上听音乐,突然好奇网易音乐的播放器一个小细节.为什么切换网页的时候,音乐不会断掉或者说重新刷新.后来去搜索才知道原来使用的是pjax技术异步加载,局部刷新.这个功能也不算是新技术,但是大大提高了页面缓存和加载的速度.因为是局部刷新,所以音乐在切换页面的时候不会因此而重新加载.&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;对新技术的好奇往往很能考察一名程序猿敏锐的嗅觉~&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/listen1/listen1_chrome_extension/tree/master/js/vendor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Listener plugin&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://binaryify.github.io/NeteaseCloudMusicApi&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易云音乐nodejs版本&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://api.xiaocp.com/player/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易专辑音乐播放器插件&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;github-widget&quot; data-repo=&quot;terrancy/musicPlayer&quot;&gt;&lt;/div&gt;
+</content>
+    
+    <summary type="html">
+    
+      个人喜欢边听音乐便工作的程序猿,可无奈因为版权所限导致有些喜欢的音乐在不同的平台.意味着如果想听音乐便需要有不同平台的账号,非常不方便.
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
+    
+    
+      <category term="plugin" scheme="http://blog.terrancy.com/tags/plugin/"/>
+    
+      <category term="music" scheme="http://blog.terrancy.com/tags/music/"/>
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WannaCry蠕虫病毒的快速蔓延与预防</title>
+    <link href="http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/"/>
+    <id>http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/</id>
+    <published>2017-05-15T14:36:28.000Z</published>
+    <updated>2017-05-18T11:57:57.433Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;近日,全球突发比特币病毒疯狂袭击公共和商业系统事件.由于某国外不法分子利用美国国家安全局未被披露的安全漏洞”EternalBlue”,以类似于蠕虫病毒的传播方式席卷世界各地.通过扫描主机上TCP445端口(Server Message Block/SMB),该病毒尝试攻击目标主机并加密存储在主机上的文档,进而要求以比特币的形式索要赎金.&lt;/p&gt;
+&lt;h2 id=&quot;预防&quot;&gt;&lt;a href=&quot;#预防&quot; class=&quot;headerlink&quot; title=&quot;预防&quot;&gt;&lt;/a&gt;预防&lt;/h2&gt;&lt;p&gt;既然知道这种蠕虫病毒的主要特点是扫描主机上TCP445端口,我们便可以直接通过开启防火墙关闭445端口.当蠕虫病毒一下子蔓延开来的同时,微博上很多人也给出了相应的应对方法.为避免开机后来不及处理便措手不及,需要在开机前先断开主机与一切可以联网的介质,包括网线和无线网.然后开启电脑上的防火墙,按照网上的教程关掉445端口即可.为方便某些技术小白和手残党,以下结合上述的主要操纵要求写了个一键处理的bash文件.当然,需要管理员权限执行~&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@ECHO OFF&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;::run with admin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;gt;nul 2&amp;gt;&amp;amp;1 &lt;span class=&quot;string&quot;&gt;&quot;%SYSTEMROOT%\system32\cacls.exe&quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;%SYSTEMROOT%\system32\config\system&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;%errorlevel%&#39;&lt;/span&gt; NEQ &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt; (&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;goto UACPrompt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;) &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; ( goto gotAdmin )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:UACPrompt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; Set UAC = CreateObject^(&lt;span class=&quot;string&quot;&gt;&quot;Shell.Application&quot;&lt;/span&gt;^) &amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; UAC.ShellExecute &lt;span class=&quot;string&quot;&gt;&quot;%~s0&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;runas&quot;&lt;/span&gt;, 1 &amp;gt;&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; /B&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:gotAdmin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; exist &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt; ( del &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt; )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:: bash code&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@ECHO ON&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; allprofiles state on&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny135&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=135 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny136&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=136 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny137&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=137 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny138&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=138 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny139&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=139 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny445&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=445 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny42&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=42 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny135&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=135 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny137&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=137 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny138&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=138 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny139&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=139 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:: CLS&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@ECHO OFF&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ECHO 哎呀,终于搞定了.再也不用断网线防勒索了~&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;PAUSE&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 该bash的功能主要分成两部分,第一部分就是要有管理员权限.判断当前用户是否是超级管理员.如果不是超级管理员就弹出窗口要求管理员权限.第二部分就开启防火墙并禁止掉一些关联的端口,自然少不了445.&lt;/p&gt;
+&lt;p&gt;如果有安装Telnet的话,可以尝试着去访问该端口看是否可用.&lt;/p&gt;
+ &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;telnet ip地址 445&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;无论是在生活还是工作中我们肯定会遇到一些或大或小的”麻烦”.既然我们无法忽略也无法逃避,那么我们在遇到类似的困境时就更加需要抱有处之泰然的态度和死磕到底的决心.放心吧,牛奶和面包都会有的.只要不灰心丧气,努力去争取属于我们的点点滴滴,包括希望和梦想.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      近日,全球突发比特币病毒疯狂袭击公共和商业系统事件.由于某国外不法分子利用美国国家安全局未被披露的安全漏洞&quot;EternalBlue&quot;,以类似于蠕虫病毒的传播方式席卷世界各地.通过扫描主机上TCP445端口(Server Message Block/SMB),该病毒尝试攻击目标主机并加密存储在主机上的文档,进而要求以比特币的形式索要赎金.
+    
+    </summary>
+    
+      <category term="bash" scheme="http://blog.terrancy.com/categories/bash/"/>
+    
+    
+      <category term="bash" scheme="http://blog.terrancy.com/tags/bash/"/>
+    
+      <category term="virus" scheme="http://blog.terrancy.com/tags/virus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动化运营维护人员的自动化运维工具</title>
+    <link href="http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/"/>
+    <id>http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/</id>
+    <published>2017-04-30T15:25:57.000Z</published>
+    <updated>2018-04-09T12:02:50.896Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着开源世界的到来,以往需要运维人员简单重复的操作逐步被自动化运维工具所取代.这不仅解放了运维人员的劳动力,提升工作效率,而且还是让整个工作变得更加智能高效.&lt;/p&gt;
+&lt;h2 id=&quot;日志分析&quot;&gt;&lt;a href=&quot;#日志分析&quot; class=&quot;headerlink&quot; title=&quot;日志分析&quot;&gt;&lt;/a&gt;日志分析&lt;/h2&gt;&lt;h2 id=&quot;系统监控&quot;&gt;&lt;a href=&quot;#系统监控&quot; class=&quot;headerlink&quot; title=&quot;系统监控&quot;&gt;&lt;/a&gt;系统监控&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;elatic官网&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://my.oschina.net/itblog/blog/547250&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-搭建实时日志分析平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.cnblogs.com/huangxincheng/p/7918722.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-集中化日志平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/baidu/1676798&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-开源实时日志分析ELK平台部署&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/467754239/1700828&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-日志分析系统&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      随着开源世界的到来,以往需要运维人员简单重复的操作逐步被自动化运维工具所取代.这不仅解放了运维人员的劳动力,提升工作效率,而且还是让整个工作变得更加智能高效.
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.terrancy.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
+    
+      <category term="ELK" scheme="http://blog.terrancy.com/tags/ELK/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP的常见问题</title>
+    <link href="http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/"/>
+    <id>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</id>
+    <published>2017-03-27T15:56:39.000Z</published>
+    <updated>2017-06-25T14:01:55.661Z</updated>
+    
+    <content type="html">&lt;p&gt;使用php编写代码过程中难免会遇到疑惑,本人会将工作中遇到的一些疑难杂症一一列举出来,如有错误不良赐教~&lt;/p&gt;
+&lt;h2 id=&quot;file-get-contents-疑惑&quot;&gt;&lt;a href=&quot;#file-get-contents-疑惑&quot; class=&quot;headerlink&quot; title=&quot;file_get_contents 疑惑&quot;&gt;&lt;/a&gt;file_get_contents 疑惑&lt;/h2&gt;&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;PHP中对文件操作印象最深的莫过于 file_get_contents 和 file_put_contents 两个读写文件的函数,可谓是屡试不爽.当然,这两个函数同样可以请求API.可问题在于,有时候不知道原因的出现请求不到数据的问题.通过排查nginx记录下来的错误日志排查到调用函数出现 Server Error 500 错误,而这些链接如果放到浏览器明明可以访问.&lt;/p&gt;
+&lt;h3 id=&quot;排查&quot;&gt;&lt;a href=&quot;#排查&quot; class=&quot;headerlink&quot; title=&quot;排查&quot;&gt;&lt;/a&gt;排查&lt;/h3&gt;&lt;p&gt;查询资料之后才知道其实User Agent 的问题, 而这个可能是服务器对此做了限制.User Agent默认是没有开启的,通过PHP.ini配置文件开启即可.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 操作文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;find / -name php.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 编辑文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/php.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;user_agent=&lt;span class=&quot;string&quot;&gt;&quot;Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Gecko/20041001 Firefox/0.10.1&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重启PHP&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;通过开启User Agent的默认值来模拟浏览器发送请求达到”欺骗”服务器的目的.&lt;/p&gt;
+&lt;h2 id=&quot;PHP-模块加载&quot;&gt;&lt;a href=&quot;#PHP-模块加载&quot; class=&quot;headerlink&quot; title=&quot;PHP 模块加载&quot;&gt;&lt;/a&gt;PHP 模块加载&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/devcjq/articles/6085006.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;解决php无法通过file_get_contents或curl采集页面内容&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      使用php编写代码过程中难免会遇到疑惑,本人会将工作中遇到的一些疑难杂症一一列举出来,如有错误不良赐教~
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何配置IPV6环境</title>
+    <link href="http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/"/>
+    <id>http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/</id>
+    <published>2017-03-25T14:31:23.000Z</published>
+    <updated>2017-06-04T09:33:49.894Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;当公司辛苦研发好的应用提交苹果审核的时候,经常发生苹果审核严苛的审查机制被拒之门外.其中被拒的一个原因是IPV6搞的鬼.可惜的是,国内的大部分IPV6都被教育网垄断掉了.很多人根本就没法获取IPV6资源,畅想IPV6带来的便利.&lt;/p&gt;
+&lt;h2 id=&quot;Windows-Server-环境&quot;&gt;&lt;a href=&quot;#Windows-Server-环境&quot; class=&quot;headerlink&quot; title=&quot;Windows Server 环境&quot;&gt;&lt;/a&gt;Windows Server 环境&lt;/h2&gt;&lt;h2 id=&quot;CentOS-环境&quot;&gt;&lt;a href=&quot;#CentOS-环境&quot; class=&quot;headerlink&quot; title=&quot;CentOS 环境&quot;&gt;&lt;/a&gt;CentOS 环境&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.ttlsa.com/nginx/nginx-ipv6-configuration/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nginx开启IPV6支持配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/vijayfly/p/6612771.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里云服务器如何设置IPV6通过appstore的审核&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/284958.html?pos=11&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为阿里云ECS（Windows 2012）创建IPv6隧道地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/304532.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为阿里云ECS（CentOS 5）配置IPv6隧道地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ipv6-test.com/validate.php?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PIV6-test&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-ping.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;online-ping-ipv6&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      当公司辛苦研发好的应用提交苹果审核的时候,经常发生苹果审核严苛的审查机制被拒之门外.其中被拒的一个原因是IPV6搞的鬼.
+    
+    </summary>
+    
+      <category term="linux" scheme="http://blog.terrancy.com/categories/linux/"/>
+    
+      <category term="ipv6" scheme="http://blog.terrancy.com/categories/linux/ipv6/"/>
+    
+    
+      <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何进行Facebook直播</title>
+    <link href="http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/"/>
+    <id>http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/</id>
+    <published>2017-03-20T17:39:17.000Z</published>
+    <updated>2017-03-20T17:44:53.851Z</updated>
+    
+    <content type="html">&lt;p&gt;游戏内接入twitch直播和youtube直播之后,自然而然便会引入Facebook直播了.与前两者不同的是,Facebook live 是找不到第三方的API.没办法,只能自己动手写吧.如何有哪位读者刚好看到有相关的资料,麻烦在评论上提示下哈.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      游戏内接入twitch直播和youtube直播之后,自然而然便会引入Facebook直播了.与前两者不同的是,Facebook live 是找不到第三方的API.没办法,只能自己动手写吧.
+    
+    </summary>
+    
+      <category term="facebook" scheme="http://blog.terrancy.com/categories/facebook/"/>
+    
+      <category term="live" scheme="http://blog.terrancy.com/categories/facebook/live/"/>
+    
+    
+      <category term="facebook" scheme="http://blog.terrancy.com/tags/facebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bazaar支付的服务端验证</title>
+    <link href="http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/"/>
+    <id>http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/</id>
+    <published>2017-03-20T15:29:54.000Z</published>
+    <updated>2017-05-30T02:34:40.647Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;游戏上线后充值被破解&quot;&gt;&lt;a href=&quot;#游戏上线后充值被破解&quot; class=&quot;headerlink&quot; title=&quot;游戏上线后充值被破解&quot;&gt;&lt;/a&gt;游戏上线后充值被破解&lt;/h2&gt;&lt;p&gt;由于之前对Bazzar支付方式的了解不够透彻,以至于我以为支付的验证放在客户端便能解决问题,等到上线之后发现游戏的充值分分钟钟被lucky pacher破解,真是后悔莫及.因为对于服务端而言,现有的参数远远不能做任何验证的.无奈,只能在新包中重新对好API后等待游戏包强制更新了.&lt;/p&gt;
+&lt;h2 id=&quot;游戏服务端API验证功能&quot;&gt;&lt;a href=&quot;#游戏服务端API验证功能&quot; class=&quot;headerlink&quot; title=&quot;游戏服务端API验证功能&quot;&gt;&lt;/a&gt;游戏服务端API验证功能&lt;/h2&gt;&lt;p&gt;Cafebazaar Developer API is a REST API that allows you to automatically perform some of your product management tasks. Using this API, you can check the status of your products and subscriptions sales from your personal server.&lt;/p&gt;
+&lt;h3 id=&quot;Bazaar充值验证的OAuth2授权&quot;&gt;&lt;a href=&quot;#Bazaar充值验证的OAuth2授权&quot; class=&quot;headerlink&quot; title=&quot;Bazaar充值验证的OAuth2授权&quot;&gt;&lt;/a&gt;Bazaar充值验证的OAuth2授权&lt;/h3&gt;&lt;p&gt;因为Bazzar的充值验证功能是需要经过OAuth2授权之后才能请求的,所以在此之前需要预先通过授权获取refresh_token 和 access_token并保存在指定地方.一旦access_token失效之后需要通过refresh_token重新获取,并重新保存.当然,前提是你必须要现在开发者后台先创建好client_id和client_secret以及redirect_uri.&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getAccessToken&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonAccess = file_get_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirConfig.&lt;span class=&quot;string&quot;&gt;&quot;/access.json&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrDataAccess = json_decode($jsonAccess,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;isset&lt;/span&gt;($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;]) &amp;amp;&amp;amp; &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getAccessTokenExpire($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrGetAccessTokenWhere = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;grant_type&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;string&quot;&gt;&quot;refresh_token&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;client_id&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;idClient,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;client_secret&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;secretClient,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;refresh_token&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;tokenRefresh,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $jsonAccess = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;apiCurl-&amp;gt;curlByPost(json_encode(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;uriGetToken),$arrGetAccessTokenWhere);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataAccess = json_decode($jsonAccess,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;isset&lt;/span&gt;($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;access_token&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;] = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getCurrentTimeStamp() + $arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;expires_in&#39;&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $jsonAccess = json_encode($arrDataAccess);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirConfig.&lt;span class=&quot;string&quot;&gt;&quot;/access.json&quot;&lt;/span&gt;,$jsonAccess);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $arrDataAccess;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Bazaar充值验证API的接入&quot;&gt;&lt;a href=&quot;#Bazaar充值验证API的接入&quot; class=&quot;headerlink&quot; title=&quot;Bazaar充值验证API的接入&quot;&gt;&lt;/a&gt;Bazaar充值验证API的接入&lt;/h3&gt;&lt;p&gt;获取到Bazzar的授权access_token之后,方可通过purchase validation api 获取相应的数据.&lt;/p&gt;
+&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getPurchaseValidation&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrDataAccess  = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getAccessToken();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $urlPurchaseValidation = &lt;span class=&quot;string&quot;&gt;&quot;https://pardakht.cafebazaar.ir/devapi/v2/api/validate/&amp;#123;$arrData[&#39;packagename&#39;]&amp;#125;/inapp/&amp;#123;$arrData[&#39;productId&#39;]&amp;#125;/purchases/&amp;#123;$arrData[&#39;purchaseToken&#39;]&amp;#125;?access_token=&quot;&lt;/span&gt;.$arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;access_token&#39;&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $timeLog = @date(&lt;span class=&quot;string&quot;&gt;&#39;[d/M/Y:H:i:s]&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirRoot.&lt;span class=&quot;string&quot;&gt;&quot;/purchaseValidation.txt&quot;&lt;/span&gt;,$timeLog.&lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;.$urlPurchaseValidation.PHP_EOL,FILE_APPEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonPurchaseValidation = file_get_contents($urlPurchaseValidation);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirRoot.&lt;span class=&quot;string&quot;&gt;&quot;/purchaseValidation.txt&quot;&lt;/span&gt;,$timeLog.&lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;.$jsonPurchaseValidation.PHP_EOL,FILE_APPEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $jsonPurchaseValidation;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果请求成功无误的话,将会从purchase validation api获取到一段json格式的数据,如下所示:&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;consumptionState&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;purchaseState&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;kind&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;androidpublisher#inappPurchase&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;developerPayload&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;something&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;purchaseTime&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1414181378566&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;程序通过上述参数就可以判断该订单是否充值成功.&lt;/p&gt;
+&lt;p&gt;以下是官方对各个参数的说明.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;consumptionState&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;This field is 0, if the purchase is consumed, and 1 otherwise.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;purchaseState&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Normally this field is 0, but if the purchase is refunded it is 1.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;kind&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Type of the returned resource. This will always be androidpublisher#inappPurchase&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;developerPayload&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;The payload string that is sent to Bazaar by app when making the purchase.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;purchaseTime&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Time of the purchase as milliseconds from EPOCh (1970/1/1).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;补充说明&quot;&gt;&lt;a href=&quot;#补充说明&quot; class=&quot;headerlink&quot; title=&quot;补充说明&quot;&gt;&lt;/a&gt;补充说明&lt;/h2&gt;&lt;p&gt;Bazaar充值中也使用到了RSA加密验证确保数据传输的完整性以防止他人的篡改,在Bazaar开发者后台中找到一串经过base64加密过的公钥.当客户端向服务端发起充值请求之后,Bazaar服务器端相应的会返回一系列参数.而这部分校验过程中需要使用到RSA加解密.&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;生活难免会有糊涂的时候,这时候的我们更需要拿起自身的勇气和耐心,敢于承担与付出.&lt;/li&gt;
+&lt;li&gt;Bazaar的充值流程和google play的充值流程是相似的,甚至于他们的验证方式.&lt;/li&gt;
+&lt;li&gt;此次的经验教训加深了我对OAuth2的权限的了解以及RESTFUL的异同.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developers.cafebazaar.ir/en/docs/developer-api-v2-introduction/developer-api-v2-getting-started/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;In-app-developer-api-oauth2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://developers.cafebazaar.ir/en/docs/developer-api-v2-introduction/developer-api-v2-ref-validate/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;In-app-purchase-validation&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      由于之前对Bazzar支付方式的了解不够透彻,以至于我以为支付的验证放在客户端便能解决问题了,等到上线之后发现游戏的充值分分钟钟破解才追悔莫及
+    
+    </summary>
+    
+      <category term="pay" scheme="http://blog.terrancy.com/categories/pay/"/>
+    
+      <category term="Bazzar" scheme="http://blog.terrancy.com/categories/pay/Bazzar/"/>
+    
+    
+      <category term="pay" scheme="http://blog.terrancy.com/tags/pay/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高效大并发游戏架构的整理与实施</title>
+    <link href="http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/"/>
+    <id>http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/</id>
+    <published>2017-03-19T15:14:19.000Z</published>
+    <updated>2017-03-19T15:22:57.192Z</updated>
+    
+    <content type="html">&lt;p&gt;新年伊始,经过公司的合理运作与积极争取.我们独家研发的游戏终于取得谷歌全球的推荐名额.这意味着,接下来的一个月我们必须更加努力提高游戏自身品质的同时,也要将游戏提升到高并发架构上来,以及随时面临着来自世界各地不同的玩家能够流畅的体验着游戏带来的快乐.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      新年伊始,经过公司的合理运作与积极争取.我们独家研发的游戏终于取得谷歌全球的推荐名额.这意味着,接下来的一个月我们必须更加努力提高游戏自身品质的同时,也要将游戏提升到高并发架构上来,以及随时面临着来自世界各地不同的玩家能够流畅的体验着游戏带来的快乐.
+    
+    </summary>
+    
+      <category term="framework" scheme="http://blog.terrancy.com/categories/framework/"/>
+    
+    
+      <category term="framework" scheme="http://blog.terrancy.com/tags/framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于大数据量的分析整理</title>
+    <link href="http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/"/>
+    <id>http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/</id>
+    <published>2017-03-19T14:58:55.000Z</published>
+    <updated>2017-03-19T15:11:03.383Z</updated>
+    
+    <content type="html">&lt;p&gt;数据的分析和整理的准确性和合理性,对游戏数值策划而言至关重要.从小到一个道具的价格,到大至游戏内一场精心安排的活动,对玩家行为的布局无不需要前期问卷调查数据和后期玩家数据的支撑和验证.高效的数值大神,凭借着多年的经验和智慧操纵着数据引导玩家入坑.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      数据的分析和整理的准确性和合理性,对游戏数值策划而言至关重要.从小到一个道具的价格,到大至游戏内一场精心安排的活动,对玩家行为的布局无不需要前期问卷调查数据和后期玩家数据的支撑和验证.高效的数值大神,凭借着多年的经验和智慧操纵着数据引导玩家入坑.
+    
+    </summary>
+    
+      <category term="bigdata" scheme="http://blog.terrancy.com/categories/bigdata/"/>
+    
+    
+      <category term="bigdata" scheme="http://blog.terrancy.com/tags/bigdata/"/>
+    
+      <category term="analysis" scheme="http://blog.terrancy.com/tags/analysis/"/>
+    
+  </entry>
+  
+</feed>

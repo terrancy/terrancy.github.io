@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</loc>
+    <lastmod>2018-04-11T13:11:10.140Z</lastmod>
+    <data>
+        <display>
+        <title>多功能网页音乐播放器</title>
+        <pubTime>2017-05-22T13:07:08.000Z</pubTime>
+        
+        <tag>plugin</tag>
+         
+        <tag>music</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://blog.terrancy.com/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/</loc>
+    <lastmod>2018-04-09T12:02:50.896Z</lastmod>
+    <data>
+        <display>
+        <title>自动化运营维护人员的自动化运维工具</title>
+        <pubTime>2017-04-30T15:25:57.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>ELK</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
+    <lastmod>2018-04-08T17:20:30.361Z</lastmod>
+    <data>
+        <display>
+        <title>在Centos7环境下开发环境打搭建杂集</title>
+        <pubTime>2017-06-21T15:18:23.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>ftp</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/05/21/how-to-use-plugin-DPlayer/</loc>
+    <lastmod>2018-04-07T10:48:42.507Z</lastmod>
+    <data>
+        <display>
+        <title>html5视频播放器DPlayer</title>
+        <pubTime>2016-05-21T14:20:58.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>danmaku</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.terrancy.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/</loc>
+    <lastmod>2018-04-03T16:32:32.858Z</lastmod>
+    <data>
+        <display>
+        <title>关于海外支付SDK的集成方案与总结</title>
+        <pubTime>2017-10-18T06:09:28.000Z</pubTime>
+        
+        <tag>pay</tag>
+         
+         
+           
+             
+              <breadCrumb title="pay" url="http://blog.terrancy.com/categories/pay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/</loc>
+    <lastmod>2017-10-19T15:15:05.203Z</lastmod>
+    <data>
+        <display>
+        <title>话说七牛云</title>
+        <pubTime>2017-10-19T15:05:45.000Z</pubTime>
+        
+        <tag>wechat</tag>
+         
+        <tag>cloud storage</tag>
+         
+         
+           
+             
+              <breadCrumb title="node" url="http://blog.terrancy.com/categories/node/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/</loc>
+    <lastmod>2017-10-18T23:56:19.744Z</lastmod>
+    <data>
+        <display>
+        <title>Git基础教程</title>
+        <pubTime>2017-09-09T16:42:05.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://blog.terrancy.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/</loc>
+    <lastmod>2017-10-11T15:42:06.688Z</lastmod>
+    <data>
+        <display>
+        <title>Steam-SDK 接入教程</title>
+        <pubTime>2017-09-30T14:32:09.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>Steam</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/</loc>
+    <lastmod>2017-10-09T22:48:35.699Z</lastmod>
+    <data>
+        <display>
+        <title>U8-服务端环境搭建及其思想架构的总结</title>
+        <pubTime>2017-08-05T17:48:48.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>U8</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://blog.terrancy.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/</loc>
+    <lastmod>2017-10-07T13:57:35.215Z</lastmod>
+    <data>
+        <display>
+        <title>关于接入QQ微端游戏的教程</title>
+        <pubTime>2017-07-31T01:14:32.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>QQ</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</loc>
+    <lastmod>2017-09-05T18:10:53.214Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序基础教程</title>
+        <pubTime>2017-08-14T17:59:47.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>wechat</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
+    <lastmod>2017-06-25T14:01:55.661Z</lastmod>
+    <data>
+        <display>
+        <title>PHP的常见问题</title>
+        <pubTime>2017-03-27T15:56:39.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/12/20/the-method-to-get-start-crawler-with-python/</loc>
+    <lastmod>2017-06-10T15:58:52.788Z</lastmod>
+    <data>
+        <display>
+        <title>入门级爬虫的基本姿势</title>
+        <pubTime>2016-12-19T20:16:18.000Z</pubTime>
+        
+        <tag>crawler</tag>
+         
+        <tag>pyhton</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://blog.terrancy.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/</loc>
+    <lastmod>2017-06-09T14:55:31.022Z</lastmod>
+    <data>
+        <display>
+        <title>深度学习-Pytorch框架初体验</title>
+        <pubTime>2017-06-09T14:44:25.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>deep-learning</tag>
+         
+        <tag>pytorch</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://blog.terrancy.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/14/the-free-ssl-certificate-let-s-encrpt/</loc>
+    <lastmod>2017-06-04T13:01:19.340Z</lastmod>
+    <data>
+        <display>
+        <title>免费的SSL证书Let's Encrypt的安装与使用</title>
+        <pubTime>2016-10-13T23:02:25.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>ssl</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/</loc>
+    <lastmod>2017-06-04T09:33:49.894Z</lastmod>
+    <data>
+        <display>
+        <title>如何配置IPV6环境</title>
+        <pubTime>2017-03-25T14:31:23.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+             
+              <breadCrumb title="ipv6" url="http://blog.terrancy.com/categories/linux/ipv6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/</loc>
+    <lastmod>2017-06-01T14:04:35.727Z</lastmod>
+    <data>
+        <display>
+        <title>多说评论系统</title>
+        <pubTime>2017-05-26T15:42:57.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+        <tag>duoshuo</tag>
+         
+         
+           
+             
+              <breadCrumb title="javascript" url="http://blog.terrancy.com/categories/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/10/restful-api-with-flask/</loc>
+    <lastmod>2017-05-30T15:44:34.322Z</lastmod>
+    <data>
+        <display>
+        <title>基于flask的RESTful-API应用</title>
+        <pubTime>2016-10-10T14:43:39.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>flask</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://blog.terrancy.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/</loc>
+    <lastmod>2017-05-30T02:34:40.647Z</lastmod>
+    <data>
+        <display>
+        <title>Bazaar支付的服务端验证</title>
+        <pubTime>2017-03-20T15:29:54.000Z</pubTime>
+        
+        <tag>pay</tag>
+         
+         
+           
+             
+              <breadCrumb title="pay" url="http://blog.terrancy.com/categories/pay/"/>
+          
+             
+              <breadCrumb title="Bazzar" url="http://blog.terrancy.com/categories/pay/Bazzar/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/</loc>
+    <lastmod>2017-05-30T02:32:14.166Z</lastmod>
+    <data>
+        <display>
+        <title>博客站内搜索引擎</title>
+        <pubTime>2017-05-27T15:46:46.000Z</pubTime>
+        
+        <tag>google</tag>
+         
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="blog" url="http://blog.terrancy.com/categories/blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/</loc>
+    <lastmod>2017-05-18T11:57:57.433Z</lastmod>
+    <data>
+        <display>
+        <title>WannaCry蠕虫病毒的快速蔓延与预防</title>
+        <pubTime>2017-05-15T14:36:28.000Z</pubTime>
+        
+        <tag>bash</tag>
+         
+        <tag>virus</tag>
+         
+         
+           
+             
+              <breadCrumb title="bash" url="http://blog.terrancy.com/categories/bash/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/05/10/how-to-surfing-the-internet-all-over-the-world/</loc>
+    <lastmod>2017-03-24T00:54:03.899Z</lastmod>
+    <data>
+        <display>
+        <title>如何科学上网</title>
+        <pubTime>2016-05-10T13:37:35.000Z</pubTime>
+        
+        <tag>tutorial</tag>
+         
+        <tag>shadowsocks</tag>
+         
+         
+           
+             
+              <breadCrumb title="tutorial" url="http://blog.terrancy.com/categories/tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/12/the-beautiful-system-boot-tool-with-burg/</loc>
+    <lastmod>2017-03-21T17:23:30.300Z</lastmod>
+    <data>
+        <display>
+        <title>使用burg为多系统点亮酷炫的开机启动效果</title>
+        <pubTime>2016-10-12T13:39:15.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>burg</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/</loc>
+    <lastmod>2017-03-20T17:44:53.851Z</lastmod>
+    <data>
+        <display>
+        <title>如何进行Facebook直播</title>
+        <pubTime>2017-03-20T17:39:17.000Z</pubTime>
+        
+        <tag>facebook</tag>
+         
+         
+           
+             
+              <breadCrumb title="facebook" url="http://blog.terrancy.com/categories/facebook/"/>
+          
+             
+              <breadCrumb title="live" url="http://blog.terrancy.com/categories/facebook/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/</loc>
+    <lastmod>2017-03-19T15:22:57.192Z</lastmod>
+    <data>
+        <display>
+        <title>高效大并发游戏架构的整理与实施</title>
+        <pubTime>2017-03-19T15:14:19.000Z</pubTime>
+        
+        <tag>framework</tag>
+         
+         
+           
+             
+              <breadCrumb title="framework" url="http://blog.terrancy.com/categories/framework/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/</loc>
+    <lastmod>2017-03-19T15:11:03.383Z</lastmod>
+    <data>
+        <display>
+        <title>关于大数据量的分析整理</title>
+        <pubTime>2017-03-19T14:58:55.000Z</pubTime>
+        
+        <tag>bigdata</tag>
+         
+        <tag>analysis</tag>
+         
+         
+           
+             
+              <breadCrumb title="bigdata" url="http://blog.terrancy.com/categories/bigdata/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/</loc>
+    <lastmod>2017-03-19T14:55:11.535Z</lastmod>
+    <data>
+        <display>
+        <title>游戏API服务器正面临着DDOS攻击</title>
+        <pubTime>2017-03-19T14:45:47.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>security</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/12/20/how-to-get-simulation-login-zhihu-with-python/</loc>
+    <lastmod>2016-12-19T20:15:04.719Z</lastmod>
+    <data>
+        <display>
+        <title>如何使用python模拟登入知乎</title>
+        <pubTime>2016-12-19T20:07:52.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>crawler</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://blog.terrancy.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/11/02/research-about-api-live-sdk-with-youtube/</loc>
+    <lastmod>2016-12-19T19:53:11.251Z</lastmod>
+    <data>
+        <display>
+        <title>youtube直播sdk嵌入的使用</title>
+        <pubTime>2016-11-02T15:11:38.000Z</pubTime>
+        
+        <tag>live</tag>
+         
+        <tag>youtube</tag>
+         
+         
+           
+             
+              <breadCrumb title="live" url="http://blog.terrancy.com/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/11/14/the-difference-between-http-and-text/</loc>
+    <lastmod>2016-11-17T15:09:35.024Z</lastmod>
+    <data>
+        <display>
+        <title>通过Http获取和通过流的形式下载文件的区别</title>
+        <pubTime>2016-11-14T15:54:49.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+             
+              <breadCrumb title="http" url="http://blog.terrancy.com/categories/http/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/11/08/research-about-phpunit-tool/</loc>
+    <lastmod>2016-11-08T15:15:05.598Z</lastmod>
+    <data>
+        <display>
+        <title>自动化测试工具PHPUNIT实践</title>
+        <pubTime>2016-11-08T14:05:36.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>tool</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/13/research-about-encryption-with-different-pay-sdk/</loc>
+    <lastmod>2016-11-07T00:06:09.244Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈支付加密及签名验证</title>
+        <pubTime>2016-08-12T21:25:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>pay</tag>
+         
+        <tag>encrypt</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/26/live-to-run-run-to-life/</loc>
+    <lastmod>2016-11-05T16:14:13.552Z</lastmod>
+    <data>
+        <display>
+        <title>跑步,与生俱来</title>
+        <pubTime>2016-09-26T14:33:05.000Z</pubTime>
+        
+        <tag>sport</tag>
+         
+        <tag>marathon</tag>
+         
+         
+           
+             
+              <breadCrumb title="sport" url="http://blog.terrancy.com/categories/sport/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
+    <lastmod>2016-11-02T15:22:38.289Z</lastmod>
+    <data>
+        <display>
+        <title>如何合理对待PHP包管理工具</title>
+        <pubTime>2016-10-18T15:09:05.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>composer</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/22/the-document-about-vietnam-payment/</loc>
+    <lastmod>2016-10-18T15:47:48.388Z</lastmod>
+    <data>
+        <display>
+        <title>越南支付的接入总结文档</title>
+        <pubTime>2016-09-22T15:46:06.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>payment</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/11/research-about-using-sdk-pay-from-different-channel/</loc>
+    <lastmod>2016-10-18T15:47:34.790Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈支付SDK的接入</title>
+        <pubTime>2016-08-11T12:58:48.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>payment</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/11/research-about-using-live-from-alibaba/</loc>
+    <lastmod>2016-10-18T15:47:26.175Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈九游直播接入</title>
+        <pubTime>2016-08-11T13:53:14.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>live</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/05/18/how-to-use-javascript-about-videoJs/</loc>
+    <lastmod>2016-10-18T15:47:01.275Z</lastmod>
+    <data>
+        <display>
+        <title>html5视频播放器VideoJS</title>
+        <pubTime>2016-05-18T14:51:31.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>VideoJS</tag>
+         
+         
+           
+             
+              <breadCrumb title="html5" url="http://blog.terrancy.com/categories/html5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/16/life-can't-live-for-bread-or-mike-without-the-dream/</loc>
+    <lastmod>2016-10-16T15:58:21.492Z</lastmod>
+    <data>
+        <display>
+        <title>生活不止眼前的苟且,还有诗和远方</title>
+        <pubTime>2016-10-16T15:38:07.000Z</pubTime>
+        
+        <tag>jotting</tag>
+         
+         
+           
+             
+              <breadCrumb title="jotting" url="http://blog.terrancy.com/categories/jotting/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/</loc>
+    <lastmod>2016-10-11T11:58:36.668Z</lastmod>
+    <data>
+        <display>
+        <title>如何让自己的部落格变成功能性更强的系统</title>
+        <pubTime>2016-08-26T14:47:59.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>plugin</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://blog.terrancy.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/05/11/how-to-bulid-blog-with-hexo/</loc>
+    <lastmod>2016-10-11T11:57:56.841Z</lastmod>
+    <data>
+        <display>
+        <title>HEXO+Github,搭建属于自己的博客</title>
+        <pubTime>2016-05-11T15:43:30.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>node</tag>
+         
+        <tag>gifthub</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://blog.terrancy.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/23/research-about-api-live-sdk-with-twitch/</loc>
+    <lastmod>2016-10-11T11:40:00.807Z</lastmod>
+    <data>
+        <display>
+        <title>国外的直播SDK-Twitch的接入与应用</title>
+        <pubTime>2016-09-23T15:09:55.000Z</pubTime>
+        
+        <tag>live</tag>
+         
+        <tag>twitch</tag>
+         
+         
+           
+             
+              <breadCrumb title="live" url="http://blog.terrancy.com/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/10/08/idea-about-position-of-the-content-tag-with-the-mouse-movement/</loc>
+    <lastmod>2016-10-11T11:38:57.717Z</lastmod>
+    <data>
+        <display>
+        <title>目录跟随鼠标移动定位</title>
+        <pubTime>2016-10-08T13:42:27.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://blog.terrancy.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/29/resource-about-static-file-cdn-for-free/</loc>
+    <lastmod>2016-09-26T15:04:29.123Z</lastmod>
+    <data>
+        <display>
+        <title>关于常用优秀开源库免费CDN的整理</title>
+        <pubTime>2016-08-29T14:54:16.000Z</pubTime>
+        
+        <tag>cdn</tag>
+         
+        <tag>staticFile</tag>
+         
+         
+           
+             
+              <breadCrumb title="cdn" url="http://blog.terrancy.com/categories/cdn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/24/how-to-resolve-the-common-problems-about-git-that-occurred-as-usual/</loc>
+    <lastmod>2016-09-26T15:01:04.197Z</lastmod>
+    <data>
+        <display>
+        <title>关于在日常生活中经常发生的git问题的梳理与总结</title>
+        <pubTime>2016-08-24T15:08:29.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>problem</tag>
+         
+         
+           
+             
+              <breadCrumb title="git" url="http://blog.terrancy.com/categories/git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/22/how-to-resolve-mx-records-exception/</loc>
+    <lastmod>2016-09-26T15:00:59.291Z</lastmod>
+    <data>
+        <display>
+        <title>腾讯企业邮箱域名MX记录设置异常</title>
+        <pubTime>2016-08-22T14:11:35.000Z</pubTime>
+        
+        <tag>tencent</tag>
+         
+        <tag>email</tag>
+         
+        <tag>exception</tag>
+         
+         
+           
+             
+              <breadCrumb title="tencent" url="http://blog.terrancy.com/categories/tencent/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/</loc>
+    <lastmod>2016-09-26T15:00:41.681Z</lastmod>
+    <data>
+        <display>
+        <title>围城</title>
+        <pubTime>2016-05-11T15:43:30.000Z</pubTime>
+        
+        <tag>jotting</tag>
+         
+         
+           
+             
+              <breadCrumb title="jotting" url="http://blog.terrancy.com/categories/jotting/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/12/docker-image-about-lamp-distributed/</loc>
+    <lastmod>2016-09-26T14:59:32.393Z</lastmod>
+    <data>
+        <display>
+        <title>在docker环境下关于分布式LAMP方案的镜像部署</title>
+        <pubTime>2016-09-12T14:44:37.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+        <tag>images</tag>
+         
+        <tag>lamp</tag>
+         
+         
+           
+             
+              <breadCrumb title="docker" url="http://blog.terrancy.com/categories/docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/12/docker-image-about-gitlab/</loc>
+    <lastmod>2016-09-26T14:57:31.654Z</lastmod>
+    <data>
+        <display>
+        <title>在docker环境下关于gitlab的镜像部署</title>
+        <pubTime>2016-09-12T14:53:02.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+        <tag>images</tag>
+         
+        <tag>gitlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="docker" url="http://blog.terrancy.com/categories/docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/12/application-to-send-push-notifications-using-Google-Cloud-Messaging/</loc>
+    <lastmod>2016-09-26T14:57:25.762Z</lastmod>
+    <data>
+        <display>
+        <title>关于谷歌云推送的应用实例</title>
+        <pubTime>2016-09-12T15:24:57.000Z</pubTime>
+        
+        <tag>google</tag>
+         
+        <tag>push</tag>
+         
+         
+           
+             
+              <breadCrumb title="google" url="http://blog.terrancy.com/categories/google/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/09/04/a-tutorial-about-docker/</loc>
+    <lastmod>2016-09-26T14:57:20.089Z</lastmod>
+    <data>
+        <display>
+        <title>玩转docker镜像</title>
+        <pubTime>2016-09-04T10:25:30.000Z</pubTime>
+        
+        <tag>tutorial</tag>
+         
+        <tag>docker</tag>
+         
+        <tag>images</tag>
+         
+         
+           
+             
+              <breadCrumb title="docker" url="http://blog.terrancy.com/categories/docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2016/08/28/how-to-switch-web-pages-without-refresh/</loc>
+    <lastmod>2016-09-18T14:24:17.175Z</lastmod>
+    <data>
+        <display>
+        <title>如何实现页面之间的切换不刷新</title>
+        <pubTime>2016-08-28T09:10:52.000Z</pubTime>
+        
+        <tag>html5</tag>
+         
+        <tag>pjax</tag>
+         
+        <tag>music</tag>
+         
+         
+           
+             
+              <breadCrumb title="pjax" url="http://blog.terrancy.com/categories/pjax/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>
