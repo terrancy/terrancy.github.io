@@ -306,7 +306,7 @@ require([], function (){
         pjaxLoadBusuanzi();
         pjaxLoadTOCListen();
         pjaxLoadTitleHidden();
-        pjaxLoadChangyan();
+        // pjaxLoadChangyan();
       }
 
       function pajxLoadDuoShuo(){
