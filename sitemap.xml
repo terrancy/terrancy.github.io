@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com//404.html</loc>
+    
+    <lastmod>2018-05-08T15:57:57.830Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</loc>
     
     <lastmod>2018-04-11T13:11:10.140Z</lastmod>
@@ -376,13 +383,6 @@
     <loc>http://blog.terrancy.com/2016/08/28/how-to-switch-web-pages-without-refresh/</loc>
     
     <lastmod>2016-09-18T14:24:17.175Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.terrancy.com//404.html</loc>
-    
-    <lastmod>2016-05-04T12:34:03.978Z</lastmod>
     
   </url>
   

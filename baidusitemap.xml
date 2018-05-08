@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</loc>
     <lastmod>2018-04-11T13:11:10.140Z</lastmod>
@@ -1118,11 +1119,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
-        <tag>tutorial</tag>
-         
         <tag>docker</tag>
          
         <tag>images</tag>
+         
+        <tag>tutorial</tag>
          
          
            
@@ -1157,5 +1158,4 @@
     </data>
     </url>
 
-    
 </urlset>
