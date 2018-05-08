@@ -56,7 +56,7 @@
           scrollreveal: "//cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js",
           background_image: {dir:"AprilsLie",min_mun:27,max_num:31},
           baidu_share:{on:true},
-          comments_changyan:{on:"true",app_id:"cyt2vJE4I",conf:"prod_693e657ec102e31bcd97557015f49ae2"}
+          comments_changyan:{on:"false",app_id:"cyt2vJE4I",conf:"prod_693e657ec102e31bcd97557015f49ae2"}
       }
   </script>
   <!-- <script src="https://rawgit.com/DIYgod/DPlayer/master/dist/DPlayer.min.js"></script> -->
@@ -442,16 +442,6 @@
 
 
     
-        
-<!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="http://blog.terrancy.com/2016/05/18/how-to-use-javascript-about-videoJs/" class="cy_thread"></div>
-<script type="text/javascript">
-(function(){
-var appid = 'cyt2vJE4I';
-var conf = 'prod_693e657ec102e31bcd97557015f49ae2';
- var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); })(); </script>
-
-    
         <div id="gitalk-container">1111111111111</div>
 <link rel='stylesheet' href="https://unpkg.com/gitalk/dist/gitalk.css">
 <style type="text/css">
@@ -558,6 +548,7 @@ var conf = 'prod_693e657ec102e31bcd97557015f49ae2';
 /** 扑街 **/
 
 #gitalk-container .gt-header-comment textarea {
+  height: 96px !important;
   background: url(http://blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
 }
 </style>
