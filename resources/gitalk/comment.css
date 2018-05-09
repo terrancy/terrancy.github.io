@@ -105,6 +105,6 @@
   background: url(//blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
 }
 
-.gt-container .gt-header-textarea:hover {
-  background-color: #fbfbfb;
+.gt-container.gt-input-focused .gt-header-comment {
+  background-color: white;
 }
