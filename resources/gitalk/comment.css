@@ -100,11 +100,11 @@
 
 /** 扑街 **/
 
-#gitalk-container .gt-header-comment textarea {
+#gitalk-container .gt-header-comment .gt-header-textarea{
   height: 96px !important;
   background: url(//blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
 }
 
-.gt-input-focused .gt-header-comment textarea{
+.gt-container .gt-input-focused .gt-header-comment .gt-header-textarea{
   background-color: white;
 }
