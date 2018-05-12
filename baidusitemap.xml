@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</loc>
+    <lastmod>2018-05-12T15:21:07.873Z</lastmod>
+    <data>
+        <display>
+        <title>电报机器人</title>
+        <pubTime>2018-05-12T15:13:10.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://blog.terrancy.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -1120,11 +1140,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
-        <tag>tutorial</tag>
-         
         <tag>docker</tag>
          
         <tag>images</tag>
+         
+        <tag>tutorial</tag>
          
          
            

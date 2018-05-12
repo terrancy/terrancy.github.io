@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2017-10-19T15:15:05.203Z</updated>
+  <updated>2018-05-12T15:21:07.873Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电报机器人</title>
+    <link href="http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/"/>
+    <id>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</id>
+    <published>2018-05-12T15:13:10.000Z</published>
+    <updated>2018-05-12T15:21:07.873Z</updated>
+    
+    <content type="html">&lt;p&gt;以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.
+    
+    </summary>
+    
+      <category term="python" scheme="http://blog.terrancy.com/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://blog.terrancy.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>话说七牛云</title>
@@ -909,31 +932,6 @@
     
     
       <category term="framework" scheme="http://blog.terrancy.com/tags/framework/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于大数据量的分析整理</title>
-    <link href="http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/"/>
-    <id>http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/</id>
-    <published>2017-03-19T14:58:55.000Z</published>
-    <updated>2017-03-19T15:11:03.383Z</updated>
-    
-    <content type="html">&lt;p&gt;数据的分析和整理的准确性和合理性,对游戏数值策划而言至关重要.从小到一个道具的价格,到大至游戏内一场精心安排的活动,对玩家行为的布局无不需要前期问卷调查数据和后期玩家数据的支撑和验证.高效的数值大神,凭借着多年的经验和智慧操纵着数据引导玩家入坑.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      数据的分析和整理的准确性和合理性,对游戏数值策划而言至关重要.从小到一个道具的价格,到大至游戏内一场精心安排的活动,对玩家行为的布局无不需要前期问卷调查数据和后期玩家数据的支撑和验证.高效的数值大神,凭借着多年的经验和智慧操纵着数据引导玩家入坑.
-    
-    </summary>
-    
-      <category term="bigdata" scheme="http://blog.terrancy.com/categories/bigdata/"/>
-    
-    
-      <category term="bigdata" scheme="http://blog.terrancy.com/tags/bigdata/"/>
-    
-      <category term="analysis" scheme="http://blog.terrancy.com/tags/analysis/"/>
     
   </entry>
   

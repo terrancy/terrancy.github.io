@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>微信小程序基础教程 | terrancy`s blog</title>
+  <title>Archives: 2018/5 | terrancy`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序基础教程">
-<meta property="og:url" content="http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/index.html">
+  <meta name="description" content="terrancy`s blog,terrancy,菜鸟部落格">
+<meta property="og:type" content="website">
+<meta property="og:title" content="terrancy`s blog">
+<meta property="og:url" content="http://blog.terrancy.com/archives/2018/05/index.html">
 <meta property="og:site_name" content="terrancy`s blog">
-<meta property="og:description" content="许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.">
-<meta property="og:updated_time" content="2017-09-05T18:10:53.214Z">
+<meta property="og:description" content="terrancy`s blog,terrancy,菜鸟部落格">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序基础教程">
-<meta name="twitter:description" content="许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.">
+<meta name="twitter:title" content="terrancy`s blog">
+<meta name="twitter:description" content="terrancy`s blog,terrancy,菜鸟部落格">
   
     <link rel="alternative" href="/atom.xml" title="terrancy`s blog" type="application/atom+xml">
   
@@ -47,8 +46,8 @@
           fancybox: false,
           animate: true,
           isHome: false,
-          isPost: true,
-          isArchive: false,
+          isPost: false,
+          isArchive: true,
           isTag: false,
           isCategory: false,
           open_in_new: false,
@@ -239,236 +238,58 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
 
-      <div class="body-wrap" id="article-list"><article id="post-the-tutorial-about-wechat-mini-program" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap" id="article-list">
   
-    <div class="article-meta">
-      <a href="/2017/08/15/the-tutorial-about-wechat-mini-program/" class="article-date">
-      <time datetime="2017-08-14T17:59:47.000Z" itemprop="datePublished">2017-08-15</time>
-</a>
+  
+    
+    
       
-  <a href="/2017/08/15/the-tutorial-about-wechat-mini-program/#comments" title="查看评论">
-      <i class="fa fa-comments-o" aria-hidden="true"></i>
-      <span id = "sourceId::http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/" class = "gt-link gt-link-counts">0</span>条评论
-  </a>
-
-
-    </div>
-  
-  <div class="article-inner">
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
     
-    
-      <header class="article-header">
-        
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2018/05/12/the-rotbot-with-telegram/" class="archive-article-date">
+      <time datetime="2018-05-12T15:13:10.000Z" itemprop="datePublished">2018-05-12</time>
+</a>
+        </div>
+         
   
-    <h1 class="article-title" itemprop="name">
-      微信小程序基础教程
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/12/the-rotbot-with-telegram/">电报机器人</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/php/">php</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wechat/">wechat</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.</p>
-<h2 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h3 id="前端模块"><a href="#前端模块" class="headerlink" title="前端模块"></a>前端模块</h3><h3 id="服务端模块"><a href="#服务端模块" class="headerlink" title="服务端模块"></a>服务端模块</h3><h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h3><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2>
-      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/python/">python</a>
     </div>
-    
+
+
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/08/15/the-tutorial-about-wechat-mini-program/">微信小程序基础教程</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">terrancy</a></p>
-        <p><span>发布时间:</span>2017-08-15, 01:59:47</p>
-        <p><span>最后更新:</span>2017-09-06, 02:10:53</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/08/15/the-tutorial-about-wechat-mini-program/" title="微信小程序基础教程">http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/09/10/the-basical-tutorial-about-the-git/">
-                    Git基础教程
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/08/06/the-tutorial-about-the-U8-server/">
-                    U8-服务端环境搭建及其思想架构的总结
-                </a>
-            </div>
-        
-    </nav>
-
-  
 </article>
 
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微信小程序"><span class="toc-number">2.</span> <span class="toc-text">微信小程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">2.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端模块"><span class="toc-number">2.2.</span> <span class="toc-text">前端模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端模块"><span class="toc-number">2.3.</span> <span class="toc-text">服务端模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发工具"><span class="toc-number">2.4.</span> <span class="toc-text">开发工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">3.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
-</div>
-<style>
-    .left-col .switch-btn {
-        display: none;
-    }
-    .left-col .switch-area {
-        display: none;
-    }
-</style>
-
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-            $(".switch-btn, .switch-area").fadeOut(300);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-            $(".switch-btn, .switch-area").fadeIn(500);
-        }
-    })
-
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-        $(".switch-btn, .switch-area").show();
-    }
-</script>
-
-
-
-
+  
+  
+    </div></section>
+  
 
     
-<div class="share">
-    
-        <div class="bdsharebuttonbox" data-tag="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <!-- <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a> -->
-        </div>
-        <script>
-            var baiduSharePic = $('body').css('background').replace(/.*url\(\"([^\)]+)\"\).*/gi,'$1') || "";
-            window._bd_share_config={
-                "common":{
-                  "bdSnsKey":{},
-                  "bdText":"微信小程序基础教程　| terrancy`s blog",
-                  "bdMini":"2",
-                  "bdMiniList":false,
-                  "bdPic": baiduSharePic,
-                  "bdStyle":"0",
-                  "bdSize":"24"
-                },
-                "share":{}
-              };
-              var scriptBaiduShare;
-              scriptBaiduShare = document.createElement('script');
-              scriptBaiduShare.src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5);
-              scriptBaiduShare.id = 'id_bgimg_baidu_share';
-              if($('#id_bgimg_baidu_share').length) $('#id_bgimg_baidu_share').remove();
-              window._bd_share_main = false;
-              with(document)0[(getElementsByTagName('head')[0]||body).appendChild(scriptBaiduShare)];
-
-        </script>
-    
-
-    
-
-
-</div>
-
-
-
-
-    
-        <div id="gitalk-container"></div>
-<link rel='stylesheet' href="https://unpkg.com/gitalk/dist/gitalk.css">
-<link rel='stylesheet' href="http://blog.terrancy.com/resources/gitalk/comment.css"/>
-<script src="https://unpkg.com/gitalk@1.2.2/dist/gitalk.min.js"></script>
-<script src="https://cdn.staticfile.org/blueimp-md5/2.7.0/js/md5.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-      clientID:  '1875216265d16240a6f3',
-      clientSecret: 'd03e77a0113a072a376c6285fdf13cfa2978cf56',
-      id: md5(location.pathname),
-      repo: 'terrancy.github.io',
-      owner: 'terrancy',
-      admin: 'terrancy',
-      distractionFreeMode: true,
-    })
-    gitalk.render('gitalk-container')
-</script>
-
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/09/10/the-basical-tutorial-about-the-git/" title="上一篇: Git基础教程">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/08/06/the-tutorial-about-the-U8-server/" title="下一篇: U8-服务端环境搭建及其思想架构的总结">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/the-rotbot-with-telegram/">电报机器人</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/">话说七牛云</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/">关于海外支付SDK的集成方案与总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/the-tutorial-about-microclient-with-Steam/">Steam-SDK 接入教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/10/the-basical-tutorial-about-the-git/">Git基础教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/15/the-tutorial-about-wechat-mini-program/">微信小程序基础教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/06/the-tutorial-about-the-U8-server/">U8-服务端环境搭建及其思想架构的总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/31/the-tutorial-about-microclient-with-tencent/">关于接入QQ微端游戏的教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/21/how-to-set-up-ftp-server-on-the-centos/">在Centos7环境下开发环境打搭建杂集</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/09/the-elegant-framework-about-pytorch/">深度学习-Pytorch框架初体验</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/the-web-plugin-with-google-customer-search/">博客站内搜索引擎</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/the-comment-system-about-duoshuo/">多说评论系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/the-web-plugin-with-music-player/">多功能网页音乐播放器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/the-way-about-AntiWannaCry/">WannaCry蠕虫病毒的快速蔓延与预防</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/30/the-awesome-automated-operations-tool-ELK/">自动化运营维护人员的自动化运维工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/27/the-common-prolems-about-PHP/">PHP的常见问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/how-to-get-network-with-ipv6/">如何配置IPV6环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/how-to-get-facebook-live/">如何进行Facebook直播</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/the-similar-payment-sdk-about-bazaar/">Bazaar支付的服务端验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/">高效大并发游戏架构的整理与实施</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/some-conclusion-about-analysis-of-big-data/">关于大数据量的分析整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/the-api-server-was-under-DDOS-attacks/">游戏API服务器正面临着DDOS攻击</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/the-method-to-get-start-crawler-with-python/">入门级爬虫的基本姿势</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/how-to-get-simulation-login-zhihu-with-python/">如何使用python模拟登入知乎</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/the-difference-between-http-and-text/">通过Http获取和通过流的形式下载文件的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/research-about-phpunit-tool/">自动化测试工具PHPUNIT实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/research-about-api-live-sdk-with-youtube/">youtube直播sdk嵌入的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/how-to-use-package-manage-tool-for-php/">如何合理对待PHP包管理工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/life-can't-live-for-bread-or-mike-without-the-dream/">生活不止眼前的苟且,还有诗和远方</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/the-free-ssl-certificate-let-s-encrpt/">免费的SSL证书Let's Encrypt的安装与使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/the-beautiful-system-boot-tool-with-burg/">使用burg为多系统点亮酷炫的开机启动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/restful-api-with-flask/">基于flask的RESTful-API应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/idea-about-position-of-the-content-tag-with-the-mouse-movement/">目录跟随鼠标移动定位</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/26/live-to-run-run-to-life/">跑步,与生俱来</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/23/research-about-api-live-sdk-with-twitch/">国外的直播SDK-Twitch的接入与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/22/the-document-about-vietnam-payment/">越南支付的接入总结文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/application-to-send-push-notifications-using-Google-Cloud-Messaging/">关于谷歌云推送的应用实例</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/docker-image-about-gitlab/">在docker环境下关于gitlab的镜像部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/docker-image-about-lamp-distributed/">在docker环境下关于分布式LAMP方案的镜像部署</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/04/a-tutorial-about-docker/">玩转docker镜像</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/resource-about-static-file-cdn-for-free/">关于常用优秀开源库免费CDN的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/how-to-switch-web-pages-without-refresh/">如何实现页面之间的切换不刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/">如何让自己的部落格变成功能性更强的系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/how-to-resolve-the-common-problems-about-git-that-occurred-as-usual/">关于在日常生活中经常发生的git问题的梳理与总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/how-to-resolve-mx-records-exception/">腾讯企业邮箱域名MX记录设置异常</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/13/research-about-encryption-with-different-pay-sdk/">浅谈支付加密及签名验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/research-about-using-live-from-alibaba/">浅谈九游直播接入</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/research-about-using-sdk-pay-from-different-channel/">浅谈支付SDK的接入</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/21/how-to-use-plugin-DPlayer/">html5视频播放器DPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/how-to-use-javascript-about-videoJs/">html5视频播放器VideoJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/how-to-bulid-blog-with-hexo/">HEXO+Github,搭建属于自己的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/fortress-besieged-personal/">围城</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/how-to-surfing-the-internet-all-over-the-world/">如何科学上网</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 
 </div>
       <footer id="footer">
