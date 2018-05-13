@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-05-12T15:21:07.873Z</updated>
+  <updated>2018-05-13T15:15:58.017Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -20,9 +20,13 @@
     <link href="http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/"/>
     <id>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</id>
     <published>2018-05-12T15:13:10.000Z</published>
-    <updated>2018-05-12T15:21:07.873Z</updated>
+    <updated>2018-05-13T15:15:58.017Z</updated>
     
     <content type="html">&lt;p&gt;以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.&lt;/p&gt;
+&lt;h2 id=&quot;机器人&quot;&gt;&lt;a href=&quot;#机器人&quot; class=&quot;headerlink&quot; title=&quot;机器人&quot;&gt;&lt;/a&gt;机器人&lt;/h2&gt;&lt;p&gt;按照机器人的功能特点,以下主要分为群聊机器人和警报机器人.&lt;/p&gt;
+&lt;h3 id=&quot;群聊机器人&quot;&gt;&lt;a href=&quot;#群聊机器人&quot; class=&quot;headerlink&quot; title=&quot;群聊机器人&quot;&gt;&lt;/a&gt;群聊机器人&lt;/h3&gt;&lt;p&gt;群聊机器人是放在电报的群主里面,主要对群成员对机器人的某些对话给予相应的回答.而警报机器人只能与管理员对话.这是两者最大的异同点.&lt;/p&gt;
+&lt;h3 id=&quot;警报机器人&quot;&gt;&lt;a href=&quot;#警报机器人&quot; class=&quot;headerlink&quot; title=&quot;警报机器人&quot;&gt;&lt;/a&gt;警报机器人&lt;/h3&gt;&lt;p&gt;警报机器人是放在电报的频道上的,在频道中只有管理员可以与警报机器人对话,其他的成员只能通过的订阅该频道来了解频道内的信息.&lt;/p&gt;
+&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/python-telegram-bot/python-telegram-bot&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;python-telegram-bot&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Naltox/telegram-node-bot&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;telegram-node-bot&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://jiasule.v2ex.com/t/436979&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 telegram bot 创建报警工具&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://51.ruyo.net/8054.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Telegram Bot接管WeChat信息&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
