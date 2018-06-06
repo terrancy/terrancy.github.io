@@ -2,401 +2,408 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com/2018/06/06/the-random-thoughts-about-duration-of-the-resignation/</loc>
+    
+    <lastmod>2018-06-06T15:10:15.372Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</loc>
     
-    <lastmod>2018-05-15T00:06:19.378Z</lastmod>
+    <lastmod>2018-05-15T00:06:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/resources/gitalk/comment.css</loc>
     
-    <lastmod>2018-05-09T16:00:57.957Z</lastmod>
+    <lastmod>2018-05-09T16:00:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com//404.html</loc>
     
-    <lastmod>2018-05-09T15:01:19.132Z</lastmod>
+    <lastmod>2018-05-09T15:01:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</loc>
     
-    <lastmod>2018-04-11T13:11:10.140Z</lastmod>
+    <lastmod>2018-04-11T13:11:12.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/</loc>
     
-    <lastmod>2018-04-09T12:02:50.896Z</lastmod>
+    <lastmod>2018-04-09T12:02:52.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
     
-    <lastmod>2018-04-08T17:20:30.361Z</lastmod>
+    <lastmod>2018-04-08T17:20:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/05/21/how-to-use-plugin-DPlayer/</loc>
     
-    <lastmod>2018-04-07T10:48:42.507Z</lastmod>
+    <lastmod>2018-04-07T10:48:44.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/</loc>
     
-    <lastmod>2018-04-03T16:32:32.858Z</lastmod>
+    <lastmod>2018-04-03T16:32:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/</loc>
     
-    <lastmod>2017-10-19T15:15:05.203Z</lastmod>
+    <lastmod>2017-10-19T15:15:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/</loc>
     
-    <lastmod>2017-10-18T23:56:19.744Z</lastmod>
+    <lastmod>2017-10-18T23:56:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/</loc>
     
-    <lastmod>2017-10-11T15:42:06.688Z</lastmod>
+    <lastmod>2017-10-11T15:42:08.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/</loc>
     
-    <lastmod>2017-10-09T22:48:35.699Z</lastmod>
+    <lastmod>2017-10-09T22:48:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/</loc>
     
-    <lastmod>2017-10-07T13:57:35.215Z</lastmod>
+    <lastmod>2017-10-07T13:57:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</loc>
     
-    <lastmod>2017-09-05T18:10:53.214Z</lastmod>
+    <lastmod>2017-09-05T18:10:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
     
-    <lastmod>2017-06-25T14:01:55.661Z</lastmod>
+    <lastmod>2017-06-25T14:01:56.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/12/20/the-method-to-get-start-crawler-with-python/</loc>
     
-    <lastmod>2017-06-10T15:58:52.788Z</lastmod>
+    <lastmod>2017-06-10T15:58:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/</loc>
     
-    <lastmod>2017-06-09T14:55:31.022Z</lastmod>
+    <lastmod>2017-06-09T14:55:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/14/the-free-ssl-certificate-let-s-encrpt/</loc>
     
-    <lastmod>2017-06-04T13:01:19.340Z</lastmod>
+    <lastmod>2017-06-04T13:01:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/</loc>
     
-    <lastmod>2017-06-04T09:33:49.894Z</lastmod>
+    <lastmod>2017-06-04T09:33:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/about/index.html</loc>
     
-    <lastmod>2017-06-03T15:24:41.958Z</lastmod>
+    <lastmod>2017-06-03T15:24:42.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/</loc>
     
-    <lastmod>2017-06-01T14:04:35.727Z</lastmod>
+    <lastmod>2017-06-01T14:04:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/10/restful-api-with-flask/</loc>
     
-    <lastmod>2017-05-30T15:44:34.322Z</lastmod>
+    <lastmod>2017-05-30T15:44:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/</loc>
     
-    <lastmod>2017-05-30T02:34:40.647Z</lastmod>
+    <lastmod>2017-05-30T02:34:42.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/</loc>
     
-    <lastmod>2017-05-30T02:32:14.166Z</lastmod>
+    <lastmod>2017-05-30T02:32:16.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/</loc>
     
-    <lastmod>2017-05-18T11:57:57.433Z</lastmod>
+    <lastmod>2017-05-18T11:57:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/05/10/how-to-surfing-the-internet-all-over-the-world/</loc>
     
-    <lastmod>2017-03-24T00:54:03.899Z</lastmod>
+    <lastmod>2017-03-24T00:54:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/12/the-beautiful-system-boot-tool-with-burg/</loc>
     
-    <lastmod>2017-03-21T17:23:30.300Z</lastmod>
+    <lastmod>2017-03-21T17:23:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/</loc>
     
-    <lastmod>2017-03-20T17:44:53.851Z</lastmod>
+    <lastmod>2017-03-20T17:44:54.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/</loc>
     
-    <lastmod>2017-03-19T15:22:57.192Z</lastmod>
+    <lastmod>2017-03-19T15:22:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/19/some-conclusion-about-analysis-of-big-data/</loc>
     
-    <lastmod>2017-03-19T15:11:03.383Z</lastmod>
+    <lastmod>2017-03-19T15:11:04.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/</loc>
     
-    <lastmod>2017-03-19T14:55:11.535Z</lastmod>
+    <lastmod>2017-03-19T14:55:12.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/12/20/how-to-get-simulation-login-zhihu-with-python/</loc>
     
-    <lastmod>2016-12-19T20:15:04.719Z</lastmod>
+    <lastmod>2016-12-19T20:15:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/11/02/research-about-api-live-sdk-with-youtube/</loc>
     
-    <lastmod>2016-12-19T19:53:11.251Z</lastmod>
+    <lastmod>2016-12-19T19:53:12.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/11/14/the-difference-between-http-and-text/</loc>
     
-    <lastmod>2016-11-17T15:09:35.024Z</lastmod>
+    <lastmod>2016-11-17T15:09:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/11/08/research-about-phpunit-tool/</loc>
     
-    <lastmod>2016-11-08T15:15:05.598Z</lastmod>
+    <lastmod>2016-11-08T15:15:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/13/research-about-encryption-with-different-pay-sdk/</loc>
     
-    <lastmod>2016-11-07T00:06:09.244Z</lastmod>
+    <lastmod>2016-11-07T00:06:10.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/26/live-to-run-run-to-life/</loc>
     
-    <lastmod>2016-11-05T16:14:13.552Z</lastmod>
+    <lastmod>2016-11-05T16:14:14.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
     
-    <lastmod>2016-11-02T15:22:38.289Z</lastmod>
+    <lastmod>2016-11-02T15:22:40.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/22/the-document-about-vietnam-payment/</loc>
     
-    <lastmod>2016-10-18T15:47:48.388Z</lastmod>
+    <lastmod>2016-10-18T15:47:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/11/research-about-using-sdk-pay-from-different-channel/</loc>
     
-    <lastmod>2016-10-18T15:47:34.790Z</lastmod>
+    <lastmod>2016-10-18T15:47:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/11/research-about-using-live-from-alibaba/</loc>
     
-    <lastmod>2016-10-18T15:47:26.175Z</lastmod>
+    <lastmod>2016-10-18T15:47:28.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/05/18/how-to-use-javascript-about-videoJs/</loc>
     
-    <lastmod>2016-10-18T15:47:01.275Z</lastmod>
+    <lastmod>2016-10-18T15:47:02.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/16/life-can't-live-for-bread-or-mike-without-the-dream/</loc>
     
-    <lastmod>2016-10-16T15:58:21.492Z</lastmod>
+    <lastmod>2016-10-16T15:58:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/tags/index.html</loc>
     
-    <lastmod>2016-10-15T13:55:51.625Z</lastmod>
+    <lastmod>2016-10-15T13:55:52.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/</loc>
     
-    <lastmod>2016-10-11T11:58:36.668Z</lastmod>
+    <lastmod>2016-10-11T11:58:38.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/05/11/how-to-bulid-blog-with-hexo/</loc>
     
-    <lastmod>2016-10-11T11:57:56.841Z</lastmod>
+    <lastmod>2016-10-11T11:57:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/23/research-about-api-live-sdk-with-twitch/</loc>
     
-    <lastmod>2016-10-11T11:40:00.807Z</lastmod>
+    <lastmod>2016-10-11T11:40:02.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/10/08/idea-about-position-of-the-content-tag-with-the-mouse-movement/</loc>
     
-    <lastmod>2016-10-11T11:38:57.717Z</lastmod>
+    <lastmod>2016-10-11T11:38:58.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/29/resource-about-static-file-cdn-for-free/</loc>
     
-    <lastmod>2016-09-26T15:04:29.123Z</lastmod>
+    <lastmod>2016-09-26T15:04:30.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/24/how-to-resolve-the-common-problems-about-git-that-occurred-as-usual/</loc>
     
-    <lastmod>2016-09-26T15:01:04.197Z</lastmod>
+    <lastmod>2016-09-26T15:01:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/22/how-to-resolve-mx-records-exception/</loc>
     
-    <lastmod>2016-09-26T15:00:59.291Z</lastmod>
+    <lastmod>2016-09-26T15:01:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/</loc>
     
-    <lastmod>2016-09-26T15:00:41.681Z</lastmod>
+    <lastmod>2016-09-26T15:00:42.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/12/docker-image-about-lamp-distributed/</loc>
     
-    <lastmod>2016-09-26T14:59:32.393Z</lastmod>
+    <lastmod>2016-09-26T14:59:34.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/12/docker-image-about-gitlab/</loc>
     
-    <lastmod>2016-09-26T14:57:31.654Z</lastmod>
+    <lastmod>2016-09-26T14:57:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/12/application-to-send-push-notifications-using-Google-Cloud-Messaging/</loc>
     
-    <lastmod>2016-09-26T14:57:25.762Z</lastmod>
+    <lastmod>2016-09-26T14:57:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/09/04/a-tutorial-about-docker/</loc>
     
-    <lastmod>2016-09-26T14:57:20.089Z</lastmod>
+    <lastmod>2016-09-26T14:57:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blog.terrancy.com/2016/08/28/how-to-switch-web-pages-without-refresh/</loc>
     
-    <lastmod>2016-09-18T14:24:17.175Z</lastmod>
+    <lastmod>2016-09-18T14:24:18.000Z</lastmod>
     
   </url>
   

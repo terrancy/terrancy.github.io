@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-05-15T00:06:19.378Z</updated>
+  <updated>2018-06-06T15:10:15.372Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>辞职前后的随想笔记</title>
+    <link href="http://blog.terrancy.com/2018/06/06/the-random-thoughts-about-duration-of-the-resignation/"/>
+    <id>http://blog.terrancy.com/2018/06/06/the-random-thoughts-about-duration-of-the-resignation/</id>
+    <published>2018-06-06T14:41:33.000Z</published>
+    <updated>2018-06-06T15:10:15.372Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;或许这是件傻事&quot;&gt;&lt;a href=&quot;#或许这是件傻事&quot; class=&quot;headerlink&quot; title=&quot;或许这是件傻事&quot;&gt;&lt;/a&gt;或许这是件傻事&lt;/h2&gt;&lt;p&gt;过年的时候有跟家人提及个人离职的意愿,家人和亲戚的想法其实就是让我先找好工作再离职,不要犯傻裸辞.&lt;br&gt;没想到年后发生的事情实在也让人猝不及防,公司面临着濒临倒闭的窘境.出于感情因素,不想在公司困难的时候离开,还是勉强坚持了一阵子.毕竟待在这边呆了足足5年,而在这5年里大部分是在加班中度过,为此还发过牢骚抱怨过.同时足够时间也给予我无数次的尝试,积累了丰富的工作经验.&lt;br&gt;看着曾经同甘共苦的同事一个个纷纷离开的时候,既有不舍也有祝福.离开是一种解脱,留着反倒是一种煎熬.因为留下来的什么都没法改,也不敢改.就生怕会拆东墙补西墙一样不小心就踩到了雷区.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      经过一段时间的思考,还是决定离开.满怀的不甘与愤懑,匆匆的提上辞呈.或许,太多的犹豫不决反而是种阻碍.
+    
+    </summary>
+    
+      <category term="random-thought" scheme="http://blog.terrancy.com/categories/random-thought/"/>
+    
+    
+      <category term="resignation" scheme="http://blog.terrancy.com/tags/resignation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>电报机器人</title>
     <link href="http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/"/>
     <id>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</id>
     <published>2018-05-12T15:13:10.000Z</published>
-    <updated>2018-05-15T00:06:19.378Z</updated>
+    <updated>2018-05-15T00:06:20.000Z</updated>
     
     <content type="html">&lt;p&gt;以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.&lt;/p&gt;
 &lt;h2 id=&quot;机器人&quot;&gt;&lt;a href=&quot;#机器人&quot; class=&quot;headerlink&quot; title=&quot;机器人&quot;&gt;&lt;/a&gt;机器人&lt;/h2&gt;&lt;p&gt;按照机器人的功能特点,以下主要分为群聊机器人和警报机器人.&lt;/p&gt;
@@ -47,7 +70,7 @@
     <link href="http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/"/>
     <id>http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/</id>
     <published>2017-10-19T15:05:45.000Z</published>
-    <updated>2017-10-19T15:15:05.203Z</updated>
+    <updated>2017-10-19T15:15:06.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近忙里偷闲写写小程序,为了让小程序整体的资源压缩到最小,应用内的绝大部分图片资源将使用云存储的方式上传到云端.对比了下阿里云与七牛云,性价比上而言,七牛云比较划算.&lt;/p&gt;
 &lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
@@ -76,7 +99,7 @@
     <link href="http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/"/>
     <id>http://blog.terrancy.com/2017/10/18/the-integration-of-the-common-abroad-payment-sdk/</id>
     <published>2017-10-18T06:09:28.000Z</published>
-    <updated>2018-04-03T16:32:32.858Z</updated>
+    <updated>2018-04-03T16:32:34.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;因为业务的需要,公司的游戏不断的向海外拓展.自然地,我们的游戏也要根据当地的需要接入不同的支付方式.其中,最具代表性的,首当其冲的非苹果支付和谷歌支付莫属.但是,除此之外也有其他的支付方式,比如PayPal,Mycard等等.&lt;/p&gt;
 &lt;h2 id=&quot;PayPal支付&quot;&gt;&lt;a href=&quot;#PayPal支付&quot; class=&quot;headerlink&quot; title=&quot;PayPal支付&quot;&gt;&lt;/a&gt;PayPal支付&lt;/h2&gt;&lt;p&gt;相对于国外其他的第三方支付,Paypal支付算是一个比较容易上手的第三方支付.Paypal支付移动SDK继承三种方式的支付,如下所示:&lt;/p&gt;
@@ -145,7 +168,7 @@
     <link href="http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/"/>
     <id>http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/</id>
     <published>2017-09-30T14:32:09.000Z</published>
-    <updated>2017-10-11T15:42:06.688Z</updated>
+    <updated>2017-10-11T15:42:08.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.腾讯游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.在海外,作为最重要的端游平台,Steam的名气几乎在游戏玩家之间传播着.&lt;/p&gt;
 &lt;h2 id=&quot;支付流程&quot;&gt;&lt;a href=&quot;#支付流程&quot; class=&quot;headerlink&quot; title=&quot;支付流程&quot;&gt;&lt;/a&gt;支付流程&lt;/h2&gt;&lt;h3 id=&quot;基本流程&quot;&gt;&lt;a href=&quot;#基本流程&quot; class=&quot;headerlink&quot; title=&quot;基本流程&quot;&gt;&lt;/a&gt;基本流程&lt;/h3&gt;&lt;p&gt;玩家在游戏内购买道具并支付的流程如下,&lt;/p&gt;
@@ -317,7 +340,7 @@
     <link href="http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/"/>
     <id>http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/</id>
     <published>2017-09-09T16:42:05.000Z</published>
-    <updated>2017-10-18T23:56:19.744Z</updated>
+    <updated>2017-10-18T23:56:20.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;工作中必然会接触到代码版本管理工具,它有效地提高了程序猿的代码管理效率,大大的节约了工作成本.其中,最常用的便是SVN和GIT两种版本管理工具.&lt;/p&gt;
 &lt;h2 id=&quot;SVN基础篇&quot;&gt;&lt;a href=&quot;#SVN基础篇&quot; class=&quot;headerlink&quot; title=&quot;SVN基础篇&quot;&gt;&lt;/a&gt;SVN基础篇&lt;/h2&gt;&lt;h3 id=&quot;钩子的用处&quot;&gt;&lt;a href=&quot;#钩子的用处&quot; class=&quot;headerlink&quot; title=&quot;钩子的用处&quot;&gt;&lt;/a&gt;钩子的用处&lt;/h3&gt;&lt;p&gt;svn钩子的好处在于当用户提交前后触发的一些行为.按照具体的行为分为提交前的日志检查和提交后的代码部署&lt;/p&gt;
@@ -361,7 +384,7 @@
     <link href="http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/"/>
     <id>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</id>
     <published>2017-08-14T17:59:47.000Z</published>
-    <updated>2017-09-05T18:10:53.214Z</updated>
+    <updated>2017-09-05T18:10:54.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.&lt;/p&gt;
 &lt;h2 id=&quot;微信小程序&quot;&gt;&lt;a href=&quot;#微信小程序&quot; class=&quot;headerlink&quot; title=&quot;微信小程序&quot;&gt;&lt;/a&gt;微信小程序&lt;/h2&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;h3 id=&quot;前端模块&quot;&gt;&lt;a href=&quot;#前端模块&quot; class=&quot;headerlink&quot; title=&quot;前端模块&quot;&gt;&lt;/a&gt;前端模块&lt;/h3&gt;&lt;h3 id=&quot;服务端模块&quot;&gt;&lt;a href=&quot;#服务端模块&quot; class=&quot;headerlink&quot; title=&quot;服务端模块&quot;&gt;&lt;/a&gt;服务端模块&lt;/h3&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h3&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;</content>
@@ -386,7 +409,7 @@
     <link href="http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/"/>
     <id>http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/</id>
     <published>2017-08-05T17:48:48.000Z</published>
-    <updated>2017-10-09T22:48:35.699Z</updated>
+    <updated>2017-10-09T22:48:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前段阵子一直在研究U8SDK的架构以及服务端的运行逻辑,顺便重新回顾大学期间学习的Java编程.结合最近的实践体验总结些U8Server的思路.&lt;/p&gt;
 &lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;p&gt;U8SDK是基于Java编写的,&lt;/p&gt;
@@ -415,7 +438,7 @@
     <link href="http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/"/>
     <id>http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/</id>
     <published>2017-07-31T01:14:32.000Z</published>
-    <updated>2017-10-07T13:57:35.215Z</updated>
+    <updated>2017-10-07T13:57:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.QQ游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.&lt;/p&gt;
 &lt;h2 id=&quot;常用接口&quot;&gt;&lt;a href=&quot;#常用接口&quot; class=&quot;headerlink&quot; title=&quot;常用接口&quot;&gt;&lt;/a&gt;常用接口&lt;/h2&gt;&lt;p&gt;接入QQ游戏平台端游有几个必须接入的游戏接口,分别为获取用户信息,蓝钻信息,Q点直购.这些接口接入最麻烦的就是签名验证功能.其中获取用户信息、蓝钻信息接口和Q点直购在签名验证上存在一些区别.以下对签名验证功能做一些简要的讲解.&lt;/p&gt;
@@ -464,7 +487,7 @@
     <link href="http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/"/>
     <id>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</id>
     <published>2017-06-21T15:18:23.000Z</published>
-    <updated>2018-04-08T17:20:30.361Z</updated>
+    <updated>2018-04-08T17:20:32.000Z</updated>
     
     <content type="html">&lt;p&gt;笔者平时开发使用的是Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要.因为当时购买选用的是Centos7.x操作系统&lt;del&gt;(一般情况都是使用Centos作为服务器)&lt;/del&gt;,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.&lt;/p&gt;
 &lt;h2 id=&quot;Nginx-服务器&quot;&gt;&lt;a href=&quot;#Nginx-服务器&quot; class=&quot;headerlink&quot; title=&quot;Nginx 服务器&quot;&gt;&lt;/a&gt;Nginx 服务器&lt;/h2&gt;&lt;h3 id=&quot;Nginx-介绍&quot;&gt;&lt;a href=&quot;#Nginx-介绍&quot; class=&quot;headerlink&quot; title=&quot;Nginx 介绍&quot;&gt;&lt;/a&gt;Nginx 介绍&lt;/h3&gt;&lt;p&gt;Nginx是一款轻量级的Web服务器/反向代理服务器及电子邮件代理服务器.由于它自身占用内存少,并发能力强的特点在同类型的网页服务器中有这不俗的表现.深受广大用户的喜爱.&lt;/p&gt;
@@ -569,7 +592,7 @@
     <link href="http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/"/>
     <id>http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/</id>
     <published>2017-06-09T14:44:25.000Z</published>
-    <updated>2017-06-09T14:55:31.022Z</updated>
+    <updated>2017-06-09T14:55:32.000Z</updated>
     
     <content type="html">&lt;p&gt;自从阿尔法Go相继与围棋界顶尖棋手博弈之后,世界上开始了机器学习和深度学习的两个技术学习.追随着浩浩汤汤的学习大潮,慢慢地去接触深度学习框架.&lt;/p&gt;
 </content>
@@ -596,7 +619,7 @@
     <link href="http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/"/>
     <id>http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/</id>
     <published>2017-05-27T15:46:46.000Z</published>
-    <updated>2017-05-30T02:32:14.166Z</updated>
+    <updated>2017-05-30T02:32:16.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近经常逛V2EX网站,对其站内的搜索引擎特别好奇.站内对其也有相关的讨论,才知道原来借助的是谷歌的搜索-Custom Search Engine(简称CSE).&lt;/p&gt;
 &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;通过谷歌自定义搜索引擎(以下称之为CSE)的使用,我们可以很方便的在我们的博客首页上添加谷歌搜索框,充分利用谷歌抓取的数据从而帮助他们从我们的站点上搜索到满足他们需要的信息.通过自定义搜索引擎的功能,为自己的网站提供更加丰富的搜索需要并提高站点的搜索质量从而增加站点自身的搜索排名.&lt;/p&gt;
@@ -639,7 +662,7 @@
     <link href="http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/"/>
     <id>http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/</id>
     <published>2017-05-26T15:42:57.000Z</published>
-    <updated>2017-06-01T14:04:35.727Z</updated>
+    <updated>2017-06-01T14:04:36.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;搭建博客的时候选用了多说作为评论系统之后就一直爱不释手,特别是它充分利用评论系统结合自身收集的数据以及人性化的插件使得博客变得更加丰富.不过可惜的是&lt;a href=&quot;http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说提示即将关闭&lt;/a&gt;,当半年前多说官方宣布由于内部原因导致多说使用将于2017年6月1日到期这个消息的时候让很多用户感到倍加惋惜.虽然作为其中的一位受益者,希望写下这份纪念博客不算太晚.&lt;/p&gt;
 &lt;h2 id=&quot;多说插件&quot;&gt;&lt;a href=&quot;#多说插件&quot; class=&quot;headerlink&quot; title=&quot;多说插件&quot;&gt;&lt;/a&gt;多说插件&lt;/h2&gt;&lt;p&gt;多说是追求最佳的用户体验的社交化评论框,为中小网站提供多账号登录并评论的功能.具有众多实用性,功能强大且永久免费.与其他的评论平台的不同之处在于,多说提供众多的插件.比如最新评论,最近访客,站点热评文章,文章评论数,以及分享组件等等.同时,多说评论框的描述,背景图片,头像都支持自定义样式调整的功能.用户可以根据自己的喜好调整不同的样式.&lt;/p&gt;
@@ -682,7 +705,7 @@
     <link href="http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/"/>
     <id>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</id>
     <published>2017-05-22T13:07:08.000Z</published>
-    <updated>2018-04-11T13:11:10.140Z</updated>
+    <updated>2018-04-11T13:11:12.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;个人喜欢边听音乐便工作的程序猿,可无奈因为版权所限导致有些喜欢的音乐在不同的平台.意味着如果想听音乐便需要有不同平台的账号,非常不方便.因而萌生自己改写音乐插件,算是个人技能的拓展提升吧.&lt;/p&gt;
 &lt;h2 id=&quot;音乐插件&quot;&gt;&lt;a href=&quot;#音乐插件&quot; class=&quot;headerlink&quot; title=&quot;音乐插件&quot;&gt;&lt;/a&gt;音乐插件&lt;/h2&gt;&lt;p&gt;在创建博客的时候也参考过别人分享的心得以及一些亮点,其中一个就是音乐播放器插件.原文作者没有提到具体做法,只是那么对于音乐播放器那么一提.不管是否说者有意,但是那是似乎也没有给我多少的印象.&lt;/p&gt;
@@ -715,7 +738,7 @@
     <link href="http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/"/>
     <id>http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/</id>
     <published>2017-05-15T14:36:28.000Z</published>
-    <updated>2017-05-18T11:57:57.433Z</updated>
+    <updated>2017-05-18T11:57:58.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;近日,全球突发比特币病毒疯狂袭击公共和商业系统事件.由于某国外不法分子利用美国国家安全局未被披露的安全漏洞”EternalBlue”,以类似于蠕虫病毒的传播方式席卷世界各地.通过扫描主机上TCP445端口(Server Message Block/SMB),该病毒尝试攻击目标主机并加密存储在主机上的文档,进而要求以比特币的形式索要赎金.&lt;/p&gt;
 &lt;h2 id=&quot;预防&quot;&gt;&lt;a href=&quot;#预防&quot; class=&quot;headerlink&quot; title=&quot;预防&quot;&gt;&lt;/a&gt;预防&lt;/h2&gt;&lt;p&gt;既然知道这种蠕虫病毒的主要特点是扫描主机上TCP445端口,我们便可以直接通过开启防火墙关闭445端口.当蠕虫病毒一下子蔓延开来的同时,微博上很多人也给出了相应的应对方法.为避免开机后来不及处理便措手不及,需要在开机前先断开主机与一切可以联网的介质,包括网线和无线网.然后开启电脑上的防火墙,按照网上的教程关掉445端口即可.为方便某些技术小白和手残党,以下结合上述的主要操纵要求写了个一键处理的bash文件.当然,需要管理员权限执行~&lt;/p&gt;
@@ -746,7 +769,7 @@
     <link href="http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/"/>
     <id>http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/</id>
     <published>2017-04-30T15:25:57.000Z</published>
-    <updated>2018-04-09T12:02:50.896Z</updated>
+    <updated>2018-04-09T12:02:52.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着开源世界的到来,以往需要运维人员简单重复的操作逐步被自动化运维工具所取代.这不仅解放了运维人员的劳动力,提升工作效率,而且还是让整个工作变得更加智能高效.&lt;/p&gt;
 &lt;h2 id=&quot;日志分析&quot;&gt;&lt;a href=&quot;#日志分析&quot; class=&quot;headerlink&quot; title=&quot;日志分析&quot;&gt;&lt;/a&gt;日志分析&lt;/h2&gt;&lt;h2 id=&quot;系统监控&quot;&gt;&lt;a href=&quot;#系统监控&quot; class=&quot;headerlink&quot; title=&quot;系统监控&quot;&gt;&lt;/a&gt;系统监控&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;elatic官网&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://my.oschina.net/itblog/blog/547250&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-搭建实时日志分析平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.cnblogs.com/huangxincheng/p/7918722.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-集中化日志平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/baidu/1676798&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-开源实时日志分析ELK平台部署&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/467754239/1700828&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-日志分析系统&lt;/a&gt;&lt;/p&gt;
@@ -772,7 +795,7 @@
     <link href="http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/"/>
     <id>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</id>
     <published>2017-03-27T15:56:39.000Z</published>
-    <updated>2017-06-25T14:01:55.661Z</updated>
+    <updated>2017-06-25T14:01:56.000Z</updated>
     
     <content type="html">&lt;p&gt;使用php编写代码过程中难免会遇到疑惑,本人会将工作中遇到的一些疑难杂症一一列举出来,如有错误不良赐教~&lt;/p&gt;
 &lt;h2 id=&quot;file-get-contents-疑惑&quot;&gt;&lt;a href=&quot;#file-get-contents-疑惑&quot; class=&quot;headerlink&quot; title=&quot;file_get_contents 疑惑&quot;&gt;&lt;/a&gt;file_get_contents 疑惑&lt;/h2&gt;&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;PHP中对文件操作印象最深的莫过于 file_get_contents 和 file_put_contents 两个读写文件的函数,可谓是屡试不爽.当然,这两个函数同样可以请求API.可问题在于,有时候不知道原因的出现请求不到数据的问题.通过排查nginx记录下来的错误日志排查到调用函数出现 Server Error 500 错误,而这些链接如果放到浏览器明明可以访问.&lt;/p&gt;
@@ -800,7 +823,7 @@
     <link href="http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/"/>
     <id>http://blog.terrancy.com/2017/03/25/how-to-get-network-with-ipv6/</id>
     <published>2017-03-25T14:31:23.000Z</published>
-    <updated>2017-06-04T09:33:49.894Z</updated>
+    <updated>2017-06-04T09:33:50.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;当公司辛苦研发好的应用提交苹果审核的时候,经常发生苹果审核严苛的审查机制被拒之门外.其中被拒的一个原因是IPV6搞的鬼.可惜的是,国内的大部分IPV6都被教育网垄断掉了.很多人根本就没法获取IPV6资源,畅想IPV6带来的便利.&lt;/p&gt;
 &lt;h2 id=&quot;Windows-Server-环境&quot;&gt;&lt;a href=&quot;#Windows-Server-环境&quot; class=&quot;headerlink&quot; title=&quot;Windows Server 环境&quot;&gt;&lt;/a&gt;Windows Server 环境&lt;/h2&gt;&lt;h2 id=&quot;CentOS-环境&quot;&gt;&lt;a href=&quot;#CentOS-环境&quot; class=&quot;headerlink&quot; title=&quot;CentOS 环境&quot;&gt;&lt;/a&gt;CentOS 环境&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.ttlsa.com/nginx/nginx-ipv6-configuration/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nginx开启IPV6支持配置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/vijayfly/p/6612771.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;阿里云服务器如何设置IPV6通过appstore的审核&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/284958.html?pos=11&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为阿里云ECS（Windows 2012）创建IPv6隧道地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://bbs.aliyun.com/read/304532.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;为阿里云ECS（CentOS 5）配置IPv6隧道地址&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ipv6-test.com/validate.php?&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PIV6-test&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-ping.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;online-ping-ipv6&lt;/a&gt;&lt;/p&gt;
@@ -826,7 +849,7 @@
     <link href="http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/"/>
     <id>http://blog.terrancy.com/2017/03/21/how-to-get-facebook-live/</id>
     <published>2017-03-20T17:39:17.000Z</published>
-    <updated>2017-03-20T17:44:53.851Z</updated>
+    <updated>2017-03-20T17:44:54.000Z</updated>
     
     <content type="html">&lt;p&gt;游戏内接入twitch直播和youtube直播之后,自然而然便会引入Facebook直播了.与前两者不同的是,Facebook live 是找不到第三方的API.没办法,只能自己动手写吧.如何有哪位读者刚好看到有相关的资料,麻烦在评论上提示下哈.&lt;/p&gt;
 </content>
@@ -851,7 +874,7 @@
     <link href="http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/"/>
     <id>http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/</id>
     <published>2017-03-20T15:29:54.000Z</published>
-    <updated>2017-05-30T02:34:40.647Z</updated>
+    <updated>2017-05-30T02:34:42.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;游戏上线后充值被破解&quot;&gt;&lt;a href=&quot;#游戏上线后充值被破解&quot; class=&quot;headerlink&quot; title=&quot;游戏上线后充值被破解&quot;&gt;&lt;/a&gt;游戏上线后充值被破解&lt;/h2&gt;&lt;p&gt;由于之前对Bazzar支付方式的了解不够透彻,以至于我以为支付的验证放在客户端便能解决问题,等到上线之后发现游戏的充值分分钟钟被lucky pacher破解,真是后悔莫及.因为对于服务端而言,现有的参数远远不能做任何验证的.无奈,只能在新包中重新对好API后等待游戏包强制更新了.&lt;/p&gt;
 &lt;h2 id=&quot;游戏服务端API验证功能&quot;&gt;&lt;a href=&quot;#游戏服务端API验证功能&quot; class=&quot;headerlink&quot; title=&quot;游戏服务端API验证功能&quot;&gt;&lt;/a&gt;游戏服务端API验证功能&lt;/h2&gt;&lt;p&gt;Cafebazaar Developer API is a REST API that allows you to automatically perform some of your product management tasks. Using this API, you can check the status of your products and subscriptions sales from your personal server.&lt;/p&gt;
@@ -913,29 +936,6 @@
     
     
       <category term="pay" scheme="http://blog.terrancy.com/tags/pay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高效大并发游戏架构的整理与实施</title>
-    <link href="http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/"/>
-    <id>http://blog.terrancy.com/2017/03/19/make-a-high-efficiency-and-large-concurrency-game-framework/</id>
-    <published>2017-03-19T15:14:19.000Z</published>
-    <updated>2017-03-19T15:22:57.192Z</updated>
-    
-    <content type="html">&lt;p&gt;新年伊始,经过公司的合理运作与积极争取.我们独家研发的游戏终于取得谷歌全球的推荐名额.这意味着,接下来的一个月我们必须更加努力提高游戏自身品质的同时,也要将游戏提升到高并发架构上来,以及随时面临着来自世界各地不同的玩家能够流畅的体验着游戏带来的快乐.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      新年伊始,经过公司的合理运作与积极争取.我们独家研发的游戏终于取得谷歌全球的推荐名额.这意味着,接下来的一个月我们必须更加努力提高游戏自身品质的同时,也要将游戏提升到高并发架构上来,以及随时面临着来自世界各地不同的玩家能够流畅的体验着游戏带来的快乐.
-    
-    </summary>
-    
-      <category term="framework" scheme="http://blog.terrancy.com/categories/framework/"/>
-    
-    
-      <category term="framework" scheme="http://blog.terrancy.com/tags/framework/"/>
     
   </entry>
   
