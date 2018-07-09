@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-06-06T15:10:15.372Z</updated>
+  <updated>2018-07-09T15:56:52.583Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你到底在焦虑什么?</title>
+    <link href="http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/"/>
+    <id>http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/</id>
+    <published>2018-07-09T15:07:40.000Z</published>
+    <updated>2018-07-09T15:56:52.583Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;人生就是一直在自我抗争&quot;&gt;&lt;a href=&quot;#人生就是一直在自我抗争&quot; class=&quot;headerlink&quot; title=&quot;人生就是一直在自我抗争&quot;&gt;&lt;/a&gt;人生就是一直在自我抗争&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;你哪里是在焦虑年纪,你是在焦虑能力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;或许中国人骨子里对数字特别敏感,尤其涉及到年纪.它不仅像树的年轮一样记录着人的一生,更像每个人应该迈过的一道道坎.二十岁,三十岁这样年纪的人多少会有些焦虑.虽然这些数字仅仅表示一个人生命成长的数字,但是让我们焦虑的其实还是没能在这个或者那个年龄做该做的事情,心里多少有些恐慌或者遗憾.&lt;/p&gt;
+&lt;h2 id=&quot;保持良好生活习惯和乐观心态&quot;&gt;&lt;a href=&quot;#保持良好生活习惯和乐观心态&quot; class=&quot;headerlink&quot; title=&quot;保持良好生活习惯和乐观心态&quot;&gt;&lt;/a&gt;保持良好生活习惯和乐观心态&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;唯有通过自我反思与总结,不断明确生活的航向&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;失败并不可怕,我们需要重拾信心及时纠正,查缺补漏.只有看到能力的欠缺并努力地去提升,我们才有可能在以后的道路上满血复活.&lt;/p&gt;
+&lt;p&gt;报名考驾照硬是拖了一年才抽出时间考了科目二还是考挂了,其实平时练得挺多了就是考试的时候太不当回事了.好歹等到科目二过了练完一周的科目三还是考挂了,这次是真的练蒙圈了.愣是等了2个月重新再考就轻车熟路了,科目四考完就马上拿到了驾照.其实考驾照,开车技能很重要,临场应变能力更重要,特别是心态上不能太紧张.开车要放松下来才不会那么累.&lt;/p&gt;
+&lt;p&gt;考驾照的同时也重新准备专业考证,准备的是信息系统管理师证,属于高级工程师职称.因为之前裸考了几次有过经验,这次不敢大意就直接报班了.慢慢对自己的工作有了新的期待,正在备考PMP.&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;发现自己的不足，弥补能力的欠缺，沿着自己认为正确的方向，在沿途经过的每个加油站将油箱加满，你才有可能驶向自己想要抵达的终点.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404260003245634395#_0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你哪里是焦虑年纪，你是在焦虑能力&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      你哪里是在焦虑年纪,你是在焦虑能力
+    
+    </summary>
+    
+      <category term="random-thought" scheme="http://blog.terrancy.com/categories/random-thought/"/>
+    
+    
+      <category term="life" scheme="http://blog.terrancy.com/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>辞职前后的随想笔记</title>
@@ -866,76 +900,6 @@
     
     
       <category term="facebook" scheme="http://blog.terrancy.com/tags/facebook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bazaar支付的服务端验证</title>
-    <link href="http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/"/>
-    <id>http://blog.terrancy.com/2017/03/20/the-similar-payment-sdk-about-bazaar/</id>
-    <published>2017-03-20T15:29:54.000Z</published>
-    <updated>2017-05-30T02:34:42.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;游戏上线后充值被破解&quot;&gt;&lt;a href=&quot;#游戏上线后充值被破解&quot; class=&quot;headerlink&quot; title=&quot;游戏上线后充值被破解&quot;&gt;&lt;/a&gt;游戏上线后充值被破解&lt;/h2&gt;&lt;p&gt;由于之前对Bazzar支付方式的了解不够透彻,以至于我以为支付的验证放在客户端便能解决问题,等到上线之后发现游戏的充值分分钟钟被lucky pacher破解,真是后悔莫及.因为对于服务端而言,现有的参数远远不能做任何验证的.无奈,只能在新包中重新对好API后等待游戏包强制更新了.&lt;/p&gt;
-&lt;h2 id=&quot;游戏服务端API验证功能&quot;&gt;&lt;a href=&quot;#游戏服务端API验证功能&quot; class=&quot;headerlink&quot; title=&quot;游戏服务端API验证功能&quot;&gt;&lt;/a&gt;游戏服务端API验证功能&lt;/h2&gt;&lt;p&gt;Cafebazaar Developer API is a REST API that allows you to automatically perform some of your product management tasks. Using this API, you can check the status of your products and subscriptions sales from your personal server.&lt;/p&gt;
-&lt;h3 id=&quot;Bazaar充值验证的OAuth2授权&quot;&gt;&lt;a href=&quot;#Bazaar充值验证的OAuth2授权&quot; class=&quot;headerlink&quot; title=&quot;Bazaar充值验证的OAuth2授权&quot;&gt;&lt;/a&gt;Bazaar充值验证的OAuth2授权&lt;/h3&gt;&lt;p&gt;因为Bazzar的充值验证功能是需要经过OAuth2授权之后才能请求的,所以在此之前需要预先通过授权获取refresh_token 和 access_token并保存在指定地方.一旦access_token失效之后需要通过refresh_token重新获取,并重新保存.当然,前提是你必须要现在开发者后台先创建好client_id和client_secret以及redirect_uri.&lt;/p&gt;
-&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getAccessToken&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonAccess = file_get_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirConfig.&lt;span class=&quot;string&quot;&gt;&quot;/access.json&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrDataAccess = json_decode($jsonAccess,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;isset&lt;/span&gt;($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;]) &amp;amp;&amp;amp; &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getAccessTokenExpire($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrGetAccessTokenWhere = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;grant_type&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;string&quot;&gt;&quot;refresh_token&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;client_id&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;idClient,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;client_secret&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;secretClient,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;refresh_token&quot;&lt;/span&gt;        =&amp;gt;      &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;tokenRefresh,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $jsonAccess = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;apiCurl-&amp;gt;curlByPost(json_encode(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;uriGetToken),$arrGetAccessTokenWhere);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataAccess = json_decode($jsonAccess,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;isset&lt;/span&gt;($arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;access_token&#39;&lt;/span&gt;]))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;dateline&#39;&lt;/span&gt;] = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getCurrentTimeStamp() + $arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;expires_in&#39;&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $jsonAccess = json_encode($arrDataAccess);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirConfig.&lt;span class=&quot;string&quot;&gt;&quot;/access.json&quot;&lt;/span&gt;,$jsonAccess);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $arrDataAccess;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Bazaar充值验证API的接入&quot;&gt;&lt;a href=&quot;#Bazaar充值验证API的接入&quot; class=&quot;headerlink&quot; title=&quot;Bazaar充值验证API的接入&quot;&gt;&lt;/a&gt;Bazaar充值验证API的接入&lt;/h3&gt;&lt;p&gt;获取到Bazzar的授权access_token之后,方可通过purchase validation api 获取相应的数据.&lt;/p&gt;
-&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getPurchaseValidation&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrDataAccess  = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getAccessToken();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $urlPurchaseValidation = &lt;span class=&quot;string&quot;&gt;&quot;https://pardakht.cafebazaar.ir/devapi/v2/api/validate/&amp;#123;$arrData[&#39;packagename&#39;]&amp;#125;/inapp/&amp;#123;$arrData[&#39;productId&#39;]&amp;#125;/purchases/&amp;#123;$arrData[&#39;purchaseToken&#39;]&amp;#125;?access_token=&quot;&lt;/span&gt;.$arrDataAccess[&lt;span class=&quot;string&quot;&gt;&#39;access_token&#39;&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $timeLog = @date(&lt;span class=&quot;string&quot;&gt;&#39;[d/M/Y:H:i:s]&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirRoot.&lt;span class=&quot;string&quot;&gt;&quot;/purchaseValidation.txt&quot;&lt;/span&gt;,$timeLog.&lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;.$urlPurchaseValidation.PHP_EOL,FILE_APPEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonPurchaseValidation = file_get_contents($urlPurchaseValidation);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    file_put_contents(&lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;dirRoot.&lt;span class=&quot;string&quot;&gt;&quot;/purchaseValidation.txt&quot;&lt;/span&gt;,$timeLog.&lt;span class=&quot;string&quot;&gt;&quot;-&quot;&lt;/span&gt;.$jsonPurchaseValidation.PHP_EOL,FILE_APPEND);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $jsonPurchaseValidation;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果请求成功无误的话,将会从purchase validation api获取到一段json格式的数据,如下所示:&lt;br&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;consumptionState&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;purchaseState&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;kind&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;androidpublisher#inappPurchase&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;developerPayload&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;something&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;   &lt;span class=&quot;attr&quot;&gt;&quot;purchaseTime&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;1414181378566&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;程序通过上述参数就可以判断该订单是否充值成功.&lt;/p&gt;
-&lt;p&gt;以下是官方对各个参数的说明.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;consumptionState&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;This field is 0, if the purchase is consumed, and 1 otherwise.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;purchaseState&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Normally this field is 0, but if the purchase is refunded it is 1.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;kind&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Type of the returned resource. This will always be androidpublisher#inappPurchase&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;developerPayload&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;The payload string that is sent to Bazaar by app when making the purchase.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;purchaseTime&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Time of the purchase as milliseconds from EPOCh (1970/1/1).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;补充说明&quot;&gt;&lt;a href=&quot;#补充说明&quot; class=&quot;headerlink&quot; title=&quot;补充说明&quot;&gt;&lt;/a&gt;补充说明&lt;/h2&gt;&lt;p&gt;Bazaar充值中也使用到了RSA加密验证确保数据传输的完整性以防止他人的篡改,在Bazaar开发者后台中找到一串经过base64加密过的公钥.当客户端向服务端发起充值请求之后,Bazaar服务器端相应的会返回一系列参数.而这部分校验过程中需要使用到RSA加解密.&lt;/p&gt;
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;生活难免会有糊涂的时候,这时候的我们更需要拿起自身的勇气和耐心,敢于承担与付出.&lt;/li&gt;
-&lt;li&gt;Bazaar的充值流程和google play的充值流程是相似的,甚至于他们的验证方式.&lt;/li&gt;
-&lt;li&gt;此次的经验教训加深了我对OAuth2的权限的了解以及RESTFUL的异同.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://developers.cafebazaar.ir/en/docs/developer-api-v2-introduction/developer-api-v2-getting-started/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;In-app-developer-api-oauth2&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://developers.cafebazaar.ir/en/docs/developer-api-v2-introduction/developer-api-v2-ref-validate/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;In-app-purchase-validation&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      由于之前对Bazzar支付方式的了解不够透彻,以至于我以为支付的验证放在客户端便能解决问题了,等到上线之后发现游戏的充值分分钟钟破解才追悔莫及
-    
-    </summary>
-    
-      <category term="pay" scheme="http://blog.terrancy.com/categories/pay/"/>
-    
-      <category term="Bazzar" scheme="http://blog.terrancy.com/categories/pay/Bazzar/"/>
-    
-    
-      <category term="pay" scheme="http://blog.terrancy.com/tags/pay/"/>
     
   </entry>
   
