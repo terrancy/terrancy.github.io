@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2018/08/18/the-problem-of-the-proxy-about-atom/</loc>
+    <lastmod>2018-08-18T09:04:05.837Z</lastmod>
+    <data>
+        <display>
+        <title>Atom编辑器代理设置</title>
+        <pubTime>2018-08-18T08:46:03.000Z</pubTime>
+        
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="IDE" url="http://blog.terrancy.com/categories/IDE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/</loc>
     <lastmod>2018-07-09T16:02:28.480Z</lastmod>
     <data>
@@ -1180,11 +1200,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
-        <tag>tutorial</tag>
-         
         <tag>docker</tag>
          
         <tag>images</tag>
+         
+        <tag>tutorial</tag>
          
          
            
