@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-08-20T07:20:10.861Z</updated>
+  <updated>2018-08-20T09:09:29.286Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人面试经历的总结</title>
+    <link href="http://blog.terrancy.com/2018/08/20/the-summary-about-personal-interview-experience/"/>
+    <id>http://blog.terrancy.com/2018/08/20/the-summary-about-personal-interview-experience/</id>
+    <published>2018-08-20T09:07:08.000Z</published>
+    <updated>2018-08-20T09:09:29.286Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;对最近个人面试经历的总结.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      对最近个人面试经历的总结
+    
+    </summary>
+    
+      <category term="random-thought" scheme="http://blog.terrancy.com/categories/random-thought/"/>
+    
+    
+      <category term="interview" scheme="http://blog.terrancy.com/tags/interview/"/>
+    
+  </entry>
   
   <entry>
     <title>网易云音乐反爬虫机制</title>
@@ -876,34 +899,6 @@
       <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
     
       <category term="ELK" scheme="http://blog.terrancy.com/tags/ELK/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP的常见问题</title>
-    <link href="http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/"/>
-    <id>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</id>
-    <published>2017-03-27T15:56:39.000Z</published>
-    <updated>2017-06-25T14:01:56.000Z</updated>
-    
-    <content type="html">&lt;p&gt;使用php编写代码过程中难免会遇到疑惑,本人会将工作中遇到的一些疑难杂症一一列举出来,如有错误不良赐教~&lt;/p&gt;
-&lt;h2 id=&quot;file-get-contents-疑惑&quot;&gt;&lt;a href=&quot;#file-get-contents-疑惑&quot; class=&quot;headerlink&quot; title=&quot;file_get_contents 疑惑&quot;&gt;&lt;/a&gt;file_get_contents 疑惑&lt;/h2&gt;&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;PHP中对文件操作印象最深的莫过于 file_get_contents 和 file_put_contents 两个读写文件的函数,可谓是屡试不爽.当然,这两个函数同样可以请求API.可问题在于,有时候不知道原因的出现请求不到数据的问题.通过排查nginx记录下来的错误日志排查到调用函数出现 Server Error 500 错误,而这些链接如果放到浏览器明明可以访问.&lt;/p&gt;
-&lt;h3 id=&quot;排查&quot;&gt;&lt;a href=&quot;#排查&quot; class=&quot;headerlink&quot; title=&quot;排查&quot;&gt;&lt;/a&gt;排查&lt;/h3&gt;&lt;p&gt;查询资料之后才知道其实User Agent 的问题, 而这个可能是服务器对此做了限制.User Agent默认是没有开启的,通过PHP.ini配置文件开启即可.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 操作文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;find / -name php.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 编辑文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/php.ini&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;user_agent=&lt;span class=&quot;string&quot;&gt;&quot;Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Gecko/20041001 Firefox/0.10.1&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重启PHP&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;通过开启User Agent的默认值来模拟浏览器发送请求达到”欺骗”服务器的目的.&lt;/p&gt;
-&lt;h2 id=&quot;PHP-模块加载&quot;&gt;&lt;a href=&quot;#PHP-模块加载&quot; class=&quot;headerlink&quot; title=&quot;PHP 模块加载&quot;&gt;&lt;/a&gt;PHP 模块加载&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/devcjq/articles/6085006.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;解决php无法通过file_get_contents或curl采集页面内容&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      使用php编写代码过程中难免会遇到疑惑,本人会将工作中遇到的一些疑难杂症一一列举出来,如有错误不良赐教~
-    
-    </summary>
-    
-      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
-    
-    
-      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
     
   </entry>
   
