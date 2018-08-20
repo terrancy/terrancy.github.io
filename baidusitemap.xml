@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2018/08/20/the-case-about-anti-reptile-mechanism-with-netease-music-api/</loc>
+    <lastmod>2018-08-20T07:20:10.861Z</lastmod>
+    <data>
+        <display>
+        <title>网易云音乐反爬虫机制</title>
+        <pubTime>2018-08-20T07:06:22.000Z</pubTime>
+        
+        <tag>crawler</tag>
+         
+         
+           
+             
+              <breadCrumb title="crawler" url="http://blog.terrancy.com/categories/crawler/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/08/18/the-problem-of-the-proxy-about-atom/</loc>
-    <lastmod>2018-08-18T09:51:04.501Z</lastmod>
+    <lastmod>2018-08-18T15:09:31.686Z</lastmod>
     <data>
         <display>
         <title>Atom编辑器代理设置</title>
