@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-08-22T03:37:05.107Z</updated>
+  <updated>2018-08-27T14:21:48.388Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.terrancy.com/2018/08/20/the-summary-about-personal-interview-experience/"/>
     <id>http://blog.terrancy.com/2018/08/20/the-summary-about-personal-interview-experience/</id>
     <published>2018-08-20T09:07:08.000Z</published>
-    <updated>2018-08-22T03:37:05.107Z</updated>
+    <updated>2018-08-27T14:21:48.388Z</updated>
     
     <content type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;关于为什么辞职这里就不多做解释了,现主要对最近个人面试经历的总结.毕业后就呆在一家公司五年了,第一次离职后面临面试这个件事.其实说起来也挺尴尬的,面试了很多人这次也要被面.对职场面试而言,本是一种展示自我的一个很好的机会,但现在反而像新手一样既笨拙又难堪.不过,至少能检验自己的价值以及以及认清自己与他人的差距.以下,就面试过的一些主要公司谈谈自己的看法吧.&lt;/p&gt;
 &lt;h3 id=&quot;面试&quot;&gt;&lt;a href=&quot;#面试&quot; class=&quot;headerlink&quot; title=&quot;面试&quot;&gt;&lt;/a&gt;面试&lt;/h3&gt;&lt;h4 id=&quot;点触科技&quot;&gt;&lt;a href=&quot;#点触科技&quot; class=&quot;headerlink&quot; title=&quot;点触科技&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.dianchu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点触科技&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;厦门点触科技股份有限公司(以下以”点触科技”称之),2013年借一款宫廷养成类游戏发展至今的新三板上市公司.&lt;del&gt;(或许是在大家看来的运气的元素,因其特定的用户群体让该公司在之后的发展不断壮大.)&lt;/del&gt;目前的主要研发运营两款游戏,游戏风格大同小异.&lt;/p&gt;
@@ -28,12 +28,13 @@
 &lt;h5 id=&quot;过程&quot;&gt;&lt;a href=&quot;#过程&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h5&gt;&lt;p&gt;在前台的提示下填写了个人信息和个人主要的项目经历.&lt;del&gt;感觉也体现不了什么,反正该有的都写在简历上了&lt;/del&gt;&lt;br&gt;面试主要分为HR面试和技术面试.&lt;br&gt;①HR面试主要是为完善之前填写的那份个人信息表,还有就是了解个人工资问题等等.然后便是技术面试了.&lt;br&gt;②经过与后端程序员的负责人的交流中,逐渐的理清了该公司的后端基础模块.后端程序员大概7-8人的样子,主要负责后台工具模块,运营模块,游戏日志模块,内部员工系统包括Bug反馈系统和人事系统等等.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;后台工具模块.&lt;br&gt;后台日志模块主要为常用的数据分析,游戏基本的用户信息.&lt;br&gt;①前端框架使用&lt;a href=&quot;https://cn.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Vue&lt;/a&gt;+&lt;a href=&quot;http://element-cn.eleme.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Element UI&lt;/a&gt;.对于前端只用过Bootstrap框架的我而言也只是一知半解.这部分后面可以去学学,前端不用学得太多但必须扎实又实用才好.&lt;br&gt;②后端使用&lt;a href=&quot;http://flask.pocoo.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;python-flask&lt;/a&gt;作为日常常用开发框架.最主要的是利用python与hadoop便捷的交互优势,这点是某些编程语言所不具备的.&lt;br&gt;③使用Docker作为应用开发的服务器容器,既方便开发也方面部署.大大的缩短了运维和研发的时间,提升工作效率.&lt;/li&gt;
-&lt;li&gt;游戏日志模块.&lt;br&gt;①对外统一游戏日志规范.提供合理的数据BI接口,让游戏服务端根据自定的数据根式将需要的数据提交到游戏日志系统中.&lt;br&gt;②python的并发编程能力.以为游戏内玩家的行为日志相对比较多,对后端服务器的负载也是很大的压力,需要提升数据库的读写速度的同时也发挥python并发的特点.&lt;br&gt;③使用kafka作为常用的消息队列机制.这个可以很大程度上减少服务器端额负载压力.&lt;/li&gt;
+&lt;li&gt;游戏日志模块.&lt;br&gt;①对外统一游戏日志规范.提供合理的数据BI接口,让游戏服务端根据自定的数据根式将需要的数据提交到游戏日志系统中.&lt;br&gt;②python的并发编程能力.因为游戏内玩家的行为日志相对比较多,对后端服务器的负载也是很大的压力,需要提升数据库的读写速度的同时也发挥python并发的特点.&lt;br&gt;③使用kafka作为常用的消息队列机制.这个可以很大程度上减少服务器端额负载压力.&lt;/li&gt;
 &lt;li&gt;运营模块.&lt;br&gt;①常用的运营日志分析统计.比如某个活动对游戏数据的影响,如果能用数据直观的反馈出来对公司的运营也有很好的指导作用.&lt;br&gt;②常用的外围活动或者广告.通过一些简单微信小程序与微信小游戏,促进老玩家对游戏的粘度.通过开发相应的后台,方便运营人员在后台直接给微信小游戏换皮等.大大解放了后端开发人员的生产力.&lt;/li&gt;
-&lt;li&gt;其他模块.&lt;br&gt;①开发公司内部OA系统.&lt;br&gt;②上市公司必须的玩家消费日志系统.玩家的虚拟货币分为消费类型和赠送类型.而消费类型的虚拟货币细分为一次性和永久性.需要每个月分析玩家身上的每部分虚拟货币的使用情况.&lt;/li&gt;
+&lt;li&gt;其他模块.&lt;br&gt;①开发公司内部OA系统.&lt;br&gt;②上市公司必需的玩家消费日志系统.玩家的虚拟货币分为消费类型和赠送类型.而消费类型的虚拟货币细分为一次性和永久性.需要每个月分析玩家身上的每部分虚拟货币的使用情况.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h5&gt;&lt;p&gt;&lt;strong&gt;面试的结果,不了了之.大数据是个硬伤,也是个门槛.&lt;/strong&gt;&lt;br&gt;首先,因为面试经验的问题,对自我的认识和定位不够清晰以及缺乏临时发挥的反应力导致说话口不遮拦的原因.现在想想有点后悔.&lt;br&gt;其次,是个人技术能力.因为之前工作的游戏公司数量比较少,相对就很难遇到在一个比较大量级的情况下产生的问题.&lt;del&gt;(如果想要去一些大公司面试,特别是程序员而言大数据永远是一个绕不过的话题)&lt;/del&gt;同样的数据分析和统计,在大数据环境下产生的读写延迟与冲突导致的数据问题等一无所知.&lt;br&gt;最后,因为实际工作中没有遇到过的问题而导致在面试的减分而甘心让自己的技术停滞不前的想法肯定是不对的.但如何去跨过这样的门槛呢?确实是个值得思考的话题.&lt;/p&gt;
-&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ElemeFE/element&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Element UI&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/sSQlhZdXDgu80OINf3Uu7Q&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;华为人工智能岗位面试经历分享&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h5&gt;&lt;p&gt;&lt;strong&gt;面试的结果,不了了之.大数据是个硬伤,也是个门槛.&lt;/strong&gt;&lt;br&gt;首先,因为面试经验的问题,对自我的认识和定位不够清晰以及缺乏临时发挥的反应力导致说话口不遮拦的原因.&lt;br&gt;其次,是个人技术能力.因为之前工作的游戏公司数量比较少,相对就很难遇到在一个比较大量级的情况下产生的问题.&lt;del&gt;(如果想要去一些大公司面试,特别是程序员而言大数据永远是一个绕不过的话题)&lt;/del&gt;同样的数据分析和统计,在大数据环境下产生的读写延迟与冲突导致的数据问题等一无所知.&lt;br&gt;最后,因为实际工作中没有遇到过的问题而导致在面试的减分而甘心让自己的技术停滞不前的想法肯定是不对的.但如何去跨过这样的门槛呢?确实是个值得思考的话题.&lt;/p&gt;
+&lt;h4 id=&quot;4399&quot;&gt;&lt;a href=&quot;#4399&quot; class=&quot;headerlink&quot; title=&quot;4399&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.4399.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;4399&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;4399是中国最早的和领先的在线休闲游戏平台,免费为用户提供各种健康绿色的游戏.&lt;/p&gt;
+&lt;h5 id=&quot;要求-1&quot;&gt;&lt;a href=&quot;#要求-1&quot; class=&quot;headerlink&quot; title=&quot;要求&quot;&gt;&lt;/a&gt;要求&lt;/h5&gt;&lt;h5 id=&quot;过程-1&quot;&gt;&lt;a href=&quot;#过程-1&quot; class=&quot;headerlink&quot; title=&quot;过程&quot;&gt;&lt;/a&gt;过程&lt;/h5&gt;&lt;h5 id=&quot;总结-1&quot;&gt;&lt;a href=&quot;#总结-1&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h5&gt;&lt;h3 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/ElemeFE/element&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Element UI&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/sSQlhZdXDgu80OINf3Uu7Q&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;华为人工智能岗位面试经历分享&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
