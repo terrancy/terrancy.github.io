@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/</loc>
+    <lastmod>2018-09-02T07:05:23.932Z</lastmod>
+    <data>
+        <display>
+        <title>如何让自己的部落格变成功能性更强的系统</title>
+        <pubTime>2016-08-26T14:47:59.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>blog</tag>
+         
+        <tag>plugin</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://blog.terrancy.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/08/20/the-summary-about-personal-interview-experience/</loc>
-    <lastmod>2018-08-28T05:10:23.962Z</lastmod>
+    <lastmod>2018-09-02T06:11:54.928Z</lastmod>
     <data>
         <display>
         <title>个人面试经历的总结</title>
@@ -179,9 +203,9 @@
         <title>在Centos7环境下开发环境打搭建杂集</title>
         <pubTime>2017-06-21T15:18:23.000Z</pubTime>
         
-        <tag>ftp</tag>
-         
         <tag>linux</tag>
+         
+        <tag>ftp</tag>
          
          
            
@@ -552,9 +576,9 @@
         <title>博客站内搜索引擎</title>
         <pubTime>2017-05-27T15:46:46.000Z</pubTime>
         
-        <tag>google</tag>
-         
         <tag>blog</tag>
+         
+        <tag>google</tag>
          
          
            
@@ -983,30 +1007,6 @@
     
     
   <url>
-    <loc>http://blog.terrancy.com/2016/08/26/how-to-make-blog-became-a-multifunctional-system-with-plugin/</loc>
-    <lastmod>2016-10-11T11:58:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何让自己的部落格变成功能性更强的系统</title>
-        <pubTime>2016-08-26T14:47:59.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>blog</tag>
-         
-        <tag>plugin</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://blog.terrancy.com/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.terrancy.com/2016/05/11/how-to-bulid-blog-with-hexo/</loc>
     <lastmod>2016-10-11T11:57:58.000Z</lastmod>
     <data>
@@ -1240,11 +1240,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
+        <tag>tutorial</tag>
+         
         <tag>docker</tag>
          
         <tag>images</tag>
-         
-        <tag>tutorial</tag>
          
          
            
