@@ -778,9 +778,9 @@
       <category term="blog" scheme="http://blog.terrancy.com/categories/blog/"/>
     
     
-      <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
-    
       <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
+    
+      <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
     
   </entry>
   
