@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-09-02T06:11:54.928Z</updated>
+  <updated>2018-09-20T14:53:12.489Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于国内域名备案的总结</title>
+    <link href="http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/"/>
+    <id>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</id>
+    <published>2018-09-20T14:07:06.000Z</published>
+    <updated>2018-09-20T14:53:12.489Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  最近发现之前在阿里云上已经备案过的域名居然需要提交备案申请,导致部分域名无法正常使用.经过仔细检查之后原来部分域名使用的是腾讯的服务器.生产线上的产品在毫无征兆的情况下突然间就被显示重新提交备案,直接导致产品立马无法使用.这种算是重大的突发事件,在紧急迁移服务器的同时也加急申请备案.实在无奈~&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      最近发现之前在阿里云上已经备案过的域名居然需要提交备案申请,导致部分域名无法正常使用.
+    
+    </summary>
+    
+      <category term="DevOps" scheme="http://blog.terrancy.com/categories/DevOps/"/>
+    
+    
+      <category term="domain-filling" scheme="http://blog.terrancy.com/tags/domain-filling/"/>
+    
+  </entry>
   
   <entry>
     <title>个人面试经历的总结</title>
@@ -888,32 +911,6 @@
       <category term="bash" scheme="http://blog.terrancy.com/tags/bash/"/>
     
       <category term="virus" scheme="http://blog.terrancy.com/tags/virus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自动化运营维护人员的自动化运维工具</title>
-    <link href="http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/"/>
-    <id>http://blog.terrancy.com/2017/04/30/the-awesome-automated-operations-tool-ELK/</id>
-    <published>2017-04-30T15:25:57.000Z</published>
-    <updated>2018-04-09T12:02:52.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着开源世界的到来,以往需要运维人员简单重复的操作逐步被自动化运维工具所取代.这不仅解放了运维人员的劳动力,提升工作效率,而且还是让整个工作变得更加智能高效.&lt;/p&gt;
-&lt;h2 id=&quot;日志分析&quot;&gt;&lt;a href=&quot;#日志分析&quot; class=&quot;headerlink&quot; title=&quot;日志分析&quot;&gt;&lt;/a&gt;日志分析&lt;/h2&gt;&lt;h2 id=&quot;系统监控&quot;&gt;&lt;a href=&quot;#系统监控&quot; class=&quot;headerlink&quot; title=&quot;系统监控&quot;&gt;&lt;/a&gt;系统监控&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.elastic.co/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;elatic官网&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://my.oschina.net/itblog/blog/547250&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-搭建实时日志分析平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.cnblogs.com/huangxincheng/p/7918722.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-集中化日志平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/baidu/1676798&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-开源实时日志分析ELK平台部署&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/467754239/1700828&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ELK-日志分析系统&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      随着开源世界的到来,以往需要运维人员简单重复的操作逐步被自动化运维工具所取代.这不仅解放了运维人员的劳动力,提升工作效率,而且还是让整个工作变得更加智能高效.
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.terrancy.com/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
-    
-      <category term="ELK" scheme="http://blog.terrancy.com/tags/ELK/"/>
     
   </entry>
   
