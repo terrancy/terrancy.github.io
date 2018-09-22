@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
+    <lastmod>2018-09-22T06:02:14.347Z</lastmod>
+    <data>
+        <display>
+        <title>如何合理对待PHP包管理工具</title>
+        <pubTime>2016-10-18T15:09:05.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>composer</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</loc>
     <lastmod>2018-09-20T14:53:12.489Z</lastmod>
     <data>
@@ -896,28 +918,6 @@
 
     
   <url>
-    <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
-    <lastmod>2016-11-02T15:22:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何合理对待PHP包管理工具</title>
-        <pubTime>2016-10-18T15:09:05.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>composer</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.terrancy.com/2016/09/22/the-document-about-vietnam-payment/</loc>
     <lastmod>2016-10-18T15:47:50.000Z</lastmod>
     <data>
@@ -1260,11 +1260,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
+        <tag>tutorial</tag>
+         
         <tag>docker</tag>
          
         <tag>images</tag>
-         
-        <tag>tutorial</tag>
          
          
            
