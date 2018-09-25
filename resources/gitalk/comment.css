@@ -12,8 +12,8 @@
   -moz-transition: .8s;
   -o-transition: .8s;
   -ms-transition: .8s;
-  padding: 1px;
-  border: 1px solid #ddd;
+  /* padding: 1px; */
+  /* border: 1px solid #ddd; */
   background: #fff;
 }
 
