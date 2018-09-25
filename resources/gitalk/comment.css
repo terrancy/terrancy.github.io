@@ -105,12 +105,14 @@
   background: url(//blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
 }
 
+/** 评论边框 **/
 .gt-container .gt-comment-admin .gt-comment-content {
   background-color:rgba(255, 255, 255, 0);
-  border: 1rpx solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-/** 修改字体 **/
+
+/** 评论字体 **/
 .gt-comment-body{
   font-family: inherit;
 }
