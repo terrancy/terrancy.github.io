@@ -104,3 +104,8 @@
   height: 96px !important;
   background: url(//blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
 }
+
+/** 修改字体 **/
+.gt-comment-body{
+  font-family: inherit;
+}
