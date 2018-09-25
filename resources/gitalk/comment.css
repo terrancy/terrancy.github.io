@@ -98,6 +98,10 @@
   -moz-transform: rotateZ(360deg);
 }
 
+.gt-container.gt-input-focused:after{
+    background-color:rgba(255, 255, 255, 0);
+}
+
 /** 扑街 **/
 
 #gitalk-container .gt-header-comment .gt-header-textarea{
