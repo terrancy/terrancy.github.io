@@ -98,7 +98,7 @@
   -moz-transform: rotateZ(360deg);
 }
 
-.gt-container.gt-input-focused:after{
+.gt-container.gt-input-focused{
     background-color:rgba(255, 255, 255, 0);
 }
 
