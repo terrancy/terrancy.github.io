@@ -111,6 +111,7 @@
 #gitalk-container .gt-header-comment .gt-header-textarea{
   height: 96px !important;
   background: url(//blog.terrancy.com/resources/duoshuo/pujie.png) right no-repeat;
+  font-family: inherit;
 }
 
 /** 评论边框 **/
