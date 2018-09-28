@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/</loc>
-    <lastmod>2018-09-28T10:33:45.618Z</lastmod>
+    <lastmod>2018-09-28T16:04:47.139Z</lastmod>
     <data>
         <display>
         <title>Gitalk - 一款非常极客的评论插件</title>
@@ -638,9 +638,9 @@
         <title>博客站内搜索引擎</title>
         <pubTime>2017-05-27T15:46:46.000Z</pubTime>
         
-        <tag>blog</tag>
-         
         <tag>google</tag>
+         
+        <tag>blog</tag>
          
          
            
@@ -1011,9 +1011,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>html5</tag>
-         
         <tag>VideoJS</tag>
+         
+        <tag>html5</tag>
          
          
            
