@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/</loc>
+    
+    <lastmod>2018-09-28T10:33:45.618Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/resources/gitalk/comment.css</loc>
     
     <lastmod>2018-09-26T17:29:36.850Z</lastmod>

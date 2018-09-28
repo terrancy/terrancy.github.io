@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-09-20T14:53:12.489Z</updated>
+  <updated>2018-09-28T10:33:45.618Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gitalk - 一款非常极客的评论插件</title>
+    <link href="http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/"/>
+    <id>http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/</id>
+    <published>2018-09-28T10:08:01.000Z</published>
+    <updated>2018-09-28T10:33:45.618Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;一提到多说,相信不少博主可能会不假思索的跟你说很多它自带的许多特性以及与博客的无缝接入.除了他的访客功能之外,还提供了很多的自定义样式和描述语,这在这样一个众口难调的时代实在是少见.对于多说的感受,往往有这样的感觉-&lt;strong&gt;失去的时候才懂得珍惜&lt;/strong&gt;.本文在和介绍你如何使用Gitalk之外,从外观上尽量将这款评论插件改成多说差不多的样式.&lt;/p&gt;
+&lt;p&gt;自从多说评论插件在2017年6月宣布停止维护之后,相信很多博主会苦于意识找不到合适的评论插件取代他.加之国内其他的评论插件往往需要提供网站备案才允许接入,无形中变会提高了接入门槛.索性,很多的极客爱好者纷纷推出自己的评论插件.比如今天我们即将推荐的一款评论插件Gitalk.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      自从多说评论插件在2017年6月宣布停止维护之后,相信很多博主会苦于意识找不到合适的评论插件取代它.加之国内其他的评论插件往往需要提供网站备案才允许接入,无形中变会提高了接入门槛.索性,很多的极客爱好者纷纷推出自己的评论插件.
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
+    
+    
+      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>关于国内域名备案的总结</title>
@@ -801,9 +825,9 @@
       <category term="blog" scheme="http://blog.terrancy.com/categories/blog/"/>
     
     
-      <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
-    
       <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
+    
+      <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
     
   </entry>
   
@@ -875,42 +899,11 @@
       <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
     
     
+      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
+    
       <category term="plugin" scheme="http://blog.terrancy.com/tags/plugin/"/>
     
       <category term="music" scheme="http://blog.terrancy.com/tags/music/"/>
-    
-      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WannaCry蠕虫病毒的快速蔓延与预防</title>
-    <link href="http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/"/>
-    <id>http://blog.terrancy.com/2017/05/15/the-way-about-AntiWannaCry/</id>
-    <published>2017-05-15T14:36:28.000Z</published>
-    <updated>2017-05-18T11:57:58.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;近日,全球突发比特币病毒疯狂袭击公共和商业系统事件.由于某国外不法分子利用美国国家安全局未被披露的安全漏洞”EternalBlue”,以类似于蠕虫病毒的传播方式席卷世界各地.通过扫描主机上TCP445端口(Server Message Block/SMB),该病毒尝试攻击目标主机并加密存储在主机上的文档,进而要求以比特币的形式索要赎金.&lt;/p&gt;
-&lt;h2 id=&quot;预防&quot;&gt;&lt;a href=&quot;#预防&quot; class=&quot;headerlink&quot; title=&quot;预防&quot;&gt;&lt;/a&gt;预防&lt;/h2&gt;&lt;p&gt;既然知道这种蠕虫病毒的主要特点是扫描主机上TCP445端口,我们便可以直接通过开启防火墙关闭445端口.当蠕虫病毒一下子蔓延开来的同时,微博上很多人也给出了相应的应对方法.为避免开机后来不及处理便措手不及,需要在开机前先断开主机与一切可以联网的介质,包括网线和无线网.然后开启电脑上的防火墙,按照网上的教程关掉445端口即可.为方便某些技术小白和手残党,以下结合上述的主要操纵要求写了个一键处理的bash文件.当然,需要管理员权限执行~&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@ECHO OFF&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;::run with admin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;gt;nul 2&amp;gt;&amp;amp;1 &lt;span class=&quot;string&quot;&gt;&quot;%SYSTEMROOT%\system32\cacls.exe&quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;%SYSTEMROOT%\system32\config\system&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;%errorlevel%&#39;&lt;/span&gt; NEQ &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt; (&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;goto UACPrompt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;) &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; ( goto gotAdmin )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:UACPrompt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; Set UAC = CreateObject^(&lt;span class=&quot;string&quot;&gt;&quot;Shell.Application&quot;&lt;/span&gt;^) &amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; UAC.ShellExecute &lt;span class=&quot;string&quot;&gt;&quot;%~s0&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;runas&quot;&lt;/span&gt;, 1 &amp;gt;&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; /B&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:gotAdmin&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; exist &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt; ( del &lt;span class=&quot;string&quot;&gt;&quot;%temp%\getadmin.vbs&quot;&lt;/span&gt; )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:: bash code&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@ECHO ON&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; allprofiles state on&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny135&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=135 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny136&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=136 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny137&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=137 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny138&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=138 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny139&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=139 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny445&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=445 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny42&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=tcp localport=42 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny135&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=135 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny137&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=137 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny138&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=138 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;netsh advfirewall firewall add rule name=&lt;span class=&quot;string&quot;&gt;&quot;deny139&quot;&lt;/span&gt; dir=&lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; protocol=udp localport=139 action=block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:: CLS&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@ECHO OFF&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;ECHO 哎呀,终于搞定了.再也不用断网线防勒索了~&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;PAUSE&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 该bash的功能主要分成两部分,第一部分就是要有管理员权限.判断当前用户是否是超级管理员.如果不是超级管理员就弹出窗口要求管理员权限.第二部分就开启防火墙并禁止掉一些关联的端口,自然少不了445.&lt;/p&gt;
-&lt;p&gt;如果有安装Telnet的话,可以尝试着去访问该端口看是否可用.&lt;/p&gt;
- &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;telnet ip地址 445&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;无论是在生活还是工作中我们肯定会遇到一些或大或小的”麻烦”.既然我们无法忽略也无法逃避,那么我们在遇到类似的困境时就更加需要抱有处之泰然的态度和死磕到底的决心.放心吧,牛奶和面包都会有的.只要不灰心丧气,努力去争取属于我们的点点滴滴,包括希望和梦想.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;</content>
-    
-    <summary type="html">
-    
-      近日,全球突发比特币病毒疯狂袭击公共和商业系统事件.由于某国外不法分子利用美国国家安全局未被披露的安全漏洞&quot;EternalBlue&quot;,以类似于蠕虫病毒的传播方式席卷世界各地.通过扫描主机上TCP445端口(Server Message Block/SMB),该病毒尝试攻击目标主机并加密存储在主机上的文档,进而要求以比特币的形式索要赎金.
-    
-    </summary>
-    
-      <category term="bash" scheme="http://blog.terrancy.com/categories/bash/"/>
-    
-    
-      <category term="bash" scheme="http://blog.terrancy.com/tags/bash/"/>
-    
-      <category term="virus" scheme="http://blog.terrancy.com/tags/virus/"/>
     
   </entry>
   
