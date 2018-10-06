@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
+    
+    <lastmod>2018-10-06T08:32:25.427Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
+    
+    <lastmod>2018-10-06T08:27:50.578Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</loc>
+    
+    <lastmod>2018-09-29T08:36:47.019Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/</loc>
     
     <lastmod>2018-09-29T04:19:15.516Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
     
     <lastmod>2018-09-22T06:02:14.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</loc>
-    
-    <lastmod>2018-09-20T14:53:12.489Z</lastmod>
     
   </url>
   
@@ -100,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
-    
-    <lastmod>2018-04-08T17:20:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.terrancy.com/2016/05/21/how-to-use-plugin-DPlayer/</loc>
     
     <lastmod>2018-04-07T10:48:44.000Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</loc>
     
     <lastmod>2017-09-05T18:10:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
-    
-    <lastmod>2017-06-25T14:01:56.000Z</lastmod>
     
   </url>
   

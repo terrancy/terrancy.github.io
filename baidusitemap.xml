@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
+    <lastmod>2018-10-06T08:32:25.427Z</lastmod>
+    <data>
+        <display>
+        <title>在Centos7环境下开发环境打搭建杂集</title>
+        <pubTime>2017-06-21T15:18:23.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>ftp</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
+    <lastmod>2018-10-06T08:27:50.578Z</lastmod>
+    <data>
+        <display>
+        <title>PHP的常见问题</title>
+        <pubTime>2017-03-27T15:56:39.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</loc>
+    <lastmod>2018-09-29T08:36:47.019Z</lastmod>
+    <data>
+        <display>
+        <title>关于国内域名备案的总结</title>
+        <pubTime>2018-09-20T14:07:06.000Z</pubTime>
+        
+        <tag>domain-filling</tag>
+         
+         
+           
+             
+              <breadCrumb title="DevOps" url="http://blog.terrancy.com/categories/DevOps/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/09/28/gitalk-is-a-very-geek-comment-plugin-after-duoshuo/</loc>
     <lastmod>2018-09-29T04:19:15.516Z</lastmod>
     <data>
@@ -40,26 +102,6 @@
            
              
               <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.terrancy.com/2018/09/20/the-summary-about-the-domestic-domain-filling/</loc>
-    <lastmod>2018-09-20T14:53:12.489Z</lastmod>
-    <data>
-        <display>
-        <title>关于国内域名备案的总结</title>
-        <pubTime>2018-09-20T14:07:06.000Z</pubTime>
-        
-        <tag>domain-filling</tag>
-         
-         
-           
-             
-              <breadCrumb title="DevOps" url="http://blog.terrancy.com/categories/DevOps/"/>
           
         </display>
     </data>
@@ -258,28 +300,6 @@
 
     
   <url>
-    <loc>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</loc>
-    <lastmod>2018-04-08T17:20:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>在Centos7环境下开发环境打搭建杂集</title>
-        <pubTime>2017-06-21T15:18:23.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>ftp</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://blog.terrancy.com/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.terrancy.com/2016/05/21/how-to-use-plugin-DPlayer/</loc>
     <lastmod>2018-04-07T10:48:44.000Z</lastmod>
     <data>
@@ -440,26 +460,6 @@
         <tag>php</tag>
          
         <tag>wechat</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.terrancy.com/2017/03/27/the-common-prolems-about-PHP/</loc>
-    <lastmod>2017-06-25T14:01:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>PHP的常见问题</title>
-        <pubTime>2017-03-27T15:56:39.000Z</pubTime>
-        
-        <tag>php</tag>
          
          
            
