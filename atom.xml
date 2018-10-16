@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-09-29T04:19:15.516Z</updated>
+  <updated>2018-10-16T11:06:07.360Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Laravel5系列入门教程</title>
+    <link href="http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/"/>
+    <id>http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/</id>
+    <published>2018-10-16T10:34:48.000Z</published>
+    <updated>2018-10-16T11:06:07.360Z</updated>
+    
+    <content type="html">&lt;p&gt;新手入门学习新的PHP框架Laravel,一款号称为WEB艺术家创造的PHP框架.本文主要介绍在virtualbox环境下结合Vagrant和Headstead安装运行Laravel5.&lt;/p&gt;
+&lt;p&gt;Vagrant是一款基于virtual box的虚拟环境,可以安装各种预先配置好的开发环境,达到可以在多种开发环境之间快速切换.&lt;/p&gt;
+&lt;p&gt;Homestead是Laravel官方创建的Vagrant盒子,虚拟机的环境搭载Ubuntu16.04 LTS,并且集成了Laravel所需的开发环境及工具,包含最新版本的PHP,Mysql以及Nginx服务器.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://blog.sbot.io/articles/1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 7/8/10 系统下Laravel框架的开发环境安装及部署详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://laravel-china.org/index.php/topics/3750/windows-10-install-homestead-card-at-ssh-auth-method-private-key&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 10 安装 Homestead 卡在 SSH auth method: private key&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      新手入门学习新的PHP框架Laravel,一款号称为WEB艺术家创造的PHP框架.
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="laravel" scheme="http://blog.terrancy.com/tags/laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitalk - 一款非常极客的评论插件</title>
@@ -895,39 +921,6 @@
       <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
     
       <category term="duoshuo" scheme="http://blog.terrancy.com/tags/duoshuo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多功能网页音乐播放器</title>
-    <link href="http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/"/>
-    <id>http://blog.terrancy.com/2017/05/22/the-web-plugin-with-music-player/</id>
-    <published>2017-05-22T13:07:08.000Z</published>
-    <updated>2018-04-11T13:11:12.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;个人喜欢边听音乐便工作的程序猿,可无奈因为版权所限导致有些喜欢的音乐在不同的平台.意味着如果想听音乐便需要有不同平台的账号,非常不方便.因而萌生自己改写音乐插件,算是个人技能的拓展提升吧.&lt;/p&gt;
-&lt;h2 id=&quot;音乐插件&quot;&gt;&lt;a href=&quot;#音乐插件&quot; class=&quot;headerlink&quot; title=&quot;音乐插件&quot;&gt;&lt;/a&gt;音乐插件&lt;/h2&gt;&lt;p&gt;在创建博客的时候也参考过别人分享的心得以及一些亮点,其中一个就是音乐播放器插件.原文作者没有提到具体做法,只是那么对于音乐播放器那么一提.不管是否说者有意,但是那是似乎也没有给我多少的印象.&lt;/p&gt;
-&lt;p&gt;喜欢有事没事就去逛逛V2EX,就像如同去淘淘心玩意一样.刚好是去年的五一劳动节,有个网友在V站上分享了他们的音乐插件.该插件使用的是angular些的一个chrome插件,在开发者模式下可以播放支持网易,QQ,虾米三方音乐平台.这样用户可以随心所欲的听听三个播放器的不同的资源,同时还支持搜索功能.真心好用~&lt;/p&gt;
-&lt;p&gt;自己喜欢在网易上听音乐,突然好奇网易音乐的播放器一个小细节.为什么切换网页的时候,音乐不会断掉或者说重新刷新.后来去搜索才知道原来使用的是pjax技术异步加载,局部刷新.这个功能也不算是新技术,但是大大提高了页面缓存和加载的速度.因为是局部刷新,所以音乐在切换页面的时候不会因此而重新加载.&lt;/p&gt;
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;对新技术的好奇往往很能考察一名程序猿敏锐的嗅觉~&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/listen1/listen1_chrome_extension/tree/master/js/vendor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Listener plugin&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://binaryify.github.io/NeteaseCloudMusicApi&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易云音乐nodejs版本&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://api.xiaocp.com/player/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易专辑音乐播放器插件&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;github-widget&quot; data-repo=&quot;terrancy/musicPlayer&quot;&gt;&lt;/div&gt;
-</content>
-    
-    <summary type="html">
-    
-      个人喜欢边听音乐便工作的程序猿,可无奈因为版权所限导致有些喜欢的音乐在不同的平台.意味着如果想听音乐便需要有不同平台的账号,非常不方便.
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
-    
-      <category term="plugin" scheme="http://blog.terrancy.com/tags/plugin/"/>
-    
-      <category term="music" scheme="http://blog.terrancy.com/tags/music/"/>
     
   </entry>
   
