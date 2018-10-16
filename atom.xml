@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-10-16T11:06:07.360Z</updated>
+  <updated>2018-10-16T11:10:31.765Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/"/>
     <id>http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/</id>
     <published>2018-10-16T10:34:48.000Z</published>
-    <updated>2018-10-16T11:06:07.360Z</updated>
+    <updated>2018-10-16T11:10:31.765Z</updated>
     
     <content type="html">&lt;p&gt;新手入门学习新的PHP框架Laravel,一款号称为WEB艺术家创造的PHP框架.本文主要介绍在virtualbox环境下结合Vagrant和Headstead安装运行Laravel5.&lt;/p&gt;
 &lt;p&gt;Vagrant是一款基于virtual box的虚拟环境,可以安装各种预先配置好的开发环境,达到可以在多种开发环境之间快速切换.&lt;/p&gt;
 &lt;p&gt;Homestead是Laravel官方创建的Vagrant盒子,虚拟机的环境搭载Ubuntu16.04 LTS,并且集成了Laravel所需的开发环境及工具,包含最新版本的PHP,Mysql以及Nginx服务器.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://blog.sbot.io/articles/1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 7/8/10 系统下Laravel框架的开发环境安装及部署详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://laravel-china.org/index.php/topics/3750/windows-10-install-homestead-card-at-ssh-auth-method-private-key&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 10 安装 Homestead 卡在 SSH auth method: private key&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://laravel-china.org/topics/533/laravel-5-series-tutorial-i-the-most-suitable-for-chinese-laravel-tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Laravel 5 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.sbot.io/articles/1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 7/8/10 系统下Laravel框架的开发环境安装及部署详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://laravel-china.org/index.php/topics/3750/windows-10-install-homestead-card-at-ssh-auth-method-private-key&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 10 安装 Homestead 卡在 SSH auth method: private key&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
