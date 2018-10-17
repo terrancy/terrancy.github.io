@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-10-16T11:10:31.765Z</updated>
+  <updated>2018-10-17T12:37:33.931Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -16,16 +16,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>谷歌支付验证解决方案</title>
+    <link href="http://blog.terrancy.com/2018/10/17/Google-payment-solutions/"/>
+    <id>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</id>
+    <published>2018-10-17T12:21:27.000Z</published>
+    <updated>2018-10-17T12:37:33.931Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;关于谷歌支付验证部分,服务端有多种不同语言的SDK.但就PHP版本是Beta版本的,网上关于使用方式讲解并不全面.&lt;/p&gt;
+&lt;p&gt;之前对接中东版本时有完整做过一遍,可惜没有记录下来.如今也只能依稀记得一些流程,幸好有机会借到谷歌开发者后台的超级管理员账号,有机会全面了解谷歌后台的所有权限情况.借此机会,再对接巴西版本的时候讲整个流程再走一遍,将谷歌支付整个流程遇到的一些问题和解决方案做个记录.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/25481207/error-the-project-id-used-to-call-the-google-play-developer-api-has-not-been-l&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The project id used to call the Google Play Developer API has not been linked in the Google Play Developer Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.it1352.com/91830.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Use service account to verify Google InAppPurchase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      关于谷歌支付验证部分,服务端有多种不同语言的SDK.但就PHP版本是Beta版本的,网上关于使用方式讲解并不全面.借此机会,再对接巴西版本的时候讲整个流程再走一遍.
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="google pay" scheme="http://blog.terrancy.com/tags/google-pay/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Laravel5系列入门教程</title>
     <link href="http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/"/>
     <id>http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/</id>
     <published>2018-10-16T10:34:48.000Z</published>
-    <updated>2018-10-16T11:10:31.765Z</updated>
+    <updated>2018-10-17T12:37:55.604Z</updated>
     
     <content type="html">&lt;p&gt;新手入门学习新的PHP框架Laravel,一款号称为WEB艺术家创造的PHP框架.本文主要介绍在virtualbox环境下结合Vagrant和Headstead安装运行Laravel5.&lt;/p&gt;
 &lt;p&gt;Vagrant是一款基于virtual box的虚拟环境,可以安装各种预先配置好的开发环境,达到可以在多种开发环境之间快速切换.&lt;/p&gt;
 &lt;p&gt;Homestead是Laravel官方创建的Vagrant盒子,虚拟机的环境搭载Ubuntu16.04 LTS,并且集成了Laravel所需的开发环境及工具,包含最新版本的PHP,Mysql以及Nginx服务器.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://laravel-china.org/topics/533/laravel-5-series-tutorial-i-the-most-suitable-for-chinese-laravel-tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Laravel 5 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://blog.sbot.io/articles/1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 7/8/10 系统下Laravel框架的开发环境安装及部署详解&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://laravel-china.org/index.php/topics/3750/windows-10-install-homestead-card-at-ssh-auth-method-private-key&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 10 安装 Homestead 卡在 SSH auth method: private key&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://laravel-china.org/topics/533/laravel-5-series-tutorial-i-the-most-suitable-for-chinese-laravel-tutorial&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Laravel 5 系列入门教程（一）【最适合中国人的 Laravel 教程】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.sbot.io/articles/1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 7/8/10 系统下Laravel框架的开发环境安装及部署详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://laravel-china.org/index.php/topics/3750/windows-10-install-homestead-card-at-ssh-auth-method-private-key&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows 10 安装 Homestead 卡在 SSH auth method: private key&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -878,49 +910,6 @@
       <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
     
       <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多说评论系统</title>
-    <link href="http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/"/>
-    <id>http://blog.terrancy.com/2017/05/26/the-comment-system-about-duoshuo/</id>
-    <published>2017-05-26T15:42:57.000Z</published>
-    <updated>2017-06-01T14:04:36.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;搭建博客的时候选用了多说作为评论系统之后就一直爱不释手,特别是它充分利用评论系统结合自身收集的数据以及人性化的插件使得博客变得更加丰富.不过可惜的是&lt;a href=&quot;http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说提示即将关闭&lt;/a&gt;,当半年前多说官方宣布由于内部原因导致多说使用将于2017年6月1日到期这个消息的时候让很多用户感到倍加惋惜.虽然作为其中的一位受益者,希望写下这份纪念博客不算太晚.&lt;/p&gt;
-&lt;h2 id=&quot;多说插件&quot;&gt;&lt;a href=&quot;#多说插件&quot; class=&quot;headerlink&quot; title=&quot;多说插件&quot;&gt;&lt;/a&gt;多说插件&lt;/h2&gt;&lt;p&gt;多说是追求最佳的用户体验的社交化评论框,为中小网站提供多账号登录并评论的功能.具有众多实用性,功能强大且永久免费.与其他的评论平台的不同之处在于,多说提供众多的插件.比如最新评论,最近访客,站点热评文章,文章评论数,以及分享组件等等.同时,多说评论框的描述,背景图片,头像都支持自定义样式调整的功能.用户可以根据自己的喜好调整不同的样式.&lt;/p&gt;
-&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;虽然博客建站不就,但在慢慢的接触到了多说的评论系统的几个不同插件之后发现它对丰富博客功能起到了重要的作用.最直接的表现就是让静态博客变得生动有趣起来.一方面,读者可以借助第三方账号通过评论系统与博主实时沟通而没有阻碍.另一方面,博主可以通过该系统搜集读者的行为数据有助于提高博客的阅读量.&lt;/p&gt;
-&lt;h3 id=&quot;功能&quot;&gt;&lt;a href=&quot;#功能&quot; class=&quot;headerlink&quot; title=&quot;功能&quot;&gt;&lt;/a&gt;功能&lt;/h3&gt;&lt;p&gt;针对多说众多的功能,以下就博客目前使用的几个插件做介绍.在搞清楚如何安装这些插件的之前,需要我们到&lt;a href=&quot;http://dev.duoshuo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说官网&lt;/a&gt; 注册一个账号并填写唯一的站点域名值.&lt;/p&gt;
-&lt;h4 id=&quot;评论框&quot;&gt;&lt;a href=&quot;#评论框&quot; class=&quot;headerlink&quot; title=&quot;评论框&quot;&gt;&lt;/a&gt;评论框&lt;/h4&gt;&lt;p&gt;多说评论框是多说的基础功能,它需要使用一个多说提供的公共脚本库.这里的评论框使用的到时多说标签”ds-thread”.&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;duoshuo&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 start --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=key%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=title%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=url%&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说评论框 end --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;javascript&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; duoshuoQuery = &amp;#123;short_name:&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=theme.duoshuo.domain%&amp;gt;&quot;&lt;/span&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    (&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; ds = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.createElement(&lt;span class=&quot;string&quot;&gt;&#39;script&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.type = &lt;span class=&quot;string&quot;&gt;&#39;text/javascript&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.async = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.src = (&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.location.protocol == &lt;span class=&quot;string&quot;&gt;&#39;https:&#39;&lt;/span&gt; ? &lt;span class=&quot;string&quot;&gt;&#39;https:&#39;&lt;/span&gt; : &lt;span class=&quot;string&quot;&gt;&#39;http:&#39;&lt;/span&gt;) + &lt;span class=&quot;string&quot;&gt;&#39;//static.duoshuo.com/embed.js&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ds.charset = &lt;span class=&quot;string&quot;&gt;&#39;UTF-8&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        (&lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&#39;head&#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;         || &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&#39;body&#39;&lt;/span&gt;)[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]).appendChild(ds);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!-- 多说公共JS代码 end --&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;通过以上的脚本基本上可以看出一些端倪,多说的所有功能依赖一个&lt;a href=&quot;//static.duoshuo.com/embed.js&quot;&gt;脚本&lt;/a&gt;.多说是依据注册时使用的域名值来区分并记录数据的.多说会更具每篇文章的标题进行索引,然后依据不同的标题显示不同的数据.以下是多说评论框的代码.这里的data-thread-key是博客的URI,data-url是完整的RUL.&lt;a href=&quot;http://dev.duoshuo.com/docs/50b344447f32d30066000147&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=key%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-title&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=title%&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-url&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;lt;%=url%&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;文章评论数&quot;&gt;&lt;a href=&quot;#文章评论数&quot; class=&quot;headerlink&quot; title=&quot;文章评论数&quot;&gt;&lt;/a&gt;文章评论数&lt;/h4&gt;&lt;p&gt;多说的文章评论数的位置是放在文章列表右侧,博主不需要点进文章详情也可以大致了解文章的评论数.这是个简单的插件,多说API根据之前提供的data-thread-key的值进行查找并返回相应的评论数,我们需要根据提供的数据做些页面的美化就可.这里使用的标签是”ds-thread-count”.&lt;a href=&quot;http://dev.duoshuo.com/docs/5016427f77cf5fa30500000e&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-thread-count&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-thread-key&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;2016/08/28/how-to-switch-web-pages-without-refresh/&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-count-type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;comments&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;暂无评论&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;最近访客&quot;&gt;&lt;a href=&quot;#最近访客&quot; class=&quot;headerlink&quot; title=&quot;最近访客&quot;&gt;&lt;/a&gt;最近访客&lt;/h4&gt;&lt;p&gt;当游客用第三方账号登录之后,读者的第三方头像会在最近访客中显示出来.这里使用的标签是”ds-recent-visitors”.使用该插件有两个方面的好处.&lt;a href=&quot;http://dev.duoshuo.com/docs/4ff28d6f552860f21f00000c&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;详情移步多说…&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果读者刚好也是多说的用户,而且在多说后台配置了各自的博客链接.在最近访客部分的头像也附带了对应的站点链接.这样让很多的站点直接互相分享站点暴露值.&lt;/li&gt;
-&lt;li&gt;就博主而言,如果能在分配一个最近访客展示墙无疑是一种自身能力的最好证明.如果博客写得好,吸引的读者越多,最近访客展示墙展示的读者也会越多.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-recent-visitors&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-num-items&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;28&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;data-avatar-size&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;42&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ds-recent-visitors&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;动态加载&quot;&gt;&lt;a href=&quot;#动态加载&quot; class=&quot;headerlink&quot; title=&quot;动态加载&quot;&gt;&lt;/a&gt;动态加载&lt;/h4&gt;&lt;p&gt;多说的动态加载的特点是多说的类库一次加载之后,其所有的插件可以根据各自的功能判断动态加载.特别在于网站引入pjax局部异步加载功能之后,多说的动态加载表现出其他原生插件所无法比拟的优越性.以致于现在不得不使用其它评论系统之后,越发发现多说的方便和实用.&lt;/p&gt;
-&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;p&gt;尽管有多么的不舍,但多说始终都是要关闭的.对比国内外的几种评论系统,虽然各有各的优缺点,相信也会满足博客的基本的要求.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://dev.duoshuo.com/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说帮助文档&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://dev.duoshuo.com/docs/4ff1cfd0397309552c000017&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说样式的修改&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      搭建博客的时候选用了多说作为评论系统之后就一直爱不释手,特别是它充分利用评论系统结合自身收集的数据以及人性化的插件使得博客变得更加丰富.
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://blog.terrancy.com/categories/javascript/"/>
-    
-    
-      <category term="javascript" scheme="http://blog.terrancy.com/tags/javascript/"/>
-    
-      <category term="duoshuo" scheme="http://blog.terrancy.com/tags/duoshuo/"/>
     
   </entry>
   

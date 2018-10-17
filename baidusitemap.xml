@@ -5,13 +5,33 @@
     
   <url>
     <loc>http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/</loc>
-    <lastmod>2018-10-16T11:10:31.765Z</lastmod>
+    <lastmod>2018-10-17T12:37:55.604Z</lastmod>
     <data>
         <display>
         <title>Laravel5系列入门教程</title>
         <pubTime>2018-10-16T10:34:48.000Z</pubTime>
         
         <tag>laravel</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</loc>
+    <lastmod>2018-10-17T12:37:33.931Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌支付验证解决方案</title>
+        <pubTime>2018-10-17T12:21:27.000Z</pubTime>
+        
+        <tag>google pay</tag>
          
          
            
