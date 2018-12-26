@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-10-17T12:37:33.931Z</updated>
+  <updated>2018-12-26T09:56:26.112Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序常用的第三方框架的整理</title>
+    <link href="http://blog.terrancy.com/2018/11/29/the-common-third-part-framework-about-wechat-mini-program/"/>
+    <id>http://blog.terrancy.com/2018/11/29/the-common-third-part-framework-about-wechat-mini-program/</id>
+    <published>2018-11-29T09:52:00.000Z</published>
+    <updated>2018-12-26T09:56:26.112Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+      开始入手微信小程序的时候,通常使用的是原生框架来写.
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序支付相关教程</title>
+    <link href="http://blog.terrancy.com/2018/11/26/the-payment-about-wechat-mini-program/"/>
+    <id>http://blog.terrancy.com/2018/11/26/the-payment-about-wechat-mini-program/</id>
+    <published>2018-11-26T09:37:18.000Z</published>
+    <updated>2018-12-26T09:48:12.752Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+      根据平时在写小程序的业务,对微信小程序支付相关教程的整理与总结
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序常用的第三方SDK的整理与总结</title>
+    <link href="http://blog.terrancy.com/2018/11/16/the-common-third-part-sdk-about-wechat-mini-program/"/>
+    <id>http://blog.terrancy.com/2018/11/16/the-common-third-part-sdk-about-wechat-mini-program/</id>
+    <published>2018-11-16T09:39:28.000Z</published>
+    <updated>2018-12-26T09:48:15.831Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+      根据平时在写小程序的业务,对微信小程序常用的第三方SDK的整理与总结
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
+    
+  </entry>
   
   <entry>
     <title>谷歌支付验证解决方案</title>
@@ -235,7 +307,7 @@
     <link href="http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/"/>
     <id>http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/</id>
     <published>2018-07-09T15:07:40.000Z</published>
-    <updated>2018-07-09T16:02:28.480Z</updated>
+    <updated>2018-10-20T00:59:22.798Z</updated>
     
     <content type="html">&lt;h2 id=&quot;人生就是一直在自我抗争&quot;&gt;&lt;a href=&quot;#人生就是一直在自我抗争&quot; class=&quot;headerlink&quot; title=&quot;人生就是一直在自我抗争&quot;&gt;&lt;/a&gt;人生就是一直在自我抗争&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;你哪里是在焦虑年纪,你是在焦虑能力&lt;/p&gt;
@@ -248,7 +320,9 @@
 &lt;p&gt;报名考驾照硬是拖了一年才抽出时间考了科目二还是考挂了,其实平时练得挺多了就是考试的时候太不当回事了.好歹等到科目二过了练完一周的科目三还是考挂了,这次是真的练蒙圈了.愣是等了2个月重新再考就轻车熟路了,科目四考完就马上拿到了驾照.其实考驾照,开车技能很重要,临场应变能力更重要,特别是心态上不能太紧张.开车要放松下来才不会那么累.&lt;/p&gt;
 &lt;p&gt;考驾照的同时也重新准备专业考证,准备的是信息系统管理师证,属于高级工程师职称.因为之前裸考了几次有过经验,这次不敢大意就直接报班了.慢慢对自己的工作有了新的期待,正在备考PMP.&lt;/p&gt;
 &lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;发现自己的不足，弥补能力的欠缺，沿着自己认为正确的方向，在沿途经过的每个加油站将油箱加满，你才有可能驶向自己想要抵达的终点.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404260003245634395#_0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你哪里是焦虑年纪，你是在焦虑能力&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404260003245634395#_0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你哪里是焦虑年纪，你是在焦虑能力&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -728,188 +802,6 @@
       <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
     
       <category term="QQ" scheme="http://blog.terrancy.com/tags/QQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Centos7环境下开发环境打搭建杂集</title>
-    <link href="http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/"/>
-    <id>http://blog.terrancy.com/2017/06/21/how-to-set-up-ftp-server-on-the-centos/</id>
-    <published>2017-06-21T15:18:23.000Z</published>
-    <updated>2018-10-06T08:45:27.823Z</updated>
-    
-    <content type="html">&lt;p&gt;笔者平时开发使用的是Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要.因为当时购买选用的是Centos7.x操作系统&lt;del&gt;(一般情况都是使用Centos作为服务器)&lt;/del&gt;,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.&lt;/p&gt;
-&lt;h2 id=&quot;Nginx-服务器&quot;&gt;&lt;a href=&quot;#Nginx-服务器&quot; class=&quot;headerlink&quot; title=&quot;Nginx 服务器&quot;&gt;&lt;/a&gt;Nginx 服务器&lt;/h2&gt;&lt;h3 id=&quot;Nginx-介绍&quot;&gt;&lt;a href=&quot;#Nginx-介绍&quot; class=&quot;headerlink&quot; title=&quot;Nginx 介绍&quot;&gt;&lt;/a&gt;Nginx 介绍&lt;/h3&gt;&lt;p&gt;Nginx是一款轻量级的Web服务器/反向代理服务器及电子邮件代理服务器.由于它自身占用内存少,并发能力强的特点在同类型的网页服务器中有这不俗的表现.深受广大用户的喜爱.&lt;/p&gt;
-&lt;h3 id=&quot;Nginx-安装&quot;&gt;&lt;a href=&quot;#Nginx-安装&quot; class=&quot;headerlink&quot; title=&quot;Nginx 安装&quot;&gt;&lt;/a&gt;Nginx 安装&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;在指定的目录下创建yum源配置文件.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/yum.repos.d/nginx.repo&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;插入以下一行代码,在vim环境下切换编辑模式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;name=nginx repo&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baseurl=http://nginx.org/packages/centos/&lt;span class=&quot;variable&quot;&gt;$releasever&lt;/span&gt;/&lt;span class=&quot;variable&quot;&gt;$basearch&lt;/span&gt;/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gpgcheck=0&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;enabled=1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;更新系统资源并安装&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum update &amp;amp;&amp;amp;  yum -y nginx install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Nginx-启动&quot;&gt;&lt;a href=&quot;#Nginx-启动&quot; class=&quot;headerlink&quot; title=&quot;Nginx 启动&quot;&gt;&lt;/a&gt;Nginx 启动&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;以下关于nginx常用的几个命令:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl start nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#关闭&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl stop  nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl reload nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#重启&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#状态&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl status nginx.service&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 配置文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/nginx/nginx.conf&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;安装完nginx之后不要着急着把它启动起来,一帮情况是需要通过防火墙开放nginx的端口,默认是80.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#第一种方案,重启之后失效&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;iptables -I INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;service iptables save&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#第二种方案,直接写在iptables文件中,需要注意顺序&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/sysconfig/iptables&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-A INPUT 5 -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;开放防火墙的80端口之后,可以通过以上命令启动nginx.而且nginx在默认的情况下是有一个站点的,所以启动之后是可以直接访问的.简单的检查下nginx服务器是否正在运行,&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ps aux | grep nginx&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;添加开机启动&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; nginx.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;PHP7&quot;&gt;&lt;a href=&quot;#PHP7&quot; class=&quot;headerlink&quot; title=&quot;PHP7&quot;&gt;&lt;/a&gt;PHP7&lt;/h2&gt;&lt;h3 id=&quot;PHP7-介绍&quot;&gt;&lt;a href=&quot;#PHP7-介绍&quot; class=&quot;headerlink&quot; title=&quot;PHP7 介绍&quot;&gt;&lt;/a&gt;PHP7 介绍&lt;/h3&gt;&lt;p&gt;PHP7使用新的 Zend Engine 3.0 提高应用程序性能两倍,比PHP5.6 低了 50％ 的内存消耗. 它可以服务于更多的并发用户，无需任何额外的硬件.此外,由于它摒弃低版本的一些过时的API而无法完全向下兼容.&lt;/p&gt;
-&lt;h3 id=&quot;PHP7-安装&quot;&gt;&lt;a href=&quot;#PHP7-安装&quot; class=&quot;headerlink&quot; title=&quot;PHP7 安装&quot;&gt;&lt;/a&gt;PHP7 安装&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Centos下默认的PHP版本比较低,一般情况下在安装之前先卸载已有的版本.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum remove php&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;但是这样是并完全卸载掉PHP,以下命令是查看与php相关的所有软件.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep php&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;卸载前先查看下软件之前的相互依赖.没有依赖项的软件优先卸载.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt; php70w-common-7.0.19-1.w7.x86_64&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;下载并安装指定版本的PHP7&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 下载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum install php70w-7.0.19-1.w7.x86_64 php70w-cli-7.0.19-1.w7.x86_64 php70w-common-7.0.19-1.w7.x86_64 php70w-gd-7.0.19-1.w7.x86_64 php70w-ldap-7.0.19-1.w7.x86_64 php70w-mbstring-7.0.19-1.w7.x86_64 php70w-mcrypt-7.0.19-1.w7.x86_64 php70w-mysql-7.0.19-1.w7.x86_64 php70w-pdo-7.0.19-1.w7.x86_64&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 卸载&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep webstatic&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm &lt;span class=&quot;_&quot;&gt;-e&lt;/span&gt;  上面搜索到的包即可&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;安装php-fpm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum install php70w-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;PHP7-启动&quot;&gt;&lt;a href=&quot;#PHP7-启动&quot; class=&quot;headerlink&quot; title=&quot;PHP7 启动&quot;&gt;&lt;/a&gt;PHP7 启动&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;以下是PHP启动的常见命令&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl start php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 关闭&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl stop php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 重启&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 状态&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl status php-fpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 配置文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/php.ini&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;安装完PHP之后就可以通过以上命令启动.查看PHP是否已经正在运行,&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;ps aux | grep php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;添加开机启动&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; php-fpm&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;FTP-服务器&quot;&gt;&lt;a href=&quot;#FTP-服务器&quot; class=&quot;headerlink&quot; title=&quot;FTP 服务器&quot;&gt;&lt;/a&gt;FTP 服务器&lt;/h2&gt;&lt;h3 id=&quot;FTP-介绍&quot;&gt;&lt;a href=&quot;#FTP-介绍&quot; class=&quot;headerlink&quot; title=&quot;FTP 介绍&quot;&gt;&lt;/a&gt;FTP 介绍&lt;/h3&gt;&lt;p&gt;一般而言,直接连接到服务器上是一个便捷而且安全的做法.搭建FTP服务器主要是为了服务其他人,他们不要动那么多命令照样可以在服务器上指定的路径上完成一些任务.比如上传搭建服务器CDN源站后给相关人员上传资源,他们只关心将资源上传到指定的路径之后就可以访问,而不用通过一大堆的命令去完成.&lt;/p&gt;
-&lt;h3 id=&quot;FTP-安装&quot;&gt;&lt;a href=&quot;#FTP-安装&quot; class=&quot;headerlink&quot; title=&quot;FTP 安装&quot;&gt;&lt;/a&gt;FTP 安装&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;查看是否有安装,如果没有就安装.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 检查&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rpm -qa | grep vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum -y install vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 开机启动&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl &lt;span class=&quot;built_in&quot;&gt;enable&lt;/span&gt; vsftpd.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;FTP-配置&quot;&gt;&lt;a href=&quot;#FTP-配置&quot; class=&quot;headerlink&quot; title=&quot;FTP 配置&quot;&gt;&lt;/a&gt;FTP 配置&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;修改配置文件vsftpd.conf&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 访问限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anonymous_enable=NO&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;local_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置路径&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chroot_list_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置宿主账号列表&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chroot_list_file=/etc/vsftpd/chroot_list&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置PAM认证文件名&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;pam_service_name=vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 开启虚拟账号&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;guest.enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置宿主用户&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;guest.username=username&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置存放虚拟账号的文件夹路径&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;user_config_dir=/etc/vsftpd/vuser_conf&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 端口监听,默认是21&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;listen_port=21&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;创建允许访问的宿主账号文件,填写已存在的宿主账号并保存&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/chroot_list&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;创建虚拟账号和密码,&lt;strong&gt;&lt;em&gt;奇数行是账号,偶数行是密码&lt;/em&gt;&lt;/strong&gt;,并生成认证文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建虚拟账号信息并保存为vuser_passwd.txt&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/vuser_passwd.txt&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 生成认证文件vuser_passwd.db&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dbload -T -t &lt;span class=&quot;built_in&quot;&gt;hash&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 编辑认证文件,加入ftp认证并保存&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/pam.d/vsftpd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 查找系统版本号&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;getconf LONG_BIT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#系统为32位：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;auth required pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;account required pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 系统为64位：&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;account required /lib64/security/pam_userdb.so db=/etc/vsftpd/vuser_passwd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;创建虚拟账号文件信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建虚拟账号文件&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/vsftpd/vuser_conf/username&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 权限限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 虚拟用户根目录,根据实际情况修改  该目录必须要有读写权限 chmod -R 777 目录&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;local_root=/var/www/html  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 可写&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;write_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 掩码  &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_umask=022&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_world_readable_only=NO&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_upload_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_mkdir_write_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;anon_other_write_enable=YES&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;以上代码注意每行末尾的空格,否则会出现认证成功但却无法登陆的窘境.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;开放防火墙端口,默认是21.设置启动服务器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 设置防护墙,防护墙添加访问限制&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-A INPUT -m state --state NEW &lt;span class=&quot;_&quot;&gt;-s&lt;/span&gt; xxx.xxx.xxx.xxx  -m tcp -p tcp --dport 21 -j ACCEPT&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;systemctl restart vsftpd.service&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;FTP-日志&quot;&gt;&lt;a href=&quot;#FTP-日志&quot; class=&quot;headerlink&quot; title=&quot;FTP 日志&quot;&gt;&lt;/a&gt;FTP 日志&lt;/h3&gt;&lt;p&gt;这步骤很重要,开启FTP上传下载日志.可以监控访问者的所有行为.&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;xferlog_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;xferlog_file=/var/&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;/vsftpd/xferlog&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;xferlog_std_format=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dual_log_enable=YES&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;vsftpd_log_file=/var/&lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt;/vsftpd/vsftd.log&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;邮件功能&quot;&gt;&lt;a href=&quot;#邮件功能&quot; class=&quot;headerlink&quot; title=&quot;邮件功能&quot;&gt;&lt;/a&gt;邮件功能&lt;/h2&gt;&lt;h3 id=&quot;mail介绍&quot;&gt;&lt;a href=&quot;#mail介绍&quot; class=&quot;headerlink&quot; title=&quot;mail介绍&quot;&gt;&lt;/a&gt;mail介绍&lt;/h3&gt;&lt;p&gt;很多时候我们希望服务器帮我们做些简单的.系统的.重复的事情,我们往往会将这些任务定期化或者自动化,在一定程度上解放劳动力.在现实工作上有很多需要让服务器自己来处理.让将处理结果通过一定的方式通知到相应的工作人员.&lt;br&gt;有很多的运维平台其实也集成了这样的功能,可以选择通过邮件的方式,微信公众号推送,甚至是电报.其实不管使用什么方式,这些都是通知工具.以下主要介绍在linux下通过mail命令发送邮件.&lt;/p&gt;
-&lt;h3 id=&quot;mail安装&quot;&gt;&lt;a href=&quot;#mail安装&quot; class=&quot;headerlink&quot; title=&quot;mail安装&quot;&gt;&lt;/a&gt;mail安装&lt;/h3&gt;&lt;p&gt;我们通过mail命令发送邮件,实际上是调用sendmail来执行对外发送邮件功能.使用以下命令指定安装操作.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;yum install -y sendmail&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;service sendmail start&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&quot;mail配置&quot;&gt;&lt;a href=&quot;#mail配置&quot; class=&quot;headerlink&quot; title=&quot;mail配置&quot;&gt;&lt;/a&gt;mail配置&lt;/h3&gt;&lt;p&gt;正常情况下在安装之后mail默认使用本地的sendmail功能发送邮件,但如果不安装sendmail模块也可以通过外部SMTP服务器来发送邮件.此时需要修改mail的配置文件(/etc/nail.rc).&lt;br&gt;在配置文件末尾追加外部SMTP服务器参数信息.特别注意等号前后不能有空格.以下以腾讯的SMTP为例.&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;vim /etc/nail.rc&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;set from=Your-mail@qq.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;set smtp=smtp.exmail.qq.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;set smtp-auth-user=Your-mail@qq.com&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;set smtp-auth-password=Password_mail&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;set smtp-auth=login&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&quot;mail使用&quot;&gt;&lt;a href=&quot;#mail使用&quot; class=&quot;headerlink&quot; title=&quot;mail使用&quot;&gt;&lt;/a&gt;mail使用&lt;/h3&gt;&lt;p&gt;mail参数选项如下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;-b&amp;lt;地址&amp;gt;：指定密件副本的收信人地址；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-c&amp;lt;地址&amp;gt;：指定副本的收信人地址；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-f&amp;lt;邮件文件&amp;gt;：读取指定邮件文件中的邮件；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-i：不显示终端发出的信息；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-I：使用互动模式；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-n：程序使用时，不使用mail.rc文件中的设置；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-N：阅读邮件时，不显示邮件的标题；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-s&amp;lt;邮件主题&amp;gt;：指定邮件的主题；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-u&amp;lt;用户帐号&amp;gt;：读取指定用户的邮件；&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;-v：执行时，显示详细的信息。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在Shell下使用mail发送邮件很方便,特别处理在一些邮件警报或者定时数据报表的时候.以下通过管道的形式发送邮件.&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;## 邮件警报&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;echo -e &amp;quot;区域：$&amp;#123;area&amp;#125;\n状态：在线人数下降超过百分十,当前在线人数$&amp;#123;b&amp;#125;\n服务器当前时间：`date`&amp;quot; | tr -d &amp;apos;\r&amp;apos;| mail -s &amp;quot;$&amp;#123;area&amp;#125;在线人数异常下降&amp;quot; $&amp;#123;list&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;## 数据报表&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;echo &amp;quot;用户数据报表&amp;quot; | mail -v -s &amp;quot;上个月用户数据报表&amp;quot; -a &amp;quot;data.zip&amp;quot; $&amp;#123;emailList&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;SSH-服务器&quot;&gt;&lt;a href=&quot;#SSH-服务器&quot; class=&quot;headerlink&quot; title=&quot;SSH 服务器&quot;&gt;&lt;/a&gt;SSH 服务器&lt;/h2&gt;&lt;h3 id=&quot;SSH-介绍&quot;&gt;&lt;a href=&quot;#SSH-介绍&quot; class=&quot;headerlink&quot; title=&quot;SSH 介绍&quot;&gt;&lt;/a&gt;SSH 介绍&lt;/h3&gt;&lt;h3 id=&quot;SSH-常见问题&quot;&gt;&lt;a href=&quot;#SSH-常见问题&quot; class=&quot;headerlink&quot; title=&quot;SSH 常见问题&quot;&gt;&lt;/a&gt;SSH 常见问题&lt;/h3&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/d169e186469f44436611d8ec.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;如何在centos7环境下安装vsftpd&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.51cto.com/ityunwei2017/1713425&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux下使用mail命令发送邮件&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.cnblogs.com/mousean/p/5972272.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;centos 7 下发送邮件设置&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://man.linuxde.net/mail&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux命令大全&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      笔者平时开发使用的时Windows操作系统,服务器用的是阿里云服务器.一台较低配置的云服务器已经足够日常的研发需要,研发所需的一些环境也会随着条件和需要不断增加.本篇文章会根据需要不断增加环境搭建的过程.
-    
-    </summary>
-    
-      <category term="linux" scheme="http://blog.terrancy.com/categories/linux/"/>
-    
-    
-      <category term="linux" scheme="http://blog.terrancy.com/tags/linux/"/>
-    
-      <category term="ftp" scheme="http://blog.terrancy.com/tags/ftp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习-Pytorch框架初体验</title>
-    <link href="http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/"/>
-    <id>http://blog.terrancy.com/2017/06/09/the-elegant-framework-about-pytorch/</id>
-    <published>2017-06-09T14:44:25.000Z</published>
-    <updated>2017-06-09T14:55:32.000Z</updated>
-    
-    <content type="html">&lt;p&gt;自从阿尔法Go相继与围棋界顶尖棋手博弈之后,世界上开始了机器学习和深度学习的两个技术学习.追随着浩浩汤汤的学习大潮,慢慢地去接触深度学习框架.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      自从阿尔法Go相继与围棋界顶尖棋手博弈之后,世界上开始了机器学习和深度学习的两个技术学习.追随着浩浩汤汤的学习大潮,慢慢地去接触深度学习框架.
-    
-    </summary>
-    
-      <category term="python" scheme="http://blog.terrancy.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://blog.terrancy.com/tags/python/"/>
-    
-      <category term="deep-learning" scheme="http://blog.terrancy.com/tags/deep-learning/"/>
-    
-      <category term="pytorch" scheme="http://blog.terrancy.com/tags/pytorch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客站内搜索引擎</title>
-    <link href="http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/"/>
-    <id>http://blog.terrancy.com/2017/05/27/the-web-plugin-with-google-customer-search/</id>
-    <published>2017-05-27T15:46:46.000Z</published>
-    <updated>2017-05-30T02:32:16.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近经常逛V2EX网站,对其站内的搜索引擎特别好奇.站内对其也有相关的讨论,才知道原来借助的是谷歌的搜索-Custom Search Engine(简称CSE).&lt;/p&gt;
-&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;通过谷歌自定义搜索引擎(以下称之为CSE)的使用,我们可以很方便的在我们的博客首页上添加谷歌搜索框,充分利用谷歌抓取的数据从而帮助他们从我们的站点上搜索到满足他们需要的信息.通过自定义搜索引擎的功能,为自己的网站提供更加丰富的搜索需要并提高站点的搜索质量从而增加站点自身的搜索排名.&lt;/p&gt;
-&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;p&gt;要使用谷歌自定义搜索引擎的前提,也是最重要的一点自然是能访问谷歌开发者后台.利用注册号的账号登录谷歌控制台才能继续以下其他步骤.&lt;/p&gt;
-&lt;h3 id=&quot;自定义搜索引擎创建与安装&quot;&gt;&lt;a href=&quot;#自定义搜索引擎创建与安装&quot; class=&quot;headerlink&quot; title=&quot;自定义搜索引擎创建与安装&quot;&gt;&lt;/a&gt;自定义搜索引擎创建与安装&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用已有的谷歌账号登入谷歌的&lt;a href=&quot;https://cse.google.com/create/new&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;控制台&lt;/a&gt;创建一个搜索引擎.&lt;/li&gt;
-&lt;li&gt;输入需要待搜索的站点节点,这里所说的站点节点既可以是泛域名搜索,也可以是指定站点,或者是站点的某个部分内容,比如一个网页.&lt;/li&gt;
-&lt;li&gt;根据自身站点的语言特点选择所需的语言,不通的语言意味着生成的搜索插件有着不通的样式和表现形式,但不会影响到搜索的结果.&lt;/li&gt;
-&lt;li&gt;创建之后会生成一段JavaScript脚本和一个谷歌特有的标签.这个标签就是谷歌搜索框,把这个标签代替站点搜索框的位置,在站点的嵌入相应的JavaScript脚本即可.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;谷歌搜索框的其他使用方法&quot;&gt;&lt;a href=&quot;#谷歌搜索框的其他使用方法&quot; class=&quot;headerlink&quot; title=&quot;谷歌搜索框的其他使用方法&quot;&gt;&lt;/a&gt;谷歌搜索框的其他使用方法&lt;/h3&gt;&lt;p&gt;如果仔细观察V2EX的搜索框的部分代码和搜索链接,我们会发现V2EX的搜索虽然用到的也是自定义搜索引擎但和上面的方法不太一样.主要的区别在于不用使用谷歌标签和脚本.只要把将搜索的结果重定向到谷歌搜索,让他们替我们针对网站做定向搜索.以下针对hexo框架的博客站点简要说明下.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;谷歌自定义搜索引擎只是站点搜索的一种形式,为了方便站点其他搜索引擎控制与切换,我们在配置文件添加切换开关.&lt;br&gt;在_config.yml配置文件中修改搜索框的控制类型,根据需要暂时定义两个参数控制.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 是否显示边栏中的搜索框（仅样式，未添加搜索功能）&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Search Box in left column&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# type google | baidu | swifttype&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;search_box:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  on:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  type:&lt;/span&gt; google&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;根据不同的主题找到搜索框指定位置的页面上修改页面跳转的重定向即可.&lt;br&gt;页面重定向后的链接类似于 &lt;a href=&quot;https://www.google.com/search?q=搜索内容&amp;amp;q=site:站点域名&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.google.com/search?q=搜索内容&amp;amp;q=site:站点域名&lt;/a&gt;, 根据这个思路只要稍微懂页面前端的程序猿自然很清楚如何修改.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;attr&quot;&gt;theme.search_box.on&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;attr&quot;&gt;theme.search_box.type&lt;/span&gt; == &lt;span class=&quot;string&quot;&gt;&#39;google&#39;&lt;/span&gt;)&amp;#123; %&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;action&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https://www.google.com/search&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;target&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;_blank&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;method&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;get&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;accept-charset&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;q&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;search&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;autocomplete&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;maxlength&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;20&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;placeholder&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot; &amp;lt;%= __(&#39;index.search&#39;) %&amp;gt;...&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;type&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;hidden&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;q&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;autocomplete&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;site:&amp;lt;%- config.url.replace(/^https?:\/\//, &#39;&#39;) %&amp;gt;&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;form&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;%&amp;#125;%&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;未完待续&quot;&gt;&lt;a href=&quot;#未完待续&quot; class=&quot;headerlink&quot; title=&quot;未完待续&quot;&gt;&lt;/a&gt;未完待续&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.jerryfu.net/post/search-engine-for-hexo-with-swiftype-v2.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用swiftype为hexo添加站内搜索v2.0&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://developers.google.com/custom-search/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Custom Search Api&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      最近经常逛V2EX网站,对其站内的搜索引擎特别好奇.站内对其也有相关的讨论,才知道原来借助的是谷歌的搜索引擎-Custom Search Engine.
-    
-    </summary>
-    
-      <category term="blog" scheme="http://blog.terrancy.com/categories/blog/"/>
-    
-    
-      <category term="google" scheme="http://blog.terrancy.com/tags/google/"/>
-    
-      <category term="blog" scheme="http://blog.terrancy.com/tags/blog/"/>
     
   </entry>
   

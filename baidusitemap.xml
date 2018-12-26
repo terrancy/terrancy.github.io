@@ -4,6 +4,92 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2018/11/29/the-common-third-part-framework-about-wechat-mini-program/</loc>
+    <lastmod>2018-12-26T09:56:26.112Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序常用的第三方框架的整理</title>
+        <pubTime>2018-11-29T09:52:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>wechat</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/11/16/the-common-third-part-sdk-about-wechat-mini-program/</loc>
+    <lastmod>2018-12-26T09:48:15.831Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序常用的第三方SDK的整理与总结</title>
+        <pubTime>2018-11-16T09:39:28.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>wechat</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/11/26/the-payment-about-wechat-mini-program/</loc>
+    <lastmod>2018-12-26T09:48:12.752Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序支付相关教程</title>
+        <pubTime>2018-11-26T09:37:18.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>wechat</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/</loc>
+    <lastmod>2018-10-20T00:59:22.798Z</lastmod>
+    <data>
+        <display>
+        <title>你到底在焦虑什么?</title>
+        <pubTime>2018-07-09T15:07:40.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="random-thought" url="http://blog.terrancy.com/categories/random-thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/10/16/the-getting-started-tutorial-about-lavarel-1/</loc>
     <lastmod>2018-10-17T12:37:55.604Z</lastmod>
     <data>
@@ -233,26 +319,6 @@
 
     
   <url>
-    <loc>http://blog.terrancy.com/2018/07/09/what-are-you-worry-about-with-age/</loc>
-    <lastmod>2018-07-09T16:02:28.480Z</lastmod>
-    <data>
-        <display>
-        <title>你到底在焦虑什么?</title>
-        <pubTime>2018-07-09T15:07:40.000Z</pubTime>
-        
-        <tag>life</tag>
-         
-         
-           
-             
-              <breadCrumb title="random-thought" url="http://blog.terrancy.com/categories/random-thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.terrancy.com/2018/06/06/the-random-thoughts-about-duration-of-the-resignation/</loc>
     <lastmod>2018-06-06T15:10:15.372Z</lastmod>
     <data>
@@ -303,9 +369,9 @@
         
         <tag>javascript</tag>
          
-        <tag>plugin</tag>
-         
         <tag>music</tag>
+         
+        <tag>plugin</tag>
          
          
            
