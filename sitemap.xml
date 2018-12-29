@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com/2018/12/19/the-docs-about-dingo-api/</loc>
+    
+    <lastmod>2018-12-29T02:01:54.806Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.terrancy.com/2018/12/29/the-full-use-of-jwt/</loc>
+    
+    <lastmod>2018-12-29T02:01:53.484Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/2018/11/29/the-common-third-part-framework-about-wechat-mini-program/</loc>
     
     <lastmod>2018-12-26T09:56:26.112Z</lastmod>

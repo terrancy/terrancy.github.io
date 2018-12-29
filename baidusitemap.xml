@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2018/12/19/the-docs-about-dingo-api/</loc>
+    <lastmod>2018-12-29T02:01:54.806Z</lastmod>
+    <data>
+        <display>
+        <title>Dingo-Api 开发总结</title>
+        <pubTime>2018-12-19T01:50:49.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="Laravel" url="http://blog.terrancy.com/categories/Laravel/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.terrancy.com/2018/12/29/the-full-use-of-jwt/</loc>
+    <lastmod>2018-12-29T02:01:53.484Z</lastmod>
+    <data>
+        <display>
+        <title>JWT的使用详解</title>
+        <pubTime>2018-12-29T01:49:54.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="API" url="http://blog.terrancy.com/categories/API/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/11/29/the-common-third-part-framework-about-wechat-mini-program/</loc>
     <lastmod>2018-12-26T09:56:26.112Z</lastmod>
     <data>
@@ -369,9 +409,9 @@
         
         <tag>javascript</tag>
          
-        <tag>music</tag>
-         
         <tag>plugin</tag>
+         
+        <tag>music</tag>
          
          
            
@@ -1117,9 +1157,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>html5</tag>
-         
         <tag>VideoJS</tag>
+         
+        <tag>html5</tag>
          
          
            
@@ -1386,11 +1426,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
-        <tag>tutorial</tag>
-         
         <tag>docker</tag>
          
         <tag>images</tag>
+         
+        <tag>tutorial</tag>
          
          
            

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-12-26T09:56:26.112Z</updated>
+  <updated>2018-12-29T02:01:53.484Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JWT的使用详解</title>
+    <link href="http://blog.terrancy.com/2018/12/29/the-full-use-of-jwt/"/>
+    <id>http://blog.terrancy.com/2018/12/29/the-full-use-of-jwt/</id>
+    <published>2018-12-29T01:49:54.000Z</published>
+    <updated>2018-12-29T02:01:53.484Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着开发中对JWT的理解逐步加深,单独整理个文档方便理清思路.在不同的应用场景对JWT的理解也不一样.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      随着开发中对JWT的理解逐步加深,单独整理个文档方便理清思路.在不同的应用场景对JWT的理解也不一样.
+    
+    </summary>
+    
+      <category term="API" scheme="http://blog.terrancy.com/categories/API/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dingo-Api 开发总结</title>
+    <link href="http://blog.terrancy.com/2018/12/19/the-docs-about-dingo-api/"/>
+    <id>http://blog.terrancy.com/2018/12/19/the-docs-about-dingo-api/</id>
+    <published>2018-12-19T01:50:49.000Z</published>
+    <updated>2018-12-29T02:01:54.806Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;工作中使用Laravel框架开发平台,接触到api设计与开发.顺便将在Dingo-Api的理解整理与总结下来.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      工作中使用Laravel框架开发平台,接触到api设计与开发.顺便将在Dingo-Api的理解整理与总结下来.
+    
+    </summary>
+    
+      <category term="Laravel" scheme="http://blog.terrancy.com/categories/Laravel/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序常用的第三方框架的整理</title>
@@ -724,84 +770,6 @@
       <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
     
       <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>U8-服务端环境搭建及其思想架构的总结</title>
-    <link href="http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/"/>
-    <id>http://blog.terrancy.com/2017/08/06/the-tutorial-about-the-U8-server/</id>
-    <published>2017-08-05T17:48:48.000Z</published>
-    <updated>2017-10-09T22:48:36.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;前段阵子一直在研究U8SDK的架构以及服务端的运行逻辑,顺便重新回顾大学期间学习的Java编程.结合最近的实践体验总结些U8Server的思路.&lt;/p&gt;
-&lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;p&gt;U8SDK是基于Java编写的,&lt;/p&gt;
-&lt;h2 id=&quot;总体架构&quot;&gt;&lt;a href=&quot;#总体架构&quot; class=&quot;headerlink&quot; title=&quot;总体架构&quot;&gt;&lt;/a&gt;总体架构&lt;/h2&gt;&lt;h2 id=&quot;用户模块&quot;&gt;&lt;a href=&quot;#用户模块&quot; class=&quot;headerlink&quot; title=&quot;用户模块&quot;&gt;&lt;/a&gt;用户模块&lt;/h2&gt;&lt;h2 id=&quot;支付模块&quot;&gt;&lt;a href=&quot;#支付模块&quot; class=&quot;headerlink&quot; title=&quot;支付模块&quot;&gt;&lt;/a&gt;支付模块&lt;/h2&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.uustory.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; 优优网事&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      前段阵子一直在研究U8SDK的架构以及服务端的运行逻辑,顺便重新回顾大学所有的基础Java.结合最近的实践体验总结些U8Server的思路.
-    
-    </summary>
-    
-      <category term="Java" scheme="http://blog.terrancy.com/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://blog.terrancy.com/tags/Java/"/>
-    
-      <category term="U8" scheme="http://blog.terrancy.com/tags/U8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于接入QQ微端游戏的教程</title>
-    <link href="http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/"/>
-    <id>http://blog.terrancy.com/2017/07/31/the-tutorial-about-microclient-with-tencent/</id>
-    <published>2017-07-31T01:14:32.000Z</published>
-    <updated>2017-10-07T13:57:36.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.QQ游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.&lt;/p&gt;
-&lt;h2 id=&quot;常用接口&quot;&gt;&lt;a href=&quot;#常用接口&quot; class=&quot;headerlink&quot; title=&quot;常用接口&quot;&gt;&lt;/a&gt;常用接口&lt;/h2&gt;&lt;p&gt;接入QQ游戏平台端游有几个必须接入的游戏接口,分别为获取用户信息,蓝钻信息,Q点直购.这些接口接入最麻烦的就是签名验证功能.其中获取用户信息、蓝钻信息接口和Q点直购在签名验证上存在一些区别.以下对签名验证功能做一些简要的讲解.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://wiki.open.qq.com/wiki/%E8%85%BE%E8%AE%AF%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8%E7%AD%BE%E5%90%8D%E5%8F%82%E6%95%B0sig%E7%9A%84%E8%AF%B4%E6%98%8E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第三方应用开放平台参数验证&lt;/a&gt;,将请求源串以及密钥根据一定签名方法生成的签名值，用来提高传输过程参数的防篡改性.签名的生成分为3个步骤:构造源串,构造密钥,生成签名.&lt;/p&gt;
-&lt;h3 id=&quot;构造源串&quot;&gt;&lt;a href=&quot;#构造源串&quot; class=&quot;headerlink&quot; title=&quot;构造源串&quot;&gt;&lt;/a&gt;构造源串&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;将请求的URI路径进行URL编码.&lt;/li&gt;
-&lt;li&gt;将除’sign’以外的其他参数按照键值key进行字典升序排列&lt;/li&gt;
-&lt;li&gt;将排序的参数(key=value)按照”&amp;amp;”拼接起来,并进行URL编码&lt;/li&gt;
-&lt;li&gt;将请求方式(GET或者POST)以及第一、三步骤生成URL编码字符串用”&amp;amp;”拼接起来.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;构造密钥&quot;&gt;&lt;a href=&quot;#构造密钥&quot; class=&quot;headerlink&quot; title=&quot;构造密钥&quot;&gt;&lt;/a&gt;构造密钥&lt;/h3&gt;&lt;p&gt;在开放平台申请应用之后获取一串字符串(appkey),在appkey末尾加上”&amp;amp;”,就是密钥源串&lt;/p&gt;
-&lt;h3 id=&quot;生成签名&quot;&gt;&lt;a href=&quot;#生成签名&quot; class=&quot;headerlink&quot; title=&quot;生成签名&quot;&gt;&lt;/a&gt;生成签名&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;使用HMAC-SHA1利用第二步生成的秘钥对第一步生成源串加密.(php5.1.2之后直接使用hash_hmac函数)&lt;/li&gt;
-&lt;li&gt;将加密后的字符串进行Base64编码.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通过以上几个步骤变可得到签名.在常用的这个接口接入验证的时候会使用到.当然,为了帮助我们检查签名的有效性,开放者后台有专用的&lt;a href=&quot;http://open.qq.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开放者平台联调工具&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;代码演示&quot;&gt;&lt;a href=&quot;#代码演示&quot; class=&quot;headerlink&quot; title=&quot;代码演示&quot;&gt;&lt;/a&gt;代码演示&lt;/h3&gt;&lt;p&gt;以下是PHP版本的sign源串加密算法&lt;br&gt;&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getSDKSignature&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData,$uri,$arrTemp=&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $strUri = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;getUriList($uri);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;list&lt;/span&gt;($ms,$sc) = explode(&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;,microtime());&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $time = @date(&lt;span class=&quot;string&quot;&gt;&#39;[d/M/Y:H:i:s]&#39;&lt;/span&gt;).&lt;span class=&quot;string&quot;&gt;&quot;[$ms]&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($strUri))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $idApp = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;idApp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $keyApp = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;keyApp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataGetTemp = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;appid&quot;&lt;/span&gt;      =&amp;gt;   $idApp,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;pf&quot;&lt;/span&gt;         =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;qqgame&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;format&quot;&lt;/span&gt;     =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;json&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;zoneid&quot;&lt;/span&gt;     =&amp;gt;   &lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrDataGetTemp = is_array($arrTemp) ? &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;() : $arrDataGetTemp;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $arrData = array_merge($arrData,$arrDataGetTemp);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $method = &lt;span class=&quot;string&quot;&gt;&quot;GET&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ksort($arrData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $strData = &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;UrlEncode($uri,$arrData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $strOriginal = $method.&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;.urlencode($strUri).&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;.urlencode($strData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $appKey = $keyApp.&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $encrypt = hash_hmac(&lt;span class=&quot;string&quot;&gt;&quot;sha1&quot;&lt;/span&gt;,$strOriginal,$appKey,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $signature = base64_encode($encrypt);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $signature = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($signature) ? &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt; : $signature;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $arrRst = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;data&quot;&lt;/span&gt;      =&amp;gt;      $arrData,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&quot;signature&quot;&lt;/span&gt;     =&amp;gt;  $signature,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $arrRst;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;因为支付部分对sign验证部分要求比较严格,在代码上做了一些调整.单独抽出重写.&lt;/p&gt;
-&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;PayUrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($string)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = urlencode($string);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%2A&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;*&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%21&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;!&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%28&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;(&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&quot;%29&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;)&quot;&lt;/span&gt;, $encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;+&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%20&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;_&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%5F&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;.&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%2E&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $encodeStr = str_replace(&lt;span class=&quot;string&quot;&gt;&#39;-&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;%2D&#39;&lt;/span&gt;,$encodeStr);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $encodeStr;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getPayUrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&amp;amp;$string)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $string = QQGamePay::PayUrlEncode($string);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;UrlEncode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($uri,$arrData)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    strcmp($uri,&lt;span class=&quot;string&quot;&gt;&quot;delivery_goods&quot;&lt;/span&gt;) ? &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt; : array_walk($arrData,&lt;span class=&quot;string&quot;&gt;&quot;QQGamePay::getPayUrlEncode&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; urldecode(http_build_query($arrData,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;前端接口调用&quot;&gt;&lt;a href=&quot;#前端接口调用&quot; class=&quot;headerlink&quot; title=&quot;前端接口调用&quot;&gt;&lt;/a&gt;前端接口调用&lt;/h2&gt;&lt;h3 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h3&gt;&lt;h3 id=&quot;开通蓝钻&quot;&gt;&lt;a href=&quot;#开通蓝钻&quot; class=&quot;headerlink&quot; title=&quot;开通蓝钻&quot;&gt;&lt;/a&gt;开通蓝钻&lt;/h3&gt;&lt;h3 id=&quot;QQ点直购&quot;&gt;&lt;a href=&quot;#QQ点直购&quot; class=&quot;headerlink&quot; title=&quot;QQ点直购&quot;&gt;&lt;/a&gt;QQ点直购&lt;/h3&gt;&lt;h2 id=&quot;BI系统-罗盘&quot;&gt;&lt;a href=&quot;#BI系统-罗盘&quot; class=&quot;headerlink&quot; title=&quot;BI系统(罗盘)&quot;&gt;&lt;/a&gt;BI系统(罗盘)&lt;/h2&gt;&lt;h3 id=&quot;说明-1&quot;&gt;&lt;a href=&quot;#说明-1&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h3&gt;&lt;h3 id=&quot;接口调用&quot;&gt;&lt;a href=&quot;#接口调用&quot; class=&quot;headerlink&quot; title=&quot;接口调用&quot;&gt;&lt;/a&gt;接口调用&lt;/h3&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://open.qqgame.qq.com/inside/lz03.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;总接口&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wiki.open.qq.com/wiki/%E6%94%AF%E4%BB%98%E6%8E%A5%E5%85%A5&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;支付接入&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://open.qq.com/tools&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;联调工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://open.qqgame.qq.com/wiki/24/35/46/48/48.html?ptlang=2052&amp;amp;source&amp;amp;ADUIN=877095327&amp;amp;ADSESSION=1496715658&amp;amp;ADTAG=CLIENT.QQ.5521_.0&amp;amp;ADPUBNO=26675&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前端Web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://compass.qq.com/platforms&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;罗盘&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      关于微端游戏接入QQ开放平台的流程的整理
-    
-    </summary>
-    
-      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
-    
-    
-      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
-    
-      <category term="QQ" scheme="http://blog.terrancy.com/tags/QQ/"/>
     
   </entry>
   
