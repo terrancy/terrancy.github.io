@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2019/01/03/the-exprience-about-running-pain/</loc>
+    <lastmod>2019-01-03T01:39:55.694Z</lastmod>
+    <data>
+        <display>
+        <title>跑步伤痛与恢复</title>
+        <pubTime>2019-01-03T01:31:19.000Z</pubTime>
+        
+        <tag>sport</tag>
+         
+         
+           
+             
+              <breadCrumb title="sport" url="http://blog.terrancy.com/categories/sport/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/12/19/the-docs-about-dingo-api/</loc>
     <lastmod>2018-12-29T02:01:54.806Z</lastmod>
     <data>
@@ -1157,9 +1177,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>VideoJS</tag>
-         
         <tag>html5</tag>
+         
+        <tag>VideoJS</tag>
          
          
            
@@ -1426,11 +1446,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
+        <tag>tutorial</tag>
+         
         <tag>docker</tag>
          
         <tag>images</tag>
-         
-        <tag>tutorial</tag>
          
          
            

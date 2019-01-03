@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2018-12-29T02:01:53.484Z</updated>
+  <updated>2019-01-03T01:39:55.694Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跑步伤痛与恢复</title>
+    <link href="http://blog.terrancy.com/2019/01/03/the-exprience-about-running-pain/"/>
+    <id>http://blog.terrancy.com/2019/01/03/the-exprience-about-running-pain/</id>
+    <published>2019-01-03T01:31:19.000Z</published>
+    <updated>2019-01-03T01:39:55.694Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;之前经常跑步,由于不太重视跑前热身.跑步跑久了就积累了很多的伤病,导致现在都没法正常的训练.很多放在家门口的赛事都没能如愿参加拿牌.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实,有伤病是正常的事情.关键是如何正视它并及时纠正.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;p&gt;*&lt;a href=&quot;http://www.sohu.com/a/150469205_400759&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;跑后脚背痛，原因何在？&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      之前经常跑步,由于不太重视跑前热身.跑步跑久了就积累了很多的伤病,导致现在都没法正常的训练.很多放在家门口的赛事都没能如愿参加拿牌.
+    
+    </summary>
+    
+      <category term="sport" scheme="http://blog.terrancy.com/categories/sport/"/>
+    
+    
+      <category term="sport" scheme="http://blog.terrancy.com/tags/sport/"/>
+    
+  </entry>
   
   <entry>
     <title>JWT的使用详解</title>
@@ -745,31 +772,6 @@
     
     
       <category term="git" scheme="http://blog.terrancy.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序基础教程</title>
-    <link href="http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/"/>
-    <id>http://blog.terrancy.com/2017/08/15/the-tutorial-about-wechat-mini-program/</id>
-    <published>2017-08-14T17:59:47.000Z</published>
-    <updated>2017-09-05T18:10:54.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.&lt;/p&gt;
-&lt;h2 id=&quot;微信小程序&quot;&gt;&lt;a href=&quot;#微信小程序&quot; class=&quot;headerlink&quot; title=&quot;微信小程序&quot;&gt;&lt;/a&gt;微信小程序&lt;/h2&gt;&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;h3 id=&quot;前端模块&quot;&gt;&lt;a href=&quot;#前端模块&quot; class=&quot;headerlink&quot; title=&quot;前端模块&quot;&gt;&lt;/a&gt;前端模块&lt;/h3&gt;&lt;h3 id=&quot;服务端模块&quot;&gt;&lt;a href=&quot;#服务端模块&quot; class=&quot;headerlink&quot; title=&quot;服务端模块&quot;&gt;&lt;/a&gt;服务端模块&lt;/h3&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h3&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;</content>
-    
-    <summary type="html">
-    
-      许久未动手写过手机应用,刚好老板让写一个关于游戏的三端应用(安卓、苹果、微信小程序).想来对我而言也是好事,总比一直在游戏中转悠来得好.以下是关于微信小程序前端和服务端模块开发的一些经验总结.
-    
-    </summary>
-    
-      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
-    
-    
-      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
-    
-      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
     
   </entry>
   
