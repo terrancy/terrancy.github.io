@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/</loc>
+    <lastmod>2019-01-09T01:04:51.392Z</lastmod>
+    <data>
+        <display>
+        <title>Laravel5系列入门教程之二</title>
+        <pubTime>2019-01-08T10:17:44.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2019/01/03/the-exprience-about-running-pain/</loc>
     <lastmod>2019-01-03T01:45:16.296Z</lastmod>
     <data>
@@ -427,9 +447,9 @@
         <title>多功能网页音乐播放器</title>
         <pubTime>2017-05-22T13:07:08.000Z</pubTime>
         
-        <tag>plugin</tag>
-         
         <tag>javascript</tag>
+         
+        <tag>plugin</tag>
          
         <tag>music</tag>
          
@@ -1177,9 +1197,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>VideoJS</tag>
-         
         <tag>html5</tag>
+         
+        <tag>VideoJS</tag>
          
          
            
@@ -1446,11 +1466,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
+        <tag>tutorial</tag>
+         
         <tag>docker</tag>
          
         <tag>images</tag>
-         
-        <tag>tutorial</tag>
          
          
            
@@ -1472,9 +1492,9 @@
         
         <tag>html5</tag>
          
-        <tag>music</tag>
-         
         <tag>pjax</tag>
+         
+        <tag>music</tag>
          
          
            

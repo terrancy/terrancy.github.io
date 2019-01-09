@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-01-03T01:45:16.296Z</updated>
+  <updated>2019-01-09T01:04:51.392Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Laravel5系列入门教程之二</title>
+    <link href="http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/"/>
+    <id>http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/</id>
+    <published>2019-01-08T10:17:44.000Z</published>
+    <updated>2019-01-09T01:04:51.392Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;关于在laravel中的第三方服务的配置与使用&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      关于在laravel中的第三方服务的配置与使用
+    
+    </summary>
+    
+      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
+    
+    
+      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>跑步伤痛与恢复</title>
@@ -730,50 +753,6 @@
       <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
     
       <category term="Steam" scheme="http://blog.terrancy.com/tags/Steam/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git基础教程</title>
-    <link href="http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/"/>
-    <id>http://blog.terrancy.com/2017/09/10/the-basical-tutorial-about-the-git/</id>
-    <published>2017-09-09T16:42:05.000Z</published>
-    <updated>2017-10-18T23:56:20.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;工作中必然会接触到代码版本管理工具,它有效地提高了程序猿的代码管理效率,大大的节约了工作成本.其中,最常用的便是SVN和GIT两种版本管理工具.&lt;/p&gt;
-&lt;h2 id=&quot;SVN基础篇&quot;&gt;&lt;a href=&quot;#SVN基础篇&quot; class=&quot;headerlink&quot; title=&quot;SVN基础篇&quot;&gt;&lt;/a&gt;SVN基础篇&lt;/h2&gt;&lt;h3 id=&quot;钩子的用处&quot;&gt;&lt;a href=&quot;#钩子的用处&quot; class=&quot;headerlink&quot; title=&quot;钩子的用处&quot;&gt;&lt;/a&gt;钩子的用处&lt;/h3&gt;&lt;p&gt;svn钩子的好处在于当用户提交前后触发的一些行为.按照具体的行为分为提交前的日志检查和提交后的代码部署&lt;/p&gt;
-&lt;h4 id=&quot;提交前日记检查&quot;&gt;&lt;a href=&quot;#提交前日记检查&quot; class=&quot;headerlink&quot; title=&quot;提交前日记检查&quot;&gt;&lt;/a&gt;提交前日记检查&lt;/h4&gt;&lt;p&gt;用户将数据提交到svn的时候需要填写提交的内容作为当前版本的日志记录.默认情况是不强制用户填写,但如果没有养成日志记录的习惯的话,版本控制的作用效果微乎其微.因为此时用户无法顺利的做版本管理和回溯.因此,我们需要做svn上做数据提交前的日志自检功能,强制用户做日志记录.这里用的钩子是pre-commit.&lt;/p&gt;
-&lt;p&gt;关于日志提交自检的钩子代码,如下所示:&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; off&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem SVN强制写注释的hooks脚本(Windows)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem 文件名是: pre-commit.bat,放到repository/hooks目录下&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;setlocal&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; SVN_BINDIR=&lt;span class=&quot;string&quot;&gt;&quot;这里填写VisualSVN Server的Bin目录&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; REPOS=%1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; TXN=%2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;rem 检查日志信息不少于10个字符&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;%SVN_BINDIR%\svnlook &lt;span class=&quot;built_in&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;%REPOS%&quot;&lt;/span&gt; -t &lt;span class=&quot;string&quot;&gt;&quot;%TXN%&quot;&lt;/span&gt; | findstr &lt;span class=&quot;string&quot;&gt;&quot;..........&quot;&lt;/span&gt; &amp;gt; nul&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;If %errorlevel% gtr 0 goto err&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; 0&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;:err&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; 提交时必须填写注释，并且不少于10个字符! 1&amp;gt;&amp;amp;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt; 1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;提交后自动部署&quot;&gt;&lt;a href=&quot;#提交后自动部署&quot; class=&quot;headerlink&quot; title=&quot;提交后自动部署&quot;&gt;&lt;/a&gt;提交后自动部署&lt;/h4&gt;&lt;p&gt;有些时候为了方便和服务器资源的利用,在一台服务器同时部署svn服务器和web服务器.将用户提交的数据部署到web路径下就可以正常访问.这样用户提交的代码可以很直观的显示出来.这样做确实很方便,当然其中也隐藏了一些小技巧.那就是利用svn的钩子实现代码自动部署.这里用到的钩子是post-commit.&lt;/p&gt;
-&lt;p&gt;关于代码自动化部署的钩子代码,如下所示:&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; off&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET REPOS=%1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET USER=%2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Code Deployed at %date:~0,10% %time:~0,8%&quot;&lt;/span&gt; &amp;gt;&amp;gt; 提交时的日志路径&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET SVN=&lt;span class=&quot;string&quot;&gt;&quot;这里填写VisualSVN Server的Bin目录/svn.exe&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;SET DIR=&lt;span class=&quot;string&quot;&gt;&quot;待部署的站点根目录&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;%SVN% update %DIR% --username 账号 --password 密码 --non-interactive&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;初学者可能无法一步到位,看看是否也踩到坑了.以下是一些总结,对Windows和Linux的都大同小异.主要是执行权限和目录路径不规范.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;提示 svn: E020024: Error resolving case.可能是指定的目录不合法,特别是windows下的路径分隔符是反斜杠(“\“),在指定的字母之前是有转义功能.此时的反斜杠就是转义符,不再是目录路径分隔符了.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;最简单的做法就是更换目录路径,避免转义符.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;手动执行改文件代码能正常部署到指定的站点,但提交数据的时候却无法自动部署.全程没有发现报错,就算报错也看不到.这个问题,明显就是Visual SVN Server服务的执行权限不足.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;简单操作 win+R  运行 services.msc 找到visual svn server 服务 右键属性 登陆面板 设置桌面交互或者管理员权限再试.&lt;/p&gt;
-&lt;h2 id=&quot;GIT基础篇&quot;&gt;&lt;a href=&quot;#GIT基础篇&quot; class=&quot;headerlink&quot; title=&quot;GIT基础篇&quot;&gt;&lt;/a&gt;GIT基础篇&lt;/h2&gt;&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.chenyudong.com/archives/tortoisegit-use-key-authentication.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tortoisegit使用密钥连接服务器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/dahuzix/article/details/49053507&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;利用svn钩子hooks/post-commit实现代码自动部署-LINUX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xiezhengcai/archive/2013/11/27/3445457.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SVN利用钩子实现代码同步到WEB目录-WINDOWS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      工作中必然会接触到代码版本管理工具,它有效地提高了程序猿的代码管理效率,大大的节约了工作成本.其中,最常用的便是SVN和GIT两种版本管理工具.
-    
-    </summary>
-    
-      <category term="git" scheme="http://blog.terrancy.com/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://blog.terrancy.com/tags/git/"/>
     
   </entry>
   

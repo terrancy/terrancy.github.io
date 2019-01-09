@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>游戏API服务器正面临着DDOS攻击 | terrancy`s blog</title>
+  <title>Laravel5系列入门教程之二 | terrancy`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2017年03月12中午越南服务器刚进行了一轮并不算大的并发请求,接踵而来的便是一次DDOS攻击.因为涉及到游戏登录API,直接导致外面的玩家进不去,里面的玩家却浑然不知.当然,游戏的充值API也跟着挂了.可想而知,这是很糟糕的.">
+  <meta name="description" content="关于在laravel中的第三方服务的配置与使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="游戏API服务器正面临着DDOS攻击">
-<meta property="og:url" content="http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/index.html">
+<meta property="og:title" content="Laravel5系列入门教程之二">
+<meta property="og:url" content="http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/index.html">
 <meta property="og:site_name" content="terrancy`s blog">
-<meta property="og:description" content="2017年03月12中午越南服务器刚进行了一轮并不算大的并发请求,接踵而来的便是一次DDOS攻击.因为涉及到游戏登录API,直接导致外面的玩家进不去,里面的玩家却浑然不知.当然,游戏的充值API也跟着挂了.可想而知,这是很糟糕的.">
-<meta property="og:updated_time" content="2017-03-19T14:55:12.000Z">
+<meta property="og:description" content="关于在laravel中的第三方服务的配置与使用">
+<meta property="og:updated_time" content="2019-01-09T01:04:51.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="游戏API服务器正面临着DDOS攻击">
-<meta name="twitter:description" content="2017年03月12中午越南服务器刚进行了一轮并不算大的并发请求,接踵而来的便是一次DDOS攻击.因为涉及到游戏登录API,直接导致外面的玩家进不去,里面的玩家却浑然不知.当然,游戏的充值API也跟着挂了.可想而知,这是很糟糕的.">
+<meta name="twitter:title" content="Laravel5系列入门教程之二">
+<meta name="twitter:description" content="关于在laravel中的第三方服务的配置与使用">
   
     <link rel="alternative" href="/atom.xml" title="terrancy`s blog" type="application/atom+xml">
   
@@ -241,16 +241,16 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
 
-      <div class="body-wrap" id="article-list"><article id="post-the-api-server-was-under-DDOS-attacks" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap" id="article-list"><article id="post-the-third-part-service-applied-in-the-laravel" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/19/the-api-server-was-under-DDOS-attacks/" class="article-date">
-      <time datetime="2017-03-19T14:45:47.000Z" itemprop="datePublished">2017-03-19</time>
+      <a href="/2019/01/08/the-third-part-service-applied-in-the-laravel/" class="article-date">
+      <time datetime="2019-01-08T10:17:44.000Z" itemprop="datePublished">2019-01-08</time>
 </a>
       
-  <a href="/2017/03/19/the-api-server-was-under-DDOS-attacks/#comments" title="查看评论">
+  <a href="/2019/01/08/the-third-part-service-applied-in-the-laravel/#comments" title="查看评论">
       <i class="fa fa-comments-o" aria-hidden="true"></i>
-      <span id = "sourceId::http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/" class = "gt-link gt-link-counts">0</span>条评论
+      <span id = "sourceId::http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/" class = "gt-link gt-link-counts">0</span>条评论
   </a>
 
 
@@ -263,7 +263,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      游戏API服务器正面临着DDOS攻击
+      Laravel5系列入门教程之二
     </h1>
   
 
@@ -272,13 +272,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
+    <a class="article-category-link" href="/categories/php/">php</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -288,7 +288,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>2017年03月12中午越南服务器刚进行了一轮并不算大的并发请求,接踵而来的便是一次DDOS攻击.因为涉及到游戏登录API,直接导致外面的玩家进不去,里面的玩家却浑然不知.当然,游戏的充值API也跟着挂了.可想而知,这是很糟糕的.</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于在laravel中的第三方服务的配置与使用</p>
 
       
     </div>
@@ -297,13 +297,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/19/the-api-server-was-under-DDOS-attacks/">游戏API服务器正面临着DDOS攻击</a></p>
+        <p><span>本文标题:</span><a href="/2019/01/08/the-third-part-service-applied-in-the-laravel/">Laravel5系列入门教程之二</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">terrancy</a></p>
-        <p><span>发布时间:</span>2017-03-19, 22:45:47</p>
-        <p><span>最后更新:</span>2017-03-19, 22:55:12</p>
+        <p><span>发布时间:</span>2019-01-08, 18:17:44</p>
+        <p><span>最后更新:</span>2019-01-09, 09:04:51</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/19/the-api-server-was-under-DDOS-attacks/" title="游戏API服务器正面临着DDOS攻击">http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2017/03/19/the-api-server-was-under-DDOS-attacks/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/01/08/the-third-part-service-applied-in-the-laravel/" title="Laravel5系列入门教程之二">http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -315,16 +315,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/03/19/some-conclusion-about-analysis-of-big-data/">
-                    关于大数据量的分析整理
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/20/the-method-to-get-start-crawler-with-python/">
-                    入门级爬虫的基本姿势
+                <a href="/2019/01/03/the-exprience-about-running-pain/">
+                    跑步伤痛与恢复
                 </a>
             </div>
         
@@ -335,7 +329,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -395,7 +389,7 @@
             window._bd_share_config={
                 "common":{
                   "bdSnsKey":{},
-                  "bdText":"游戏API服务器正面临着DDOS攻击　| terrancy`s blog",
+                  "bdText":"Laravel5系列入门教程之二　| terrancy`s blog",
                   "bdMini":"2",
                   "bdMiniList":false,
                   "bdPic": baiduSharePic,
@@ -449,15 +443,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/03/19/some-conclusion-about-analysis-of-big-data/" title="上一篇: 关于大数据量的分析整理">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/20/the-method-to-get-start-crawler-with-python/" title="下一篇: 入门级爬虫的基本姿势">
+            <a href="/2019/01/03/the-exprience-about-running-pain/" title="下一篇: 跑步伤痛与恢复">
                 <i class="fa fa-angle-right"></i>
             </a>
         
