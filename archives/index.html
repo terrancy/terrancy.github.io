@@ -53,7 +53,7 @@
           open_in_new: false,
           fancybox_js: "//cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.min.js",
           scrollreveal: "//cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js",
-          background_image: {dir:"AprilsLie",min_mun:27,max_num:31},
+          background_image: {url:"http://resource.blog.terrancy.com",dir:"aprilsLie",min_mun:28,max_num:31},
           baidu_share:{on:true},
           comments_changyan:{on:"false",app_id:"cyt2vJE4I",conf:"prod_693e657ec102e31bcd97557015f49ae2"}
       }
@@ -2875,8 +2875,8 @@
             }
             else {
                 var backgroundnumMax = 31;
-                var backgroundnumMin = 27;
-                var backgroundimg = "url(/background/AprilsLie/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * (backgroundnumMax-backgroundnumMin) + backgroundnumMin));
+                var backgroundnumMin = 28;
+                var backgroundimg = "url(http://resource.blog.terrancy.com/background/aprilsLie/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * (backgroundnumMax-backgroundnumMin) + backgroundnumMin));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
         })

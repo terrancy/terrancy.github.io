@@ -296,14 +296,14 @@ require([], function (){
 
       function afterPjax(){
         //多说展示
-        pajxLoadDuoShuo();
+        // pajxLoadDuoShuo();
         pjaxLoadCloundTag();
         pjaxLoadMarkdown();
         pjaxLoadTOC();
         pjaxLoadTagCanvas();
-        pajxLoadDPlayer();
+        // pajxLoadDPlayer();
         pjaxLoadGithubRepoWidget();
-        pjaxLoadBusuanzi();
+        // pjaxLoadBusuanzi();
         pjaxLoadTOCListen();
         pjaxLoadTitleHidden();
         // pjaxLoadChangyan();
@@ -537,7 +537,7 @@ require([], function (){
           var backgroundnumMax = yiliaConfig.background_image.max_num;
           // console.log(backgroundnumMax);
           var backgroundnumMin = yiliaConfig.background_image.min_mun;
-          var backgroundStr = "url("+yiliaConfig.rootUrl+"background/"+yiliaConfig.background_image.dir+"/bg-x.jpg"+")";
+          var backgroundStr = "url("+yiliaConfig.background_image.url+"/background/"+yiliaConfig.background_image.dir+"/bg-x.jpg"+")";
           // console.log(backgroundStr);
           // console.log(typeof(backgroundStr));
           var count = Math.ceil(Math.random() * (backgroundnumMax-backgroundnumMin) + backgroundnumMin);
