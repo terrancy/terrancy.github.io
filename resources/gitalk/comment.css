@@ -3,6 +3,7 @@
 #gitalk-container .gt-avatar {
   background: none !important;
   box-shadow: none !important;
+  cursor: pointer;
 }
 
 #gitalk-container .gt-avatar img, #ds-thread #gitalk-container ul.ds-children .gt-avatar img {

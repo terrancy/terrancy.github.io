@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://blog.terrancy.com/2019/01/08/the-third-part-service-applied-in-the-laravel/</loc>
     <lastmod>2019-01-09T01:04:51.392Z</lastmod>
@@ -290,7 +291,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://blog.terrancy.com/2016/10/18/how-to-use-package-manage-tool-for-php/</loc>
@@ -824,9 +824,9 @@
         <title>博客站内搜索引擎</title>
         <pubTime>2017-05-27T15:46:46.000Z</pubTime>
         
-        <tag>google</tag>
-         
         <tag>blog</tag>
+         
+        <tag>google</tag>
          
          
            
