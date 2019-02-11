@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</loc>
+    <lastmod>2019-02-11T09:43:40.565Z</lastmod>
+    <data>
+        <display>
+        <title>谷歌支付验证解决方案</title>
+        <pubTime>2018-10-17T12:21:27.000Z</pubTime>
+        
+        <tag>google pay</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2019/01/03/the-exprience-about-running-pain/</loc>
     <lastmod>2019-01-29T07:35:09.373Z</lastmod>
     <data>
@@ -179,26 +199,6 @@
         <pubTime>2018-10-16T10:34:48.000Z</pubTime>
         
         <tag>laravel</tag>
-         
-         
-           
-             
-              <breadCrumb title="php" url="http://blog.terrancy.com/categories/php/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</loc>
-    <lastmod>2018-10-17T12:37:33.931Z</lastmod>
-    <data>
-        <display>
-        <title>谷歌支付验证解决方案</title>
-        <pubTime>2018-10-17T12:21:27.000Z</pubTime>
-        
-        <tag>google pay</tag>
          
          
            

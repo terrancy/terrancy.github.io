@@ -193,13 +193,16 @@
     <link href="http://blog.terrancy.com/2018/10/17/Google-payment-solutions/"/>
     <id>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</id>
     <published>2018-10-17T12:21:27.000Z</published>
-    <updated>2018-10-17T12:37:33.931Z</updated>
+    <updated>2019-02-11T09:43:40.565Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;关于谷歌支付验证部分,服务端有多种不同语言的SDK.但就PHP版本是Beta版本的,网上关于使用方式讲解并不全面.&lt;/p&gt;
 &lt;p&gt;之前对接中东版本时有完整做过一遍,可惜没有记录下来.如今也只能依稀记得一些流程,幸好有机会借到谷歌开发者后台的超级管理员账号,有机会全面了解谷歌后台的所有权限情况.借此机会,再对接巴西版本的时候讲整个流程再走一遍,将谷歌支付整个流程遇到的一些问题和解决方案做个记录.&lt;/p&gt;
 &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/25481207/error-the-project-id-used-to-call-the-google-play-developer-api-has-not-been-l&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The project id used to call the Google Play Developer API has not been linked in the Google Play Developer Console&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.it1352.com/91830.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Use service account to verify Google InAppPurchase&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/33850864/how-to-verify-purchase-for-android-app-in-server-side-google-play-in-app-billin&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;How to verify purchase for android app in server side (google play in app billing v3)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.google.com/api-client-library/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;!import - Libraries for Google APIs Server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/googleapis/google-api-php-client&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;!import - A PHP client library for accessing Google APIs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     
