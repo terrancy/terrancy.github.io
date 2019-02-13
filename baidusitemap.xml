@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2016/05/10/how-to-surfing-the-internet-all-over-the-world/</loc>
+    <lastmod>2019-02-13T13:30:51.810Z</lastmod>
+    <data>
+        <display>
+        <title>如何科学上网</title>
+        <pubTime>2016-05-10T13:37:35.000Z</pubTime>
+        
+        <tag>tutorial</tag>
+         
+        <tag>shadowsocks</tag>
+         
+         
+           
+             
+              <breadCrumb title="tutorial" url="http://blog.terrancy.com/categories/tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2018/10/17/Google-payment-solutions/</loc>
     <lastmod>2019-02-11T09:43:40.565Z</lastmod>
     <data>
@@ -861,28 +883,6 @@
 
     
   <url>
-    <loc>http://blog.terrancy.com/2016/05/10/how-to-surfing-the-internet-all-over-the-world/</loc>
-    <lastmod>2017-03-24T00:54:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何科学上网</title>
-        <pubTime>2016-05-10T13:37:35.000Z</pubTime>
-        
-        <tag>tutorial</tag>
-         
-        <tag>shadowsocks</tag>
-         
-         
-           
-             
-              <breadCrumb title="tutorial" url="http://blog.terrancy.com/categories/tutorial/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://blog.terrancy.com/2016/10/12/the-beautiful-system-boot-tool-with-burg/</loc>
     <lastmod>2017-03-21T17:23:32.000Z</lastmod>
     <data>
@@ -1197,9 +1197,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>html5</tag>
-         
         <tag>VideoJS</tag>
+         
+        <tag>html5</tag>
          
          
            
