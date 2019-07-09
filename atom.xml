@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-01-09T01:04:51.392Z</updated>
+  <updated>2019-07-09T00:23:39.773Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Zabbix应用实例初探</title>
+    <link href="http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/"/>
+    <id>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</id>
+    <published>2019-07-09T00:20:35.000Z</published>
+    <updated>2019-07-09T00:23:39.773Z</updated>
+    
+    <content type="html">&lt;p&gt;本文主要介绍在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.
+    
+    </summary>
+    
+      <category term="DevOps" scheme="http://blog.terrancy.com/categories/DevOps/"/>
+    
+    
+      <category term="DevOps" scheme="http://blog.terrancy.com/tags/DevOps/"/>
+    
+  </entry>
   
   <entry>
     <title>Laravel5系列入门教程之二</title>
@@ -587,178 +610,6 @@
     
     
       <category term="pay" scheme="http://blog.terrancy.com/tags/pay/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Steam-SDK 接入教程</title>
-    <link href="http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/"/>
-    <id>http://blog.terrancy.com/2017/09/30/the-tutorial-about-microclient-with-Steam/</id>
-    <published>2017-09-30T14:32:09.000Z</published>
-    <updated>2017-10-11T15:42:08.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;作为Unity3D引擎开发的一款3D枪战类型的游戏,其本身就具备了多端兼容的优势.当游戏在国内外各大手游市场上不断发力的同时,我们也开始尝试在进军微端游戏市场.腾讯游戏平台作为一个集成手游、页游、端游三位于一体的游戏平台,最适合游戏公司甚至独立游戏开发者发布自己游戏.在海外,作为最重要的端游平台,Steam的名气几乎在游戏玩家之间传播着.&lt;/p&gt;
-&lt;h2 id=&quot;支付流程&quot;&gt;&lt;a href=&quot;#支付流程&quot; class=&quot;headerlink&quot; title=&quot;支付流程&quot;&gt;&lt;/a&gt;支付流程&lt;/h2&gt;&lt;h3 id=&quot;基本流程&quot;&gt;&lt;a href=&quot;#基本流程&quot; class=&quot;headerlink&quot; title=&quot;基本流程&quot;&gt;&lt;/a&gt;基本流程&lt;/h3&gt;&lt;p&gt;玩家在游戏内购买道具并支付的流程如下,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;①玩家购买指定的道具时,客户端需要向服务端相关参数.&lt;/li&gt;
-&lt;li&gt;②服务端按照Steam提供的api发起支付请求.请求成功之后,界面上会自动弹出Stea支付结算界面.&lt;/li&gt;
-&lt;li&gt;③如果请求时调用的是沙盒测试环境,可以直接购买该道具.如果是正式环境,玩家余额不足事会引导玩家去充值.&lt;/li&gt;
-&lt;li&gt;④玩家玩家支付之后,客户端通过监听Steam响应,并将结果通知服务端.&lt;/li&gt;
-&lt;li&gt;⑤服务端将按照Steam提供的api发起结束交易请求.如果支付成功,需要根据订单给玩家发送指定的道具.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;服务端接口&quot;&gt;&lt;a href=&quot;#服务端接口&quot; class=&quot;headerlink&quot; title=&quot;服务端接口&quot;&gt;&lt;/a&gt;服务端接口&lt;/h3&gt;&lt;p&gt;服务端在整个支付流程中主要负责两部分,发起支付与结束交易.当然,其前提必须要有指定的APP的支付权限.&lt;/p&gt;
-&lt;h4 id=&quot;获取开发者支付秘钥&quot;&gt;&lt;a href=&quot;#获取开发者支付秘钥&quot; class=&quot;headerlink&quot; title=&quot;获取开发者支付秘钥&quot;&gt;&lt;/a&gt;获取开发者支付秘钥&lt;/h4&gt;&lt;p&gt;获取开发者支付秘钥的前提是当前Steamworks的账号要有管理员权限.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;①选择或者创建一个包含待创建秘钥的与应用的群组.&lt;/li&gt;
-&lt;li&gt;②点击该群组查看群组右侧,如果尚未创建秘钥,只要点击「Create Web API Key」选项;否则可直接在右侧查看该群组的秘钥.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;通用接口规范&quot;&gt;&lt;a href=&quot;#通用接口规范&quot; class=&quot;headerlink&quot; title=&quot;通用接口规范&quot;&gt;&lt;/a&gt;通用接口规范&lt;/h4&gt;&lt;p&gt;支付接口分为两部分,分别为&lt;a href=&quot;https://partner.steamgames.com/doc/webapi/ISteamMicroTxn#InitTxn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;发起支付&lt;/a&gt;,&lt;a href=&quot;https://partner.steamgames.com/doc/webapi/ISteamMicroTxn#FinalizeTxn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;介绍交易&lt;/a&gt;.&lt;br&gt;在&lt;a href=&quot;https://partner.steamgames.com/doc/features/microtransactions/implementation#1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小额交易实现指南&lt;/a&gt;这章中,对支付API的规范有做了说明.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The Content-Type should be “application/x-www-form-urlencoded” and the POST parameters should be in the body of the request in standard form urlencoding format. Text should be transmitted as UTF-8.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;因此,在代码请求的时候需要明确数据格式,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;①请求头里设置好 “application/x-www-form-urlencoded”&lt;/li&gt;
-&lt;li&gt;②请求以POST的方式,数据拼接以key1=value1&amp;amp;key2=value2..的形式.&lt;br&gt;具体的代码实现方式如下所示,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight php&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;curlByPay&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;($arrData, $method,$sandbox=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $jsonData = urldecode(http_build_query($arrData,&lt;span class=&quot;keyword&quot;&gt;NULL&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&amp;amp;&quot;&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt;($method)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;InitTxn&quot;&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay = $sandbox ? &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlInitTxnSandBox : &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlInitTxnLive;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;FinalizeTxn&quot;&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay =$sandbox ? &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlFinalizeTxnSandBox : &lt;span class=&quot;keyword&quot;&gt;$this&lt;/span&gt;-&amp;gt;urlFinalizeTxnLive;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            $urlPay  = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $header  = &lt;span class=&quot;keyword&quot;&gt;array&lt;/span&gt;(&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Content-Type:application/x-www-form-urlencoded&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Accept: application/json&#39;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;Accept-Language: en_US&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!&lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($urlPay))&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//简单的curl&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $ch = curl_init($urlPay);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_RETURNTRANSFER, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_POST, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_setopt($ch,CURLOPT_HTTPHEADER,$header);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        $result = curl_exec($ch);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        curl_close($ch);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    $result = &lt;span class=&quot;keyword&quot;&gt;empty&lt;/span&gt;($result) ? &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt; : json_encode(json_decode($result,&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $result;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;发起支付&quot;&gt;&lt;a href=&quot;#发起支付&quot; class=&quot;headerlink&quot; title=&quot;发起支付&quot;&gt;&lt;/a&gt;发起支付&lt;/h4&gt;&lt;p&gt;玩家点击道具购买按钮之后,客户端需要将指定的参数传送到服务端.由服务端负责将相关的数据提交到Steam服务器.一旦数据请求成功,客户端将会弹出指定道具的支付界面.游戏服务端和Steam交互过程中,需要调用发起支付API.&lt;/p&gt;
-&lt;p&gt;需要注意的是,该请求涉及到支付,需要使用开发者秘钥,并且该请求最好放在相对安全的服务单,而不是客户端.以下只列举出调用该API必须的参数,&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;key&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Steamworks Web API publisher authentication key.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;orderid&lt;/td&gt;
-&lt;td&gt;uint64&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Unique 64-bit ID for order&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;steamid&lt;/td&gt;
-&lt;td&gt;uint64&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Steam ID of user making purchase.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;appid&lt;/td&gt;
-&lt;td&gt;uint32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;App ID of game this transaction is for.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;itemcount&lt;/td&gt;
-&lt;td&gt;uint32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Number of items in cart.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;language&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;ISO 639-1 language code of the item descriptions.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;currency&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;ISO 4217 currency code.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;itemid[0]&lt;/td&gt;
-&lt;td&gt;uint32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;3rd party ID for item.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;qty[0]&lt;/td&gt;
-&lt;td&gt;uint32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Quantity of this item.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;amount[0]&lt;/td&gt;
-&lt;td&gt;int32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Total cost (in cents) of item(s).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;description[0]&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Description of item.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;通过该发起支付的API请求之后,会收到相应的响应.具体的数据形式如下,&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;
-&lt;th&gt;Type&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;result&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Result of the operation. (OK or Failure)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;params[‘orderid’]&lt;/td&gt;
-&lt;td&gt;uint64&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;ID for order.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;params[‘transid’]&lt;/td&gt;
-&lt;td&gt;uint64&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Steam transaction ID.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;params[‘steamurl’]&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Optional URL returned when the usersession input is set to web.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;error[‘errorcode’]&lt;/td&gt;
-&lt;td&gt;int32&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Error or event code.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;error[‘errordesc’]&lt;/td&gt;
-&lt;td&gt;string&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;Message for error or event.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&quot;结束交易&quot;&gt;&lt;a href=&quot;#结束交易&quot; class=&quot;headerlink&quot; title=&quot;结束交易&quot;&gt;&lt;/a&gt;结束交易&lt;/h4&gt;&lt;p&gt;一旦弹出支付结算界面之后,客户端需要开始通过Steam SDK监听玩家支付行为.当玩家完成支付之后,客户端通过SDK收到支付结果.从而判断是否向服务端发起结束交易的行为.&lt;/p&gt;
-&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h3 id=&quot;优点&quot;&gt;&lt;a href=&quot;#优点&quot; class=&quot;headerlink&quot; title=&quot;优点&quot;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;p&gt;普通秘钥和开发者秘钥的使用的域名是分开的,根据用户使用的频繁度和安全性不同也有不同.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;①普通用户的API是走Akamai的cdn缓存,一方面是保证用户请求的速度,另一方面也减轻服务器的资源负载.&lt;/li&gt;
-&lt;li&gt;②开发者秘钥涉及到支付等涉及玩家与商家的隐私信息.一方面使用SSL证书保证数据传输加密,另一方面使用独立的服务器实时数据交互保证数据的准确性.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺点&quot; class=&quot;headerlink&quot; title=&quot;缺点&quot;&gt;&lt;/a&gt;缺点&lt;/h3&gt;&lt;p&gt;数据响应不够明确,或者可能是设计的疏忽.&lt;/p&gt;
-&lt;p&gt;在请求发起支付的时候,因为客户端的失误传入服务端的Steam ID导致每次请求时提示服务器内部错误.按照正常理解,服务器内部错误应该是服务器本身报错,从而误导开发者.&lt;/p&gt;
-&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://partner.steamgames.com/doc/features/microtransactions/implementation#1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;小额交易实现指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://partner.steamgames.com/doc/webapi_overview/auth&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;获取开发者秘钥&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://steamcommunity.com/app/219640/discussions/0/611702631248143398/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;steam 内部错误&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      关于微端游戏接入Steam开放平台的流程的整理
-    
-    </summary>
-    
-      <category term="php" scheme="http://blog.terrancy.com/categories/php/"/>
-    
-    
-      <category term="php" scheme="http://blog.terrancy.com/tags/php/"/>
-    
-      <category term="Steam" scheme="http://blog.terrancy.com/tags/Steam/"/>
     
   </entry>
   

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</loc>
+    <lastmod>2019-07-09T00:23:39.773Z</lastmod>
+    <data>
+        <display>
+        <title>Zabbix应用实例初探</title>
+        <pubTime>2019-07-09T00:20:35.000Z</pubTime>
+        
+        <tag>DevOps</tag>
+         
+         
+           
+             
+              <breadCrumb title="DevOps" url="http://blog.terrancy.com/categories/DevOps/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2016/05/10/how-to-surfing-the-internet-all-over-the-world/</loc>
     <lastmod>2019-07-09T00:15:27.537Z</lastmod>
     <data>
@@ -1197,9 +1217,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>VideoJS</tag>
-         
         <tag>html5</tag>
+         
+        <tag>VideoJS</tag>
          
          
            
