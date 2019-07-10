@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>围城 | terrancy`s blog</title>
+  <title>Zabbix告警机制与应用 | terrancy`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活就像围棋一样,往往当局者迷旁观者清">
+  <meta name="description" content="使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="围城">
-<meta property="og:url" content="http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/index.html">
+<meta property="og:title" content="Zabbix告警机制与应用">
+<meta property="og:url" content="http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/index.html">
 <meta property="og:site_name" content="terrancy`s blog">
-<meta property="og:description" content="生活就像围棋一样,往往当局者迷旁观者清">
-<meta property="og:updated_time" content="2016-09-26T15:00:42.000Z">
+<meta property="og:description" content="使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.">
+<meta property="og:updated_time" content="2019-07-10T23:43:45.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="围城">
-<meta name="twitter:description" content="生活就像围棋一样,往往当局者迷旁观者清">
+<meta name="twitter:title" content="Zabbix告警机制与应用">
+<meta name="twitter:description" content="使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.">
   
     <link rel="alternative" href="/atom.xml" title="terrancy`s blog" type="application/atom+xml">
   
@@ -241,16 +241,16 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
 
-      <div class="body-wrap" id="article-list"><article id="post-fortress-besieged-personal" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap" id="article-list"><article id="post-Head-First-Zabbix-Alert-System" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/11/fortress-besieged-personal/" class="article-date">
-      <time datetime="2016-05-11T15:43:30.000Z" itemprop="datePublished">2016-05-11</time>
+      <a href="/2019/07/11/Head-First-Zabbix-Alert-System/" class="article-date">
+      <time datetime="2019-07-10T23:40:29.000Z" itemprop="datePublished">2019-07-11</time>
 </a>
       
-  <a href="/2016/05/11/fortress-besieged-personal/#comments" title="查看评论">
+  <a href="/2019/07/11/Head-First-Zabbix-Alert-System/#comments" title="查看评论">
       <i class="fa fa-comments-o" aria-hidden="true"></i>
-      <span id = "sourceId::http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/" class = "gt-link gt-link-counts">0</span>条评论
+      <span id = "sourceId::http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/" class = "gt-link gt-link-counts">0</span>条评论
   </a>
 
 
@@ -263,7 +263,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      围城
+      Zabbix告警机制与应用
     </h1>
   
 
@@ -272,13 +272,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/jotting/">jotting</a>
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jotting/">jotting</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -288,11 +288,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>题记,就像钱钟书在围城中写道,人生是围城，婚姻是围城，冲进去了，就被生存的种种烦愁包围</p>
-</blockquote>
-<h2 id="人生是围城-婚姻亦是围城"><a href="#人生是围城-婚姻亦是围城" class="headerlink" title="人生是围城,婚姻亦是围城."></a>人生是围城,婚姻亦是围城.</h2><h3 id="婚姻是一座围城-城外的人想进去-城里的人想出来"><a href="#婚姻是一座围城-城外的人想进去-城里的人想出来" class="headerlink" title="婚姻是一座围城,城外的人想进去,城里的人想出来."></a>婚姻是一座围城,城外的人想进去,城里的人想出来.</h3><p>人生似围城,往往使人当局者迷旁观者清.最近发生了很多事,也经历了很多事情.似乎也懂得了一个道理,越是没有安全感的人,越会用谎言来伪装自己.以前在围城里,满怀信任的接受它,可随着时间却发现浑身是伤,渐行渐远.后来跳出围城之后,渐渐明白了,也许是我太冷血.可是我还是宁愿选择置之不理,不管不顾.<br>作为一名不称职的程序猿,我喜欢用python.喜欢它的一句至理名言,<strong><em>人生苦短,我用python</em></strong>.</p>
-<h2 id="思绪错乱-未完待续"><a href="#思绪错乱-未完待续" class="headerlink" title="思绪错乱,未完待续."></a>思绪错乱,未完待续.</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=28793052&auto=0&height=66"></iframe>
+        <p>使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等.</p>
 
       
     </div>
@@ -301,13 +297,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/05/11/fortress-besieged-personal/">围城</a></p>
+        <p><span>本文标题:</span><a href="/2019/07/11/Head-First-Zabbix-Alert-System/">Zabbix告警机制与应用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">terrancy</a></p>
-        <p><span>发布时间:</span>2016-05-11, 23:43:30</p>
-        <p><span>最后更新:</span>2016-09-26, 23:00:42</p>
+        <p><span>发布时间:</span>2019-07-11, 07:40:29</p>
+        <p><span>最后更新:</span>2019-07-11, 07:43:45</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/05/11/fortress-besieged-personal/" title="围城">http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2016/05/11/fortress-besieged-personal/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/07/11/Head-First-Zabbix-Alert-System/" title="Zabbix告警机制与应用">http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -319,16 +315,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/05/18/how-to-use-javascript-about-videoJs/">
-                    html5视频播放器VideoJS
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/05/11/how-to-bulid-blog-with-hexo/">
-                    HEXO+Github,搭建属于自己的博客
+                <a href="/2019/07/09/Head-First-Zabbix/">
+                    Zabbix应用实例初探
                 </a>
             </div>
         
@@ -339,7 +329,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#人生是围城-婚姻亦是围城"><span class="toc-number">1.</span> <span class="toc-text">人生是围城,婚姻亦是围城.</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#婚姻是一座围城-城外的人想进去-城里的人想出来"><span class="toc-number">1.1.</span> <span class="toc-text">婚姻是一座围城,城外的人想进去,城里的人想出来.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思绪错乱-未完待续"><span class="toc-number">2.</span> <span class="toc-text">思绪错乱,未完待续.</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -399,7 +389,7 @@
             window._bd_share_config={
                 "common":{
                   "bdSnsKey":{},
-                  "bdText":"围城　| terrancy`s blog",
+                  "bdText":"Zabbix告警机制与应用　| terrancy`s blog",
                   "bdMini":"2",
                   "bdMiniList":false,
                   "bdPic": baiduSharePic,
@@ -453,15 +443,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/05/18/how-to-use-javascript-about-videoJs/" title="上一篇: html5视频播放器VideoJS">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/05/11/how-to-bulid-blog-with-hexo/" title="下一篇: HEXO+Github,搭建属于自己的博客">
+            <a href="/2019/07/09/Head-First-Zabbix/" title="下一篇: Zabbix应用实例初探">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</loc>
+    
+    <lastmod>2019-07-10T23:43:45.564Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</loc>
     
     <lastmod>2019-07-09T00:23:39.773Z</lastmod>
