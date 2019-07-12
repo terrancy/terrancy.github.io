@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-07-10T23:43:45.564Z</updated>
+  <updated>2019-07-12T00:04:20.293Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -20,9 +20,74 @@
     <link href="http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/"/>
     <id>http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</id>
     <published>2019-07-10T23:40:29.000Z</published>
-    <updated>2019-07-10T23:43:45.564Z</updated>
+    <updated>2019-07-12T00:04:20.293Z</updated>
     
-    <content type="html">&lt;p&gt;使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等.&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;!-- 使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等. --&gt;
+&lt;p&gt;节点主机就像运维人员的孩子一样,需要时刻去关注各个节点主机的情况.运维需要合理利用Zabbix这样的高级管家帮我们了解节点主机的各项指标,一旦待监控指标特征值异常需要及时发起告警.&lt;br&gt;更重要的是,我们希望能实现阶梯式告警,不用事事必躬.这样可以根据问题的轻重缓急及时有效的通知到特定的群体组织.&lt;/p&gt;
+&lt;h2 id=&quot;告警机制&quot;&gt;&lt;a href=&quot;#告警机制&quot; class=&quot;headerlink&quot; title=&quot;告警机制&quot;&gt;&lt;/a&gt;告警机制&lt;/h2&gt;&lt;h2 id=&quot;告警应用&quot;&gt;&lt;a href=&quot;#告警应用&quot; class=&quot;headerlink&quot; title=&quot;告警应用&quot;&gt;&lt;/a&gt;告警应用&lt;/h2&gt;&lt;p&gt;关于告警的应用,根据问题的情况实际情况使用不同的通知方式.比如邮件告警,钉钉告警,电报告警,短信告警甚至使用电话语音告警.将问题最有效的通知到指定的群组.以下简单介绍邮件和钉钉告警的配置与使用.&lt;/p&gt;
+&lt;h3 id=&quot;邮件告警&quot;&gt;&lt;a href=&quot;#邮件告警&quot; class=&quot;headerlink&quot; title=&quot;邮件告警&quot;&gt;&lt;/a&gt;邮件告警&lt;/h3&gt;&lt;h4 id=&quot;邮件配置&quot;&gt;&lt;a href=&quot;#邮件配置&quot; class=&quot;headerlink&quot; title=&quot;邮件配置&quot;&gt;&lt;/a&gt;邮件配置&lt;/h4&gt;&lt;h4 id=&quot;微信通知&quot;&gt;&lt;a href=&quot;#微信通知&quot; class=&quot;headerlink&quot; title=&quot;微信通知&quot;&gt;&lt;/a&gt;微信通知&lt;/h4&gt;&lt;p&gt;使用腾讯企业邮箱结合微信小程序.在&lt;strong&gt;下班&lt;/strong&gt;时间期间,将所有的警报通过微信小程序及时通知相关干系人.&lt;/p&gt;
+&lt;h3 id=&quot;钉钉告警&quot;&gt;&lt;a href=&quot;#钉钉告警&quot; class=&quot;headerlink&quot; title=&quot;钉钉告警&quot;&gt;&lt;/a&gt;钉钉告警&lt;/h3&gt;&lt;p&gt;使用钉钉群内机器人.在&lt;strong&gt;上班&lt;/strong&gt;期间,将警报信息通知到相关人员.&lt;/p&gt;
+&lt;h4 id=&quot;申请机器人&quot;&gt;&lt;a href=&quot;#申请机器人&quot; class=&quot;headerlink&quot; title=&quot;申请机器人&quot;&gt;&lt;/a&gt;申请机器人&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;在钉钉群设置里面选择”自定义”机器人,输入机器人名字和需要发送消息的群之后可以获得相应的Hook地址.其格式如下:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://img01.taobaocdn.com/top/i1/LB1lIUlPFXXXXbGXFXXXXXXXXXX#align=left&amp;amp;display=inline&amp;amp;height=294&amp;amp;originHeight=1372&amp;amp;originWidth=2088&amp;amp;status=done&amp;amp;width=447&quot; alt=&quot;钉钉自定义群机器人申请&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;消息推送&quot;&gt;&lt;a href=&quot;#消息推送&quot; class=&quot;headerlink&quot; title=&quot;消息推送&quot;&gt;&lt;/a&gt;消息推送&lt;/h4&gt;&lt;p&gt;通过官方提供的&lt;a href=&quot;https://open-doc.dingtalk.com/microapp/serverapi2/qf2nxq&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;消息推送API&lt;/a&gt;,将消息推送指定的钉钉运维群.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;推送的参数实例:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;msgtype&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;text&quot;&lt;/span&gt;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;text&quot;&lt;/span&gt;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;content&quot;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;这是消息推送的内容&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;&quot;at&quot;&lt;/span&gt;: &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;atMobiles&quot;&lt;/span&gt;: [&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ],&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;attr&quot;&gt;&quot;isAtAll&quot;&lt;/span&gt;: &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;参数说明:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;参数类型&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;必须&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;msgtype&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;String&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;是&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;消息类型，此时固定为：text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;content&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;String&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;是&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;消息内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;atMobiles&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Array&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;否&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;被@人的手机号(在content里添加@人的手机号)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;isAtAll&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;bool&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;否&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;@所有人时：true，否则为：false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;告警脚本&lt;br&gt;根据钉钉自定义机器人文本消息推送API,可以写个精简的告警脚本.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#dingding.sh&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;webhook=&lt;span class=&quot;string&quot;&gt;&quot;https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;user=&lt;span class=&quot;variable&quot;&gt;$1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;text=&lt;span class=&quot;variable&quot;&gt;$3&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;data=&lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;&quot;msgtype&quot;:&quot;text&quot;,&quot;text&quot;:&amp;#123;&quot;content&quot;:$&amp;#123;text&amp;#125;&amp;#125;,&quot;at&quot;:&amp;#123;&quot;atMobiles&quot;:[$&amp;#123;user&amp;#125;],&quot;isAtAll&quot;:false&amp;#125;&amp;#125;&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;headers=&lt;span class=&quot;string&quot;&gt;&#39;Content-Type: application/json&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;curl &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;webhook&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt; -H &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;headers&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;_&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;data&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;将相应的bash脚本存放在zabbix告警文件夹(比如/usr/lib/zabbix/alertscripts),并赋予其相应的权限.&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;find / -name alertscripts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chown -R zabbix:zabbix /usr/lib/zabbix/alertscripts&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;chown -R 755 /usr/lib/zabbix/alertscripts&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;其他警告&quot;&gt;&lt;a href=&quot;#其他警告&quot; class=&quot;headerlink&quot; title=&quot;其他警告&quot;&gt;&lt;/a&gt;其他警告&lt;/h3&gt;&lt;p&gt;微信告警和钉钉告警是针对在国内情况下常用警报方式,如果是在国外可以选择使用电报机器人.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://open-doc.dingtalk.com/microapp/serverapi2/qf2nxq&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;钉钉-群机器人-自定义机器人&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     
     <summary type="html">
@@ -34,7 +99,7 @@
       <category term="DevOps" scheme="http://blog.terrancy.com/categories/DevOps/"/>
     
     
-      <category term="DevOps" scheme="http://blog.terrancy.com/tags/DevOps/"/>
+      <category term="Zabbix" scheme="http://blog.terrancy.com/tags/Zabbix/"/>
     
   </entry>
   
@@ -43,7 +108,7 @@
     <link href="http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/"/>
     <id>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</id>
     <published>2019-07-09T00:20:35.000Z</published>
-    <updated>2019-07-09T00:23:39.773Z</updated>
+    <updated>2019-07-11T22:54:51.675Z</updated>
     
     <content type="html">&lt;p&gt;本文主要介绍在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.&lt;/p&gt;
 </content>
@@ -57,7 +122,7 @@
       <category term="DevOps" scheme="http://blog.terrancy.com/categories/DevOps/"/>
     
     
-      <category term="DevOps" scheme="http://blog.terrancy.com/tags/DevOps/"/>
+      <category term="Zabbix" scheme="http://blog.terrancy.com/tags/Zabbix/"/>
     
   </entry>
   
