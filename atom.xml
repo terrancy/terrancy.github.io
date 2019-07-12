@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-07-12T05:25:27.834Z</updated>
+  <updated>2019-07-12T05:43:02.581Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/"/>
     <id>http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</id>
     <published>2019-07-10T23:40:29.000Z</published>
-    <updated>2019-07-12T05:25:27.834Z</updated>
+    <updated>2019-07-12T05:43:02.581Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;!-- 使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等. --&gt;
 &lt;p&gt;节点主机就像运维人员的孩子一样,需要时刻去关注各个节点主机的情况.运维需要合理利用Zabbix这样的高级管家帮我们了解节点主机的各项指标,一旦待监控指标特征值异常需要及时发起告警.&lt;br&gt;更重要的是,我们希望能实现阶梯式告警,不用事事必躬.这样可以根据问题的轻重缓急及时有效的通知到特定的群体组织.&lt;/p&gt;
@@ -28,15 +28,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;监控项&lt;/strong&gt;: 为节点主机配置好不同的监控项,让zabbix-agent收集主机的相关特征值.比如CPU,内存,进程数,服务器负载等.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://img2018.cnblogs.com/blog/634164/201809/634164-20180914094719613-169378460.png&quot; alt=&quot;监控项&quot;&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;监控项中的”更新间隔”即是数据采集频率.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com//article/zabbix/zabbix-items1.jpg&quot; alt=&quot;监控项&quot;&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;监控项中的”更新间隔”即是数据采集频率.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;触发器&lt;/strong&gt;:在触发器设置好临界指标(表达式)和警报级别(严重性),当满足条件时执行相应的动作.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://img2018.cnblogs.com/blog/634164/201809/634164-20180914094914844-685040552.png&quot; alt=&quot;触发器&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com//article/zabbix/zabbix-triggers.jpg&quot; alt=&quot;触发器&quot;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;动作&lt;/strong&gt;:zabbix监控到异常数据需要发起警报动作.通过媒体介质(meida type)通知相关人员.&lt;br&gt;可以在动作配置中设置好告警频率(默认操作步骤持续时间)以及告警次数(步骤).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://img2018.cnblogs.com/blog/634164/201809/634164-20180914102223293-1318347921.png&quot; alt=&quot;动作&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com//article/zabbix/zabbix-actions1.jpg&quot; alt=&quot;动作&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot; title=&quot;使用&quot;&gt;&lt;/a&gt;使用&lt;/h3&gt;&lt;h2 id=&quot;告警应用&quot;&gt;&lt;a href=&quot;#告警应用&quot; class=&quot;headerlink&quot; title=&quot;告警应用&quot;&gt;&lt;/a&gt;告警应用&lt;/h2&gt;&lt;p&gt;关于告警的应用,根据问题的情况实际情况使用不同的通知方式.比如邮件告警,钉钉告警,电报告警,短信告警甚至使用电话语音告警.将问题最有效的通知到指定的群组.以下简单介绍邮件和钉钉告警的配置与使用.&lt;/p&gt;
 &lt;h3 id=&quot;邮件告警&quot;&gt;&lt;a href=&quot;#邮件告警&quot; class=&quot;headerlink&quot; title=&quot;邮件告警&quot;&gt;&lt;/a&gt;邮件告警&lt;/h3&gt;&lt;h4 id=&quot;邮件配置&quot;&gt;&lt;a href=&quot;#邮件配置&quot; class=&quot;headerlink&quot; title=&quot;邮件配置&quot;&gt;&lt;/a&gt;邮件配置&lt;/h4&gt;&lt;p&gt;在zabbix平台上找到管理-&amp;gt;报警媒介类型列表,找到Email选项.填写邮件服务器相关信息.参照腾讯&lt;a href=&quot;https://service.exmail.qq.com/cgi-bin/help?subtype=1&amp;amp;&amp;amp;id=28&amp;amp;&amp;amp;no=1001254&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;企业邮箱&lt;/a&gt;的邮件服务器配置,以下以腾讯企业邮箱SMTP协议配置为例.相关配置实例图如下,&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com/article/zabbix/zabbix-email1.jpg&quot; alt=&quot;Zabbix告警邮件配置&quot;&gt;&lt;/p&gt;
