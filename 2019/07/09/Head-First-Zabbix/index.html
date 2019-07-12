@@ -11,10 +11,12 @@
 <meta property="og:url" content="http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/index.html">
 <meta property="og:site_name" content="terrancy`s blog">
 <meta property="og:description" content="在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.">
-<meta property="og:updated_time" content="2019-07-11T22:54:51.675Z">
+<meta property="og:image" content="http://resource.blog.terrancy.com/article/zabbixzabbix-framework1.png">
+<meta property="og:updated_time" content="2019-07-12T08:26:30.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Zabbix应用实例初探">
 <meta name="twitter:description" content="在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.">
+<meta name="twitter:image" content="http://resource.blog.terrancy.com/article/zabbixzabbix-framework1.png">
   
     <link rel="alternative" href="/atom.xml" title="terrancy`s blog" type="application/atom+xml">
   
@@ -288,7 +290,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>本文主要介绍在现实场景下使用Zabbix监控工具辅助开发,提高项目容灾能力.</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着业务项目的逐渐增加,一个项目的可能就需要好几个服务器.如果有好几个项目一起管理的话,运维手上的服务器少则十几个多则上百个很正常.运维不可能按照以往处理单服务器的方式解决问题,需要有个高效并且好用的服务器管家来协助他们处理服务器问题,运维的要求很简单,比如监控服务器性能并即时告警.这样的运维监控系统,既可以缓解运维管理压力,又大大减低运维门槛.</p>
+<p>市场上流行运维监控系统有很多,这里简单讲解下Zabbix基础知识.</p>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p>zabbix使用的是master/agent方式.我们将zabbix-agent部署在节点主机上,有agent负责收集相关的数据.zabbix-server作为中心服务器,负责接收并监控节点主机的信息并做及时处理.<br><img src="http://resource.blog.terrancy.com/article/zabbixzabbix-framework1.png" alt="zabbix架构"></p>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
+<li>zabbix agent:部署在节点主机上,负责收集节点主机信息,并发送给zabbix-server.</li>
+<li>zabbix server:负责接收数据,监控并处理.</li>
+<li>zabbix web:可视化管理界面,查看监控数据和配置告警等等.</li>
+</ul>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><p>zabbix工作分为主动模式和被动模式.</p>
+<ul>
+<li>主动模式:agent负责收集数据,将收集的信息<strong>主动</strong>发送给server端,称之为主动模式.</li>
+<li>被动模式:agent只负责收集数据,等待server端来<strong>拉取</strong>数据,称之为被动模式.</li>
+</ul>
+<p>特别的,主动模式和被动模式可以同时开启,两者并不冲突.配置在agent配置文件上.</p>
+<h2 id="DOCKER部署"><a href="#DOCKER部署" class="headerlink" title="DOCKER部署"></a>DOCKER部署</h2><p>测试环境下,Server端选择使用docker方式部署zabbix.这里参考网上的文档使用docker编排工具编译.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="attr">version:</span> <span class="string">'3'</span></div><div class="line"><span class="attr">services:</span></div><div class="line"><span class="attr">  mysql:</span></div><div class="line"><span class="attr">    image:</span> swr.cn-north<span class="bullet">-1.</span>myhuaweicloud.com/rj-bai/zabbix-mysql:<span class="number">5.7</span></div><div class="line"><span class="attr">    environment:</span></div><div class="line"><span class="attr">      MYSQL_USER:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_DATABASE:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_PASSWORD:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_ROOT_PASSWORD:</span> Sowhat?</div><div class="line"><span class="attr">    volumes:</span></div><div class="line"><span class="bullet">      -</span> /data/mysql/zabbix:/var/lib/mysql</div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="number">3306</span>:<span class="number">3306</span></div><div class="line"><span class="attr">    restart:</span> always</div><div class="line"><span class="attr">    networks:</span></div><div class="line"><span class="bullet">      -</span> zabbix</div><div class="line"></div><div class="line"><span class="attr">  zabbix-java-gateway:</span></div><div class="line"><span class="attr">    image:</span> swr.cn-north<span class="bullet">-1.</span>myhuaweicloud.com/rj-bai/zabbix-java-gateway:<span class="number">4.0</span><span class="number">.1</span></div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="number">10052</span>:<span class="number">10052</span></div><div class="line"><span class="attr">    restart:</span> always</div><div class="line"><span class="attr">    networks:</span></div><div class="line"><span class="bullet">      -</span> zabbix</div><div class="line"></div><div class="line"><span class="attr">  zabbix-server:</span></div><div class="line"><span class="attr">    image:</span> swr.cn-north<span class="bullet">-1.</span>myhuaweicloud.com/rj-bai/zabbix-server:<span class="number">4.0</span><span class="number">.1</span></div><div class="line"><span class="attr">    environment:</span></div><div class="line"><span class="attr">      ZBX_JAVAGATEWAY:</span> zabbix-java-gateway</div><div class="line"><span class="attr">      ZBX_JAVAGATEWAY_ENABLE:</span> <span class="string">"true"</span></div><div class="line"><span class="attr">      DB_SERVER_HOST:</span> mysql</div><div class="line"><span class="attr">      MYSQL_DATABASE:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_USER:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_PASSWORD:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_ROOT_PASSWORD:</span> Sowhat?</div><div class="line"><span class="attr">    links:</span></div><div class="line"><span class="bullet">      -</span> mysql</div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="number">10051</span>:<span class="number">10051</span></div><div class="line"><span class="attr">    depends_on:</span></div><div class="line"><span class="bullet">      -</span> mysql</div><div class="line"><span class="attr">    restart:</span> always</div><div class="line"><span class="attr">    networks:</span></div><div class="line"><span class="bullet">      -</span> zabbix</div><div class="line"></div><div class="line"><span class="attr">  zabbix-web:</span></div><div class="line"><span class="attr">    image:</span> swr.cn-north<span class="bullet">-1.</span>myhuaweicloud.com/rj-bai/zabbix-web:<span class="number">4.0</span><span class="number">.1</span></div><div class="line"><span class="attr">    environment:</span></div><div class="line"><span class="attr">      PHP_TZ:</span> Asia/Shanghai</div><div class="line"><span class="attr">      DB_SERVER_HOST:</span> mysql</div><div class="line"><span class="attr">      MYSQL_DATABASE:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_USER:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_PASSWORD:</span> zabbix</div><div class="line"><span class="attr">      MYSQL_ROOT_PASSWORD:</span> Sowhat?</div><div class="line"><span class="attr">    links:</span></div><div class="line"><span class="bullet">      -</span> mysql   </div><div class="line"><span class="attr">    ports:</span></div><div class="line"><span class="bullet">      -</span> <span class="number">80</span>:<span class="number">80</span></div><div class="line"><span class="attr">    depends_on:</span></div><div class="line"><span class="bullet">      -</span> zabbix-server</div><div class="line"><span class="bullet">      -</span> mysql</div><div class="line"><span class="attr">    restart:</span> always</div><div class="line"><span class="attr">    networks:</span></div><div class="line"><span class="bullet">      -</span> zabbix</div><div class="line"></div><div class="line"><span class="attr">networks:</span></div><div class="line"><span class="attr">  zabbix:</span></div><div class="line"><span class="attr">    driver:</span> bridge</div></pre></td></tr></table></figure>
+<p>agent端部署:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rpm -i https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm</div><div class="line">yum -y install zabbix-agent-4.0.1</div></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://www.zsythink.net/archives/447/" target="_blank" rel="external">zabbix入门</a></li>
+<li><a href="https://blog.rj-bai.com/post/144.html" target="_blank" rel="external">zabbix docker部署</a></li>
+</ul>
 
       
     </div>
@@ -300,7 +323,7 @@
         <p><span>本文标题:</span><a href="/2019/07/09/Head-First-Zabbix/">Zabbix应用实例初探</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">terrancy</a></p>
         <p><span>发布时间:</span>2019-07-09, 08:20:35</p>
-        <p><span>最后更新:</span>2019-07-12, 06:54:51</p>
+        <p><span>最后更新:</span>2019-07-12, 16:26:30</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/07/09/Head-First-Zabbix/" title="Zabbix应用实例初探">http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/　　作者: terrancy" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -335,7 +358,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本信息"><span class="toc-number">2.</span> <span class="toc-text">基本信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#架构"><span class="toc-number">2.1.</span> <span class="toc-text">架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件"><span class="toc-number">2.2.</span> <span class="toc-text">组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作方式"><span class="toc-number">2.3.</span> <span class="toc-text">工作方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOCKER部署"><span class="toc-number">3.</span> <span class="toc-text">DOCKER部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
