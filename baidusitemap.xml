@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://blog.terrancy.com/2019/07/13/coding-without-mouse/</loc>
+    <lastmod>2019-07-13T12:39:04.302Z</lastmod>
+    <data>
+        <display>
+        <title>放开你的鼠标,让我来！！</title>
+        <pubTime>2019-07-13T12:29:51.000Z</pubTime>
+        
+        <tag>knack</tag>
+         
+         
+           
+             
+              <breadCrumb title="code" url="http://blog.terrancy.com/categories/code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</loc>
-    <lastmod>2019-07-12T09:00:18.340Z</lastmod>
+    <lastmod>2019-07-12T09:02:59.456Z</lastmod>
     <data>
         <display>
         <title>Zabbix应用实例初探</title>
@@ -1237,9 +1257,9 @@
         <title>html5视频播放器VideoJS</title>
         <pubTime>2016-05-18T14:51:31.000Z</pubTime>
         
-        <tag>VideoJS</tag>
-         
         <tag>html5</tag>
+         
+        <tag>VideoJS</tag>
          
          
            
@@ -1506,11 +1526,11 @@
         <title>玩转docker镜像</title>
         <pubTime>2016-09-04T10:25:30.000Z</pubTime>
         
-        <tag>tutorial</tag>
-         
         <tag>docker</tag>
          
         <tag>images</tag>
+         
+        <tag>tutorial</tag>
          
          
            

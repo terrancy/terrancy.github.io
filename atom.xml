@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-07-12T07:13:05.962Z</updated>
+  <updated>2019-07-13T12:39:04.302Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>放开你的鼠标,让我来！！</title>
+    <link href="http://blog.terrancy.com/2019/07/13/coding-without-mouse/"/>
+    <id>http://blog.terrancy.com/2019/07/13/coding-without-mouse/</id>
+    <published>2019-07-13T12:29:51.000Z</published>
+    <updated>2019-07-13T12:39:04.302Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;使用笔记本电脑之后已经习惯使用触摸板代替鼠标,编程的时候利用编辑器的快捷方式可以进一步抛弃触摸板.对于一个轻度的洁癖者而言,保持桌面尽量干净整洁是多么舒服的一件事哈.&lt;/p&gt;
+&lt;h2 id=&quot;参看资料&quot;&gt;&lt;a href=&quot;#参看资料&quot; class=&quot;headerlink&quot; title=&quot;参看资料&quot;&gt;&lt;/a&gt;参看资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://isudox.com/2017/06/25/coding-with-keyboard-no-mouse/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;扔掉鼠标，开始键盘流编程&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      使用笔记本电脑之后已经习惯使用触摸板代替鼠标,编程的时候利用编辑器的快捷方式可以进一步抛弃触摸板.
+    
+    </summary>
+    
+      <category term="code" scheme="http://blog.terrancy.com/categories/code/"/>
+    
+    
+      <category term="knack" scheme="http://blog.terrancy.com/tags/knack/"/>
+    
+  </entry>
   
   <entry>
     <title>Zabbix告警机制与应用</title>
@@ -156,7 +180,7 @@
     <link href="http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/"/>
     <id>http://blog.terrancy.com/2019/07/09/Head-First-Zabbix/</id>
     <published>2019-07-09T00:20:35.000Z</published>
-    <updated>2019-07-12T09:00:18.340Z</updated>
+    <updated>2019-07-12T09:02:59.456Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;随着业务项目的逐渐增加,一个项目的可能就需要好几个服务器.如果有好几个项目一起管理的话,运维手上的服务器少则十几个多则上百个很正常.运维不可能按照以往处理单服务器的方式解决问题,需要有个高效并且好用的服务器管家来协助他们处理服务器问题,运维的要求很简单,比如监控服务器性能并即时告警.这样的运维监控系统,既可以缓解运维管理压力,又大大减低运维门槛.&lt;/p&gt;
 &lt;p&gt;市场上流行运维监控系统有很多,这里简单讲解下Zabbix基础知识.&lt;/p&gt;
@@ -176,7 +200,7 @@
 &lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;49&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;50&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;51&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;52&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;53&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;54&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;55&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;56&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;57&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;58&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;59&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;60&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;61&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;62&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;63&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;64&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;65&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;66&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;67&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;68&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;version:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;3&#39;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;services:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  mysql:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    image:&lt;/span&gt; swr.cn-north&lt;span class=&quot;bullet&quot;&gt;-1.&lt;/span&gt;myhuaweicloud.com/rj-bai/zabbix-mysql:&lt;span class=&quot;number&quot;&gt;5.7&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    environment:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_USER:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_DATABASE:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_PASSWORD:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_ROOT_PASSWORD:&lt;/span&gt; Sowhat?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    volumes:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; /data/mysql/zabbix:/var/lib/mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    ports:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;3306&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;3306&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    restart:&lt;/span&gt; always&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    networks:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  zabbix-java-gateway:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    image:&lt;/span&gt; swr.cn-north&lt;span class=&quot;bullet&quot;&gt;-1.&lt;/span&gt;myhuaweicloud.com/rj-bai/zabbix-java-gateway:&lt;span class=&quot;number&quot;&gt;4.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    ports:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10052&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;10052&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    restart:&lt;/span&gt; always&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    networks:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  zabbix-server:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    image:&lt;/span&gt; swr.cn-north&lt;span class=&quot;bullet&quot;&gt;-1.&lt;/span&gt;myhuaweicloud.com/rj-bai/zabbix-server:&lt;span class=&quot;number&quot;&gt;4.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    environment:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      ZBX_JAVAGATEWAY:&lt;/span&gt; zabbix-java-gateway&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      ZBX_JAVAGATEWAY_ENABLE:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      DB_SERVER_HOST:&lt;/span&gt; mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_DATABASE:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_USER:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_PASSWORD:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_ROOT_PASSWORD:&lt;/span&gt; Sowhat?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    links:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    ports:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10051&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;10051&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    depends_on:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    restart:&lt;/span&gt; always&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    networks:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  zabbix-web:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    image:&lt;/span&gt; swr.cn-north&lt;span class=&quot;bullet&quot;&gt;-1.&lt;/span&gt;myhuaweicloud.com/rj-bai/zabbix-web:&lt;span class=&quot;number&quot;&gt;4.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    environment:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      PHP_TZ:&lt;/span&gt; Asia/Shanghai&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      DB_SERVER_HOST:&lt;/span&gt; mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_DATABASE:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_USER:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_PASSWORD:&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;      MYSQL_ROOT_PASSWORD:&lt;/span&gt; Sowhat?&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    links:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; mysql   &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    ports:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    depends_on:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; zabbix-server&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; mysql&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    restart:&lt;/span&gt; always&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    networks:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;bullet&quot;&gt;      -&lt;/span&gt; zabbix&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;networks:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  zabbix:&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    driver:&lt;/span&gt; bridge&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;部署后的容器信息如下:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com/article/zabbixzabbix-docker1.jpg&quot; alt=&quot;zabbix-master-dockers&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;agent端部署&quot;&gt;&lt;a href=&quot;#agent端部署&quot; class=&quot;headerlink&quot; title=&quot;agent端部署:&quot;&gt;&lt;/a&gt;agent端部署:&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm -i https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum -y install zabbix-agent-4.0.1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;agent端部署&quot;&gt;&lt;a href=&quot;#agent端部署&quot; class=&quot;headerlink&quot; title=&quot;agent端部署&quot;&gt;&lt;/a&gt;agent端部署&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;rpm -i https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;yum -y install zabbix-agent-4.0.1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;安装后的配置文件如下:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://resource.blog.terrancy.com/article/zabbixzabbix-agent-docker1.jpg&quot; alt=&quot;agent端配置&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
@@ -672,35 +696,6 @@
     
     
       <category term="python" scheme="http://blog.terrancy.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>话说七牛云</title>
-    <link href="http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/"/>
-    <id>http://blog.terrancy.com/2017/10/19/the-exprience-about-qiiu-cloud-sdk-integration/</id>
-    <published>2017-10-19T15:05:45.000Z</published>
-    <updated>2017-10-19T15:15:06.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近忙里偷闲写写小程序,为了让小程序整体的资源压缩到最小,应用内的绝大部分图片资源将使用云存储的方式上传到云端.对比了下阿里云与七牛云,性价比上而言,七牛云比较划算.&lt;/p&gt;
-&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/gpake/qiniu-wxapp-sdk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;基于七牛云API开发的微信小程序SDK&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.qiniu.com/kodo/sdk/1289/nodejs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;七牛云API SDK&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      最近忙里偷闲写写小程序,为了让小程序整体的资源压缩到最小,应用内的绝大部分图片资源将使用云存储的方式上传到云端.对比了下阿里云与七牛云,性价比上而言,七牛云比较划算.
-    
-    </summary>
-    
-      <category term="node" scheme="http://blog.terrancy.com/categories/node/"/>
-    
-    
-      <category term="wechat" scheme="http://blog.terrancy.com/tags/wechat/"/>
-    
-      <category term="cloud storage" scheme="http://blog.terrancy.com/tags/cloud-storage/"/>
     
   </entry>
   
