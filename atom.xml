@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.terrancy.com/"/>
-  <updated>2019-07-13T12:39:04.302Z</updated>
+  <updated>2019-07-14T10:23:42.239Z</updated>
   <id>http://blog.terrancy.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fail2ban,运维们首选的&quot;看门狗&quot;</title>
+    <link href="http://blog.terrancy.com/2019/07/14/fail2ban/"/>
+    <id>http://blog.terrancy.com/2019/07/14/fail2ban/</id>
+    <published>2019-07-14T05:40:00.000Z</published>
+    <updated>2019-07-14T10:23:42.239Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;使用Fail2ban结合iptables来协助运维们阻止某些恶意的端口扫描和ssh密码破解.只要达到规定设置的失败次数,根据逻辑规则,该ip地址会自动被加入iptable黑名单之内.&lt;/p&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/4fdec5794d08&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CentOS7下安装和使用Fail2ban&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      使用Fail2ban结合iptables来协助运维们阻止某些恶意的端口扫描和ssh密码破解.
+    
+    </summary>
+    
+      <category term="DevOps" scheme="http://blog.terrancy.com/categories/DevOps/"/>
+    
+    
+      <category term="fail2ban" scheme="http://blog.terrancy.com/tags/fail2ban/"/>
+    
+  </entry>
   
   <entry>
     <title>放开你的鼠标,让我来！！</title>
@@ -44,7 +70,7 @@
     <link href="http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/"/>
     <id>http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</id>
     <published>2019-07-10T23:40:29.000Z</published>
-    <updated>2019-07-12T07:13:05.962Z</updated>
+    <updated>2019-07-14T10:23:46.465Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;!-- 使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等. --&gt;
 &lt;p&gt;节点主机就像运维人员的孩子一样,需要时刻去关注各个节点主机的情况.运维需要合理利用Zabbix这样的高级管家帮我们了解节点主机的各项指标,一旦待监控指标特征值异常需要及时发起告警.&lt;br&gt;更重要的是,我们希望能实现阶梯式告警,不用事事必躬.这样可以根据问题的轻重缓急及时有效的通知到特定的群体组织.&lt;/p&gt;
@@ -669,33 +695,6 @@
     
     
       <category term="resignation" scheme="http://blog.terrancy.com/tags/resignation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>电报机器人</title>
-    <link href="http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/"/>
-    <id>http://blog.terrancy.com/2018/05/12/the-rotbot-with-telegram/</id>
-    <published>2018-05-12T15:13:10.000Z</published>
-    <updated>2018-05-15T00:06:20.000Z</updated>
-    
-    <content type="html">&lt;p&gt;以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.&lt;/p&gt;
-&lt;h2 id=&quot;机器人&quot;&gt;&lt;a href=&quot;#机器人&quot; class=&quot;headerlink&quot; title=&quot;机器人&quot;&gt;&lt;/a&gt;机器人&lt;/h2&gt;&lt;p&gt;按照机器人的功能特点,以下主要分为群聊机器人和警报机器人.&lt;/p&gt;
-&lt;h3 id=&quot;群聊机器人&quot;&gt;&lt;a href=&quot;#群聊机器人&quot; class=&quot;headerlink&quot; title=&quot;群聊机器人&quot;&gt;&lt;/a&gt;群聊机器人&lt;/h3&gt;&lt;p&gt;群聊机器人是放在电报的群主里面,主要对群成员对机器人的某些对话给予相应的回答.而警报机器人只能与管理员对话.这是两者最大的异同点.&lt;/p&gt;
-&lt;h3 id=&quot;警报机器人&quot;&gt;&lt;a href=&quot;#警报机器人&quot; class=&quot;headerlink&quot; title=&quot;警报机器人&quot;&gt;&lt;/a&gt;警报机器人&lt;/h3&gt;&lt;p&gt;警报机器人是放在电报的频道上的,在频道中只有管理员可以与警报机器人对话,其他的成员只能通过的订阅该频道来了解频道内的信息.&lt;/p&gt;
-&lt;h2 id=&quot;思考&quot;&gt;&lt;a href=&quot;#思考&quot; class=&quot;headerlink&quot; title=&quot;思考&quot;&gt;&lt;/a&gt;思考&lt;/h2&gt;&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/python-telegram-bot/python-telegram-bot&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;python-telegram-bot&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/Naltox/telegram-node-bot&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;node-telegram-bot&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://github.com/U2FsdGVkX1/Tbo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;php-telegram-bot&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://jiasule.v2ex.com/t/436979&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用 telegram bot 创建报警工具&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://51.ruyo.net/8054.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Telegram Bot接管WeChat信息&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      以前在QQ群上和机器人小新聊过天,感觉挺好玩的.最近发现电报群上也有机器人,看着API也不难就尝试着动手弄个聊天机器人.
-    
-    </summary>
-    
-      <category term="python" scheme="http://blog.terrancy.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://blog.terrancy.com/tags/python/"/>
     
   </entry>
   
