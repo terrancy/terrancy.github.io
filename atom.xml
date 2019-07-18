@@ -70,7 +70,7 @@
     <link href="http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/"/>
     <id>http://blog.terrancy.com/2019/07/11/Head-First-Zabbix-Alert-System/</id>
     <published>2019-07-10T23:40:29.000Z</published>
-    <updated>2019-07-14T10:23:46.465Z</updated>
+    <updated>2019-07-15T00:52:59.484Z</updated>
     
     <content type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;!-- 使用Zabbix监控主机信息并做相应的告警,本文主要介绍告警机制以及相应的配置,第三方告警机器人.比如钉钉机器人,企业微信,电报机器人等. --&gt;
 &lt;p&gt;节点主机就像运维人员的孩子一样,需要时刻去关注各个节点主机的情况.运维需要合理利用Zabbix这样的高级管家帮我们了解节点主机的各项指标,一旦待监控指标特征值异常需要及时发起告警.&lt;br&gt;更重要的是,我们希望能实现阶梯式告警,不用事事必躬.这样可以根据问题的轻重缓急及时有效的通知到特定的群体组织.&lt;/p&gt;
